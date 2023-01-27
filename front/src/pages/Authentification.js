@@ -1,18 +1,18 @@
 import React from "react";
 import TopBar from "../component/TopBar";
 
-function Accueil() {
+function Authentification() {
 
 
     return (
 
 
         
-      <div className="Accueil">
+      <div className="Authentification">
         <TopBar/>
-       Welcome to himalaya
+       I see you
       </div>
     );
   }
   
-  export default Accueil;
+  export default Authentification;
