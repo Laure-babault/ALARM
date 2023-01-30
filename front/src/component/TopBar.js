@@ -10,12 +10,12 @@ function TopBar() {
 
   function clickAvatar() {
     console.log("clique sur avatar");
-    <Authentification/>
+    
   }
 
   function clickMenu() {
     console.log("clique sur menu");
-    <Accueil/>
+    
   }
 
   const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -39,8 +39,7 @@ function TopBar() {
           <StyledIconButton aria-label="Menu" title="Menu" onClick={clickMenu}><HomeIcon /></StyledIconButton>
           <StyledIconButton aria-label="Deconnection" title="Deconnection" onClick={clickAvatar}><Avatar/></StyledIconButton>
         </Stack>
-      </Toolbar>
-
+      </Toolbar>              
     </AppBar>
   )
 }
