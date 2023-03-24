@@ -57,6 +57,9 @@ function SaisieErreur() {
 
     return (
         <div>
+            <Box sx={{ textAlign: 'center' }}>
+                <h1 >Saisie d'erreur Médicale</h1>
+            </Box>
             <Box sx={{ width: '100%' }}>
                 <Stepper activeStep={activeStep}>
                     {steps.map((label, index) => {
@@ -105,7 +108,7 @@ function SaisieErreur() {
                 {activeStep === steps.length ? (
                     <React.Fragment>
                         <Typography sx={{ mt: 2, mb: 1 }}>
-                           Saisie de l'erreur effectuer 
+                            Saisie de l'erreur effectuer
                         </Typography>
                         <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                             <Box sx={{ flex: '1 1 auto' }} />
@@ -114,7 +117,7 @@ function SaisieErreur() {
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
-                        
+
                         <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                             <Button
                                 color="inherit"
