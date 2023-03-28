@@ -15,13 +15,17 @@ function Accueil() {
         </Grid>
         <Grid item xs={7}>
           <Box>
+            <p>Tout professionnel de l'établissement peut déclarer une erreur médicamenteuse</p>
             <Button component={Link} to="/SaisieErreur" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}  >Déclarer une erreur médicale</Button>
           </Box>
+          <Box>
+            <p> Accès réservé au personnelle habilité</p>
           <Box>
             <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Consulter les erreurs médicales</Button>
             <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Session du CREX</Button>
           </Box>
           <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}>Consulter les Archives</Button>
+        </Box>
         </Grid>
       </Grid>
 

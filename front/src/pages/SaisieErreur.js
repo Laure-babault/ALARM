@@ -7,14 +7,14 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 //Definition des nom des étapes sur le menu
-const steps = ['Saisie de l em', 'Suite saisie', 'Fin de saisie'];
+const steps = ['Qui je suis', 'Suite saisie', 'Fin de saisie'];
 
 function SaisieErreur() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [skipped, setSkipped] = React.useState(new Set());
 
     const isStepOptional = (step) => {
-        return step === 1;
+        return step === 0;
     };
 
     const isStepSkipped = (step) => {
@@ -67,7 +67,7 @@ function SaisieErreur() {
                         const labelProps = {};
                         if (isStepOptional(index)) {
                             labelProps.optional = (
-                                <Typography variant="caption">Optional</Typography>
+                                <Typography variant="caption">Optionnel</Typography>
                             );
                         }
                         if (isStepSkipped(index)) {
@@ -84,7 +84,7 @@ function SaisieErreur() {
                 {/* contenu de l'étape 1 */}
                 {activeStep === 0 && (
                     <div>
-                        <h2>Contenu de l'étape 1</h2>
+                        <h2>Je m'identifie ( Etape Optionnel ) </h2>
                         <p>Contenu spécifique à l'étape 1</p>
                     </div>
                 )}
