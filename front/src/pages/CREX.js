@@ -6,9 +6,11 @@ function CREX() {
 
     const [rows,setRows]=useState([]);
     const [openaffichageErreurM, setOpenAffichageErreurM]=useState(false);
+    const [idEm, setIdEm] = useState([]);
+    const [emCible,setEmCible] = useState([]);
     
     const handleRowClick =(params)=>{
-        setIdDemand(params.row.id);
+        setIdEm(params.row.id);
         setOpenAffichageErreurM(true);
     }
 
@@ -20,7 +22,7 @@ function CREX() {
             <Dialog open={openaffichageErreurM}
             onClose={closeAffichageErreurM}>
                 <DialogContent>
-                    <AffichageErreurM/>
+                    <AffichageErreurM idEm ={idEm} emCible={emCible}/>
                 </DialogContent>
             </Dialog>
             <DataGrid
