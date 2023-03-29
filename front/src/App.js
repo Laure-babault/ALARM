@@ -5,6 +5,7 @@ import Authentification from "./pages/Authentification";
 import SaisieErreur from "./pages/SaisieErreur";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CREX from "./pages/CREX";
+import Archive from "./pages/Archive";
 
 //couleur vert  	#7DC4B2
 // couleur gris 	#506C7A
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/" element={<Accueil />} />
                     <Route path="/SaisieErreur" element={<SaisieErreur />} />
                     <Route path="/Crex" element={<CREX/>} />
+                    <Route path="/Archive" element={<Archive/>} />
                 </Routes>
             </BrowserRouter>
         </div>

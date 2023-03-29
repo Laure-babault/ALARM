@@ -22,9 +22,9 @@ function Accueil() {
             <p> Accès réservé au personnelle habilité</p>
           <Box>
             <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Consulter les erreurs médicales</Button>
-            <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Session du CREX</Button>
+            <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Session du CREX</Button>
           </Box>
-          <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}>Consulter les Archives</Button>
+          <Button component={Link} to="/Archive"variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}>Consulter les Archives</Button>
         </Box>
         </Grid>
       </Grid>
