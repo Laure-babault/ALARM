@@ -1,31 +1,30 @@
 import { Dialog, DialogContent } from "@mui/material";
 import React, { useState } from "react";
-import AffichageErreurM from "./AffichageErreurM";
 import moment from "moment";
 import { DataGrid } from '@mui/x-data-grid';
 
-
-function CREX() {
+function Archive() {
 
     const [rows,setRows]=useState([]);
-    const [openaffichageErreurM, setOpenAffichageErreurM]=useState(false);
-    const [idEm, setIdEm] = useState([]);
+    const [openAffCrexarch, setopenAffCrexarch]=useState(false);
+    const [idCrex, setidCrex] = useState([]);
     
     const handleRowClick =(params)=>{
-        setIdEm(params.row.id);
-        setOpenAffichageErreurM(true);
+        setidCrex(params.row.id);
+        setopenAffCrexarch(true);
     }
 
-    const closeAffichageErreurM=()=>{
-        setOpenAffichageErreurM(false);
+    const closeAffCrexArch=()=>{
+        setopenAffCrexarch(false);
     }
 
     return (
-        <div className="Crex">
-            <Dialog open={openaffichageErreurM}
-            onClose={closeAffichageErreurM}>
+        <div className="Archive">
+            Il faut reprendre encore le tableau 
+            <Dialog open={openAffCrexarch}
+            onClose={closeAffCrexArch}>
                 <DialogContent>
-                    <AffichageErreurM idEm ={idEm}/>
+                 ici mettre les em du Crex
                 </DialogContent>
             </Dialog>
             <DataGrid
@@ -48,4 +47,4 @@ function CREX() {
     );
 }
 
-export default CREX;
+export default Archive;
