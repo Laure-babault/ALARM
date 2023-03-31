@@ -1,4 +1,4 @@
-package com.alarm;
+package com.alarm.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

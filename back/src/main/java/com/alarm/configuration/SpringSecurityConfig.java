@@ -1,5 +1,5 @@
 
-package com.alarm;
+package com.alarm.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
