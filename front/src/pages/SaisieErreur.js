@@ -16,6 +16,8 @@ import myPdf from '../pdf/patients_risque.pdf';
 import myPdf1 from '../pdf/medicaments_risque.pdf';
 import myPdf2 from '../pdf/administration_risque.pdf';
 import myPdf3 from '../pdf/cotation.pdf';
+import { FormControl } from '@mui/material/';
+
 
 //Definition des nom des étapes sur le menu
 const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape 5', 'Validation'];
@@ -174,12 +176,18 @@ function SaisieErreur() {
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography variant="h7">Pôle :</Typography>
-                                <Select>
+                                <FormControl>
 
-                                    <MenuItem value={10}>hello</MenuItem>
-                                    <MenuItem value={20}>Hello</MenuItem>
-                                    <MenuItem value={30}>Hello</MenuItem>
-                                </Select>
+                                <Select >
+
+                                    <MenuItem value={10}>Chirurigie</MenuItem>
+                                    <MenuItem value={20}>Médico-Technique</MenuItem>
+                                    <MenuItem value={30}>Gérontologie</MenuItem>
+                                    <MenuItem value={30}>Médecine</MenuItem>
+                                    <MenuItem value={30}>Mère enfant</MenuItem>
+                                    <MenuItem value={30}>Plateau Technique</MenuItem>
+
+                                </Select></FormControl>
 
                             </Grid>
                             <Grid item xs={12}>
