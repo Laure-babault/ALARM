@@ -568,18 +568,14 @@ function SaisieErreur() {
                         
                         
                         
-<Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
-    
-    <Grid item xs={12}>
-        <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</Typography>
-        <label>
-            <input type="radio" name="options" value="option1" />
-            Oui </label>  <label>
-            <input type="radio" name="options" value="option2" />
-            Non </label> </Grid>
-
-
-</Card>        
+                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
+                        
+                        <Grid item xs={12}>
+                            <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</Typography>
+                            <label><input type="radio" name="options" value="option1" />Oui </label> 
+                            <label><input type="radio" name="options" value="option2" />Non </label>
+                         </Grid>
+                     </Card>        
              
                         </>
      )}
@@ -588,19 +584,15 @@ function SaisieErreur() {
                      <h2>ETAPE 4 : Qu'est ce qui aurait pu empêcher la survenue de l'événement ?</h2>
                      <Grid item xs={12}>
                      <Typography variant="h7">Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
-                     <label>
-            <input type="radio" name="options" value="option1" />
-            Oui </label>  <label>
-            <input type="radio" name="options" value="option2" />
-            Non </label> 
+                     <label><input type="radio" name="options" value="option1" />Oui </label> 
+                     <label> <input type="radio" name="options" value="option2" />Non </label> 
                                 </Grid><br></br>
-                                <Grid item xs={12}>
-                                <Typography variant="h7">Si non , quelles ont été les défebses manquantes ou non opérationnelles ?</Typography>
+                     <Grid item xs={12}>
+                     <Typography variant="h7">Si non , quelles ont été les défebses manquantes ou non opérationnelles ?</Typography>
                                 <br></br>  <TextField
                                     id="outlined-multiline-static"
                                     multiline
                                     rows={5}
-
                                     variant="outlined" 
                                     style={{ width: '95%', backgroundColor: "white" }}
                                      />
@@ -648,86 +640,67 @@ function SaisieErreur() {
                             </Grid>
                             <Grid item xs={12}>
                      <Grid container spacing={2}>
-      <Grid item xs={2}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-
-
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={1}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-
-
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={2}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-
-  
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={2}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
- 
-  
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={1}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-  
-
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={1}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-
- 
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={2}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-  
-
-  size="small"
-/>
-      </Grid>
-      <Grid item xs={1}>
-      <TextField
-  hiddenLabel
-  id="filled-hidden-label-small"
-
- 
-  size="small"
-/>
-      </Grid>
-    </Grid>
+                            <Grid item xs={2}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={1}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={2}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={2}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={1}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={1}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={2}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                            <Grid item xs={1}>
+                            <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        size="small"
+                        />
+                            </Grid>
+                    </Grid>
                             </Grid>
                      </Card>
                        
                 )}
-
-
-
 
 
 
