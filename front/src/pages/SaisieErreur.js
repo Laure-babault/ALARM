@@ -101,7 +101,6 @@ function SaisieErreur() {
                 {activeStep === 0 && (
                     <Card style={{ backgroundColor: '#fcfbfc' , boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)' , padding: '20px'}}>
                         <h2>Je m'identifie ( Etape Optionnel ) </h2>
-                        <p>Contenu spécifique à l'étape 1</p>
                         <Grid container spacing={3}>
                                <Grid item xs={12} sm={4}>
        <Typography variant="h7">Nom :</Typography>
@@ -160,10 +159,14 @@ function SaisieErreur() {
                 
                      <><Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' }}>
                         <h2>ETAPE 1 : Quel est le problème ? (Description de l'événement) </h2>
-                        <p>Contenu spécifique à l'étape 1</p>
 
 
                         <Grid container spacing={3} justifyContent={'left'}>
+                        <Grid item xs={12}>
+                                <Typography variant="h7">Date de la déclaration :</Typography>
+                                <input type='date'></input>
+
+                            </Grid>
                             <Grid item xs={12}>
                                 <Typography variant="h7">Date de l'événement :</Typography>
                                 <input type='date'></input>
@@ -238,30 +241,64 @@ function SaisieErreur() {
                             <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
                             <Grid container spacing={3}>
                                <Grid item xs={12}>
+                               <Grid item xs={6}>
        <Typography variant="h7">Est-ce un never-event :</Typography>
        <label>
   <input type="radio" name="options" value="option1" />
   Oui </label>  <label>
   <input type="radio" name="options" value="option2" />
   Non </label>
-  </Grid>
-
-  <Grid item xs={12}>
-       <Typography variant="h7">Le(s)quel(s) :</Typography>
+  </Grid></Grid>
+  <Grid item xs={2}>
+       <Typography variant="h7">Le(s)quel(s) :</Typography></Grid>
+       <Grid item xs={10}>
        <label for="option1">
   <input type="checkbox" id="option1" name="options" value="option1"/>
-  Option 1
+  NE1
 </label>
 
 <label for="option2">
   <input type="checkbox" id="option2" name="options" value="option2"/>
-  Option 2
+  NE2
 </label>
 
 <label for="option3">
   <input type="checkbox" id="option3" name="options" value="option3"/>
-  Option 3
+  NE3
 </label> 
+<label for="option4">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE4
+</label> 
+<label for="option5">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE5
+</label> 
+<label for="option6">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE6
+</label> <br></br><br></br>
+<label for="option7">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE7
+</label> 
+<label for="option8">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE8
+</label> 
+<label for="option9">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE9
+</label> 
+<label for="option11">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE11
+</label> 
+<label for="option12">
+  <input type="checkbox" id="option3" name="options" value="option3"/>
+  NE12
+</label> 
+
  </Grid>
  <Grid item xs={12}>
  <Typography variant="h7">S'agit-il d'un patient à risque ? :</Typography>
@@ -269,7 +306,10 @@ function SaisieErreur() {
   <input type="radio" name="options" value="option1" />
   Oui </label>  <label>
   <input type="radio" name="options" value="option2" />
-  Non </label> </Grid>
+  Non </label>
+  <label>
+  <input type="radio" name="options" value="option3" />
+  Je ne sais pas </label><Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>
 
 
   <Grid item xs={12}>
@@ -282,7 +322,7 @@ function SaisieErreur() {
                                     <MenuItem value={30}>Patients à risque du fait de traceurs biologiques </MenuItem>
                                     <MenuItem value={30}>Patients à risque du fait de fragilité(s) connues(s) </MenuItem>
                                 </Select>
-                                <Link href={myPdf}>Consulter les catégories du patient à risque</Link>
+                                
                             </Grid>
                                
                                
@@ -306,7 +346,9 @@ function SaisieErreur() {
   <input type="radio" name="options" value="option1" />
   Oui </label>  <label>
   <input type="radio" name="options" value="option2" />
-  Non </label> </Grid>
+  Non </label>   <label><input type="radio" name="options" value="option2" />
+  Je ne sais pas </label>                              <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
+</Grid>
 
 <Grid item xs={12}>
                                 <Typography variant="h7">Catégorie du médicament à risque :</Typography>
@@ -321,7 +363,6 @@ function SaisieErreur() {
                                     <MenuItem value={30}>Médicaments perfusés parv pompe </MenuItem>
                                     <MenuItem value={30}>Benzodiazépines </MenuItem>
                                 </Select>
-                                <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
                             </Grid>
                                
 
@@ -339,9 +380,9 @@ function SaisieErreur() {
 
   </Grid>
 
-  <Grid item xs={12}>
- <Typography variant="h7">Elle concerne :</Typography><br></br>
-       <label> 
+  <Grid item xs={2}>
+ <Typography variant="h7">Elle concerne :</Typography></Grid>
+ <Grid item xs={10}> <label> 
   <input type="radio" name="options" value="option1" />
  Un médicament qui est <b>Réfrigéré</b> </label>
  <label>
@@ -366,7 +407,9 @@ function SaisieErreur() {
   <input type="radio" name="options" value="option1" />
   Oui </label>  <label>
   <input type="radio" name="options" value="option2" />
-  Non </label> </Grid>
+  Non </label> 
+  <input type="radio" name="options" value="option2" />
+  <label>Je ne sais pas </label><Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> </Grid>
 
   <Grid item xs={12}>
                                 <Typography variant="h7">Catégorie de la voie d'administration à risque :</Typography>
@@ -378,7 +421,7 @@ function SaisieErreur() {
                                     <MenuItem value={30}>La voie intrathécale </MenuItem>
                                 
                                 </Select>
-                                <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
+                               
                             </Grid>
 
                             <Grid item xs={12}>
@@ -417,7 +460,9 @@ function SaisieErreur() {
 
                                     <MenuItem value={10}>Prescription</MenuItem>
                                     <MenuItem value={20}>Dispensation </MenuItem>
+                                    <MenuItem value={30}>Tranport</MenuItem>
                                     <MenuItem value={30}>Administration</MenuItem>
+
                                     <MenuItem value={30}>Suivi et ré-évaluation</MenuItem>
                                 
                                 </Select>
@@ -774,60 +819,6 @@ function SaisieErreur() {
                      </Card>
                        
                 )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
