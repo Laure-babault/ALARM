@@ -520,16 +520,16 @@ function SaisieErreur() {
                         <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur est-elle liée à des facteurs propres aux patients ?</Typography>
-                            <label><input type="radio" name="options" value="option1" />Oui </label> 
-                             <label><input type="radio" name="options" value="option2" />Non </label> </Grid>
+                            <label><input type="radio" name="option1" value="option1" />Oui </label> 
+                             <label><input type="radio" name="option1" value="option2" />Non </label> </Grid>
                         </Card>
                     
                     <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px',marginTop: '20px' }}>
     
                             <Grid item xs={12}>
                                 <Typography variant="h7">L'erreur est-elle liée à des facteurs individuels ?</Typography>
-                                <label><input type="radio" name="options" value="option1" />Oui </label>  <label>
-                                      <input type="radio" name="options" value="option2" />Non </label> </Grid>
+                                <label><input type="radio" name="option2" value="option1" />Oui </label>  <label>
+                                      <input type="radio" name="option2" value="option2" />Non </label> </Grid>
 
                     </Card>
                         
@@ -538,8 +538,8 @@ function SaisieErreur() {
     
                          <Grid item xs={12}>
                          <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'équipe ?</Typography>
-                               <label><input type="radio" name="options" value="option1" /> Oui </label>  
-                               <label><input type="radio" name="options" value="option2" />Non </label> </Grid>
+                               <label><input type="radio" name="option3" value="option1" /> Oui </label>  
+                               <label><input type="radio" name="option3" value="option2" />Non </label> </Grid>
                     </Card>
                         
                          
@@ -547,8 +547,8 @@ function SaisieErreur() {
     
                         <Grid item xs={12}>
                         <Typography variant="h7">L'erreur est-elle liée à des tâches à accomplir  ?</Typography>
-                        <label><input type="radio" name="options" value="option1" /> Oui </label> 
-                        <label><input type="radio" name="options" value="option2" />Non </label> </Grid>
+                        <label><input type="radio" name="option4" value="option1" /> Oui </label> 
+                        <label><input type="radio" name="option4" value="option2" />Non </label> </Grid>
                     </Card>                 
                         
                           
@@ -556,8 +556,8 @@ function SaisieErreur() {
     
                       <Grid item xs={12}>
                       <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'environnement  ?</Typography>
-                      <label><input type="radio" name="options" value="option1" /> Oui </label>  
-                      <label><input type="radio" name="options" value="option2" />Non </label> </Grid>
+                      <label><input type="radio" name="option5" value="option1" /> Oui </label>  
+                      <label><input type="radio" name="option5" value="option2" />Non </label> </Grid>
                     </Card>                      
                         
                         
@@ -565,8 +565,8 @@ function SaisieErreur() {
     
                     <Grid item xs={12}>
                     <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'organisation ?</Typography>
-                    <label><input type="radio" name="options" value="option1" />Oui </label>  
-                    <label><input type="radio" name="options" value="option2" />Non </label> 
+                    <label><input type="radio" name="option6" value="option1" />Oui </label>  
+                    <label><input type="radio" name="option6" value="option2" />Non </label> 
                      </Grid>
                     </Card>                      
                         
@@ -576,8 +576,8 @@ function SaisieErreur() {
                         
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</Typography>
-                            <label><input type="radio" name="options" value="option1" />Oui </label> 
-                            <label><input type="radio" name="options" value="option2" />Non </label>
+                            <label><input type="radio" name="option7" value="option1" />Oui </label> 
+                            <label><input type="radio" name="option7" value="option2" />Non </label>
                          </Grid>
                      </Card>        
              
@@ -588,8 +588,8 @@ function SaisieErreur() {
                      <h2>ETAPE 4 : Qu'est ce qui aurait pu empêcher la survenue de l'événement ?</h2>
                      <Grid item xs={12}>
                      <Typography variant="h7">Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
-                     <label><input type="radio" name="options" value="option1" />Oui </label> 
-                     <label> <input type="radio" name="options" value="option2" />Non </label> 
+                     <label><input type="radio" name="option8" value="option1" />Oui </label> 
+                     <label> <input type="radio" name="option8" value="option2" />Non </label> 
                                 </Grid><br></br>
                      <Grid item xs={12}>
                      <Typography variant="h7">Si non , quelles ont été les défebses manquantes ou non opérationnelles ?</Typography>
