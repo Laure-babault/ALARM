@@ -447,9 +447,11 @@ function SaisieErreur() {
                              
                                 <Select> 
 
-                                    <MenuItem value={10}>hello </MenuItem>
-                                    <MenuItem value={20}>hello  </MenuItem>
-                                    <MenuItem value={30}>hello </MenuItem>
+                                    <MenuItem value={10}>Très probable </MenuItem>
+                                    <MenuItem value={20}>Très <b>peu</b> probable  </MenuItem>
+                                    <MenuItem value={30}>Peu probable </MenuItem>
+                                    <MenuItem value={30}>Probable </MenuItem>
+                                    <MenuItem value={30}>Très probable à certain </MenuItem>
                                 
                                 </Select>
                     
@@ -464,9 +466,11 @@ function SaisieErreur() {
                              
                                 <Select> 
 
-                                    <MenuItem value={10}>hello </MenuItem>
-                                    <MenuItem value={20}>hello  </MenuItem>
-                                    <MenuItem value={30}>hello </MenuItem>
+                                    <MenuItem value={10}>Très bon </MenuItem>
+                                    <MenuItem value={20}>Bon  </MenuItem>
+                                    <MenuItem value={30}>Moyen </MenuItem>
+                                    <MenuItem value={30}>Faible </MenuItem>
+                                    <MenuItem value={30}>Inexistant </MenuItem>
                                 
                                 </Select>
                     
@@ -479,9 +483,9 @@ function SaisieErreur() {
                              
                                 <Select> 
 
-                                    <MenuItem value={10}>hello </MenuItem>
-                                    <MenuItem value={20}>hello  </MenuItem>
-                                    <MenuItem value={30}>hello </MenuItem>
+                                    <MenuItem value={10}>1 à 14 Risque acceptable </MenuItem>
+                                    <MenuItem value={20}>45 à 125 Risque inacceptable  </MenuItem>
+                                    <MenuItem value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
                                 
                                 </Select>  </Grid>
                             
