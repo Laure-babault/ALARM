@@ -101,23 +101,23 @@ function SaisieErreur() {
 
                 {/* contenu de l'étape 1 */}
                 {activeStep === 0 && (
-                    <Card style={{ backgroundColor: '#fcfbfc' , boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)' , padding: '20px'}}>
+                    <Card style={{ backgroundColor: '#F5B7B1 ' , boxShadow: '5px 5px 5px #F1948A ' , padding: '20px'}}>
                         <h2>Je m'identifie ( Etape Optionnel ) </h2>
-                        <Grid container spacing={3}>
-                               <Grid item xs={12} sm={4}>
-                                  <Typography variant="h7">Nom :</Typography>
-                                     <TextField
-                                       hiddenLabel
-                                       id="filled-hidden-label-small"
-                                       size="small"
-                                       />
-
+                        <Grid container spacing={2}>
+                        <Grid item xs={12} sm={4}>
+                            <Typography variant="h7">Nom :</Typography>
+                               <TextField
+                                 hiddenLabel
+                                 id="filled-hidden-label-small"
+                                 style={{backgroundColor: "white" }}
+                                 size="small"/> 
                             </Grid>
                             <Grid item xs={12} sm={4}>
                             <Typography variant="h7">Prénom :</Typography>
                                <TextField
                                  hiddenLabel
                                  id="filled-hidden-label-small"
+                                 style={{backgroundColor: "white" }}
                                  size="small"/> 
                             </Grid>
 
@@ -126,13 +126,14 @@ function SaisieErreur() {
                                <TextField
                                   hiddenLabel
                                   id="filled-hidden-label-small"
+                                  style={{backgroundColor: "white" }}
                                  size="small"/>
                             </Grid>
                         </Grid>
 
                                <h2>Evénement </h2>
                                
-                    <Grid container spacing={3} justifyContent={'left'}>
+                    <Grid container spacing={2} justifyContent={'left'}>
                           <Grid item xs={12}>
                              <Typography variant="h7">Date de l'analyse :</Typography>  <input type="date"></input>
                           </Grid>
@@ -153,11 +154,11 @@ function SaisieErreur() {
                 {/* contenu de l'étape 2 */}
                 {activeStep === 1 && (
                 
-                     <><Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' }}>
+                     <><Card style={{ backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' }}>
                         <h2>ETAPE 1 : Quel est le problème ? (Description de l'événement) </h2>
 
 
-                        <Grid container spacing={3} justifyContent={'left'}>
+                        <Grid container spacing={2} justifyContent={'left'}>
                             <Grid item xs={12}>
                                 <Typography variant="h7">Date de la déclaration :</Typography>
                                 <input type='date'></input>
@@ -170,10 +171,10 @@ function SaisieErreur() {
                             </Grid>
 
                             <Grid item xs={12}>
-                                <Typography variant="h7">Pôle :</Typography>
-                                <FormControl>
+                                <Typography variant="h7">Service :</Typography>
+                                
 
-                                <Select >
+                                <Select style={{ height: '50%', width: '30%', backgroundColor: "white" }}>
 
                                     <MenuItem value={10}>Chirurigie</MenuItem>
                                     <MenuItem value={20}>Médico-Technique</MenuItem>
@@ -182,20 +183,10 @@ function SaisieErreur() {
                                     <MenuItem value={30}>Mère enfant</MenuItem>
                                     <MenuItem value={30}>Plateau Technique</MenuItem>
 
-                                </Select></FormControl>
-
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                <Typography variant="h7">Service :</Typography>
-                                <Select>
-
-                                    <MenuItem value={10}>hello</MenuItem>
-                                    <MenuItem value={20}>Hello</MenuItem>
-                                    <MenuItem value={30}>Hello</MenuItem>
                                 </Select>
 
                             </Grid>
+
 
 
                             <Grid item xs={12}>
@@ -249,9 +240,9 @@ function SaisieErreur() {
                     
                     
                     
-                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' , marginTop: '20px' }}>
+                    <Card style={{ backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' , marginTop: '20px' }}>
                         <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
-                        <Grid container spacing={3}>
+                        <Grid container spacing={2}>
                             <Grid item xs={12}>
 
                                <Grid item xs={6}>
@@ -287,7 +278,7 @@ function SaisieErreur() {
                                 <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie du patient à risque :</Typography>
                              
-                                        <Select> 
+                                        <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
                                             <MenuItem value={10}>Patient à risque du fait de leur age ou de leur(s) pathologie(s)</MenuItem>
                                             <MenuItem value={20}>Patient à risque du faite de la compléxité de leur traitement</MenuItem>
                                             <MenuItem value={30}>Patients à risque du fait de traceurs biologiques </MenuItem>
@@ -304,6 +295,8 @@ function SaisieErreur() {
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
+                                    style={{ width: '95%', backgroundColor: "white" }}
+
                                     />
                                 </Grid>
 
@@ -318,7 +311,7 @@ function SaisieErreur() {
                                  <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie du médicament à risque :</Typography>
                              
-                                        <Select> 
+                                     <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
                                             <MenuItem value={10}>Anti-cancéreux</MenuItem>
                                             <MenuItem value={20}>Morphiniques</MenuItem>
                                             <MenuItem value={30}>Electrolyse injectables </MenuItem>
@@ -336,6 +329,8 @@ function SaisieErreur() {
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
+                                    style={{ width: '95%', backgroundColor: "white" }}
+
                                     />
                                  </Grid>
 
@@ -359,7 +354,7 @@ function SaisieErreur() {
 
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie de la voie d'administration à risque :</Typography>
-                                        <Select> 
+                                        <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
                                             <MenuItem value={10}>La voie Injectable Intra-Veineuse</MenuItem>
                                             <MenuItem value={20}>La voie orale dès l'écrasement du comprimé ou ouverture de la gélule </MenuItem>
                                             <MenuItem value={30}>La voie intrathécale </MenuItem>
@@ -373,6 +368,8 @@ function SaisieErreur() {
                                               hiddenLabel
                                               id="filled-hidden-label-small"
                                               size="small"
+                                              style={{ width: '95%', backgroundColor: "white" }}
+
                                             />
                                     </Grid>
 
@@ -380,7 +377,7 @@ function SaisieErreur() {
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Degré de réalisation :</Typography>
                              
-                                        <Select> 
+                                        <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
                                             <MenuItem value={10}>Erreur avérée et interceptée avant atteinte du patient</MenuItem>
                                             <MenuItem value={20}>Erreur avérée et non interceptée : elle a atteint le patient </MenuItem>
                                             <MenuItem value={30}>Erreur potentielle : Evènement Porteur de Risque (EPR) </MenuItem>
@@ -393,7 +390,7 @@ function SaisieErreur() {
                                     <Grid item xs={12}>
                                         <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
                                     
-                                        <Select> 
+                                        <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
 
                                             <MenuItem value={10}>Prescription</MenuItem>
                                             <MenuItem value={20}>Dispensation </MenuItem>
@@ -419,15 +416,15 @@ function SaisieErreur() {
                         
                         
                         
-                        <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' , marginTop: '20px' }}>
+                        <Card style={{  backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' , marginTop: '20px' }}>
                             <h2>Cotation de l'événement</h2>
-                            <Grid container spacing={3}>
+                            <Grid container spacing={2}>
                                
        
                             <Grid item xs={12}>
                                 <Typography variant="h7">Gravité :</Typography>
                              
-                                <Select> 
+                                <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
 
                                     <MenuItem value={10}>Risque innacceptable </MenuItem>
                                     <MenuItem value={20}>Risque acceptable sous controle  </MenuItem>
@@ -441,11 +438,11 @@ function SaisieErreur() {
                                </Grid>
 
 
-
+                               <Grid container spacing={2}>
                                <Grid item xs={12}>
                                 <Typography variant="h7">Occurence :</Typography>
                              
-                                <Select> 
+                                <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
 
                                     <MenuItem value={10}>Très probable </MenuItem>
                                     <MenuItem value={20}>Très <b>peu</b> probable  </MenuItem>
@@ -457,14 +454,14 @@ function SaisieErreur() {
                     
                             
 
-
+                               </Grid>
                                </Grid>
 
-
+                               <Grid container spacing={2}>
                                <Grid item xs={12}>
                                 <Typography variant="h7">Niveau de  maîtrise  :</Typography>
                              
-                                <Select> 
+                                <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
 
                                     <MenuItem value={10}>Très bon </MenuItem>
                                     <MenuItem value={20}>Bon  </MenuItem>
@@ -476,18 +473,19 @@ function SaisieErreur() {
                     
                             
 
-
+                            </Grid>
                                </Grid>
+                               <Grid container spacing={2}>
                                <Grid item xs={12}>
                                 <Typography variant="h7">Criticité :</Typography>
                              
-                                <Select> 
+                                <Select style={{ height: ' 50%' ,width: '30%', backgroundColor: "white" }}> 
 
                                     <MenuItem value={10}>1 à 14 Risque acceptable </MenuItem>
                                     <MenuItem value={20}>45 à 125 Risque inacceptable  </MenuItem>
                                     <MenuItem value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
                                 
-                                </Select>  </Grid>
+                                </Select>  </Grid></Grid>
                             
                         </Card> 
                        
@@ -499,7 +497,7 @@ function SaisieErreur() {
 
                 {/* contenu de l'étape 3 */}
                 {activeStep === 2 && (
-                     <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)' , padding: '20px'}}>
+                     <Card style={{  backgroundColor: '#D6EAF8 ' , boxShadow: '5px 5px 5px #AED6F1  ' , padding: '20px'}}>
                      <h2>ETAPE 2 : Quels sont les dysfonctionnements, les erreurs ?</h2>
                      <Grid item xs={12}>
                                 
@@ -516,7 +514,7 @@ function SaisieErreur() {
                      </Card>
                 )}
                 {activeStep === 3 && (
-                     <><Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
+                     <><Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
                         <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur est-elle liée à des facteurs propres aux patients ?</Typography>
@@ -524,7 +522,7 @@ function SaisieErreur() {
                              <label><input type="radio" name="option1" value="option2" />Non </label> </Grid>
                         </Card>
                     
-                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px',marginTop: '20px' }}>
+                    <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px',marginTop: '20px' }}>
     
                             <Grid item xs={12}>
                                 <Typography variant="h7">L'erreur est-elle liée à des facteurs individuels ?</Typography>
@@ -534,7 +532,7 @@ function SaisieErreur() {
                     </Card>
                         
                         
-                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px',marginTop: '20px' }}>
+                    <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px',marginTop: '20px' }}>
     
                          <Grid item xs={12}>
                          <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'équipe ?</Typography>
@@ -543,7 +541,7 @@ function SaisieErreur() {
                     </Card>
                         
                          
-                     <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
+                     <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
     
                         <Grid item xs={12}>
                         <Typography variant="h7">L'erreur est-elle liée à des tâches à accomplir  ?</Typography>
@@ -552,7 +550,7 @@ function SaisieErreur() {
                     </Card>                 
                         
                           
-                     <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px',marginTop: '20px' }}>
+                     <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px',marginTop: '20px' }}>
     
                       <Grid item xs={12}>
                       <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'environnement  ?</Typography>
@@ -561,7 +559,7 @@ function SaisieErreur() {
                     </Card>                      
                         
                         
-                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
+                    <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
     
                     <Grid item xs={12}>
                     <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant l'organisation ?</Typography>
@@ -572,7 +570,7 @@ function SaisieErreur() {
                         
                         
                         
-                    <Card style={{ backgroundColor: '#fcfbfc', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)', padding: '20px' ,marginTop: '20px'}}>
+                    <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
                         
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</Typography>
@@ -584,7 +582,7 @@ function SaisieErreur() {
                         </>
      )}
          {activeStep === 4 && (
-                     <Card style={{ backgroundColor: '#fcfbfc' , boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)' , padding: '20px'}}>
+                     <Card style={{ backgroundColor: '#FDEBD0' , boxShadow: '5px 5px 5px #FAD7A0 ' , padding: '20px'}}>
                      <h2>ETAPE 4 : Qu'est ce qui aurait pu empêcher la survenue de l'événement ?</h2>
                      <Grid item xs={12}>
                      <Typography variant="h7">Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
@@ -612,7 +610,7 @@ function SaisieErreur() {
 
 
 {activeStep === 5 && (
-                     <Card style={{ backgroundColor: '#fcfbfc' , boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.3)' , padding: '20px'}}>
+                     <Card style={{ backgroundColor: '#FAD7A0 ' , boxShadow: '5px 5px 5px #E59866 ' , padding: '20px'}}>
                      <h2>ETAPE 5 : Quelles sont les actions correctives et préventives ?</h2>
                             <Grid item xs={12}>
                             <Grid container spacing={2}>
@@ -649,6 +647,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={1}>
@@ -656,6 +655,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={2}>
@@ -663,6 +663,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={2}>
@@ -670,6 +671,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={1}>
@@ -677,6 +679,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={1}>
@@ -684,6 +687,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={2}>
@@ -691,6 +695,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                             <Grid item xs={1}>
@@ -698,6 +703,7 @@ function SaisieErreur() {
                         hiddenLabel
                         id="filled-hidden-label-small"
                         size="small"
+                        style={{ width: '95%', backgroundColor: "white" }}
                         />
                             </Grid>
                     </Grid>
