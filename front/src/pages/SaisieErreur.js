@@ -592,7 +592,7 @@ function SaisieErreur() {
                      <label> <input type="radio" name="option8" value="option2" />Non </label> 
                                 </Grid><br></br>
                      <Grid item xs={12}>
-                     <Typography variant="h7">Si non , quelles ont été les défebses manquantes ou non opérationnelles ?</Typography>
+                     <Typography variant="h7">Si non , quelles ont été les défenses manquantes ou non opérationnelles ?</Typography>
                                 <br></br>  <TextField
                                     id="outlined-multiline-static"
                                     multiline
