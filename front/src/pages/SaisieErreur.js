@@ -27,24 +27,26 @@ const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape
 function SaisieErreur() {
     const [value, setValue] = useState('option1');
     const [checked, setChecked] = useState(false);
-
+    const [valuee, setValuee] = useState('no');
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-    const [showTextField, setShowTextField] = useState(false);
-    const handleRadioChange = (event) => {
-      setShowTextField(event.target.value === 'option2')
+     
+  const handleChange2 = (event) => {
+    setValuee(event.target.valuee);
+  };
+    
+
+
       
-    }; 
-
-
-
-    const handleChange1 = (event) => {
+      const handleChangeOption1 = (event) => {
         setChecked(event.target.checked);
       };
-
-
-
+    
+      const handleChangeTextField = (event) => {
+        setValue(event.target.value);
+      };
+    
 
 
 
@@ -542,87 +544,143 @@ function SaisieErreur() {
                 {activeStep === 3 && (
                      <><Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
                         <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
-                      
-                        <Grid item xs={12}>
-                            <Typography variant="h7">L'erreur est-elle liée à des facteurs propres aux patients ?</Typography>
-        
-
-                            <Grid item xs={12}>
-
-                            
-            <FormControl>
+                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 "}}>
+                        <Grid item xs={12} md={5} > 
+                            <Typography variant="h7">L'erreur est-elle liée à des facteurs propres aux patients ?</Typography></Grid>
+                            <Grid item xs={12} md={7} >  <FormControl >
               
-                <RadioGroup value={value} onChange={handleChange}
+                <RadioGroup row value={value} onChange={handleChange}
                     defaultValue="yes"
                     name="radio-buttons-group"
                 >
-
-
-
-
-                     
-                  < Grid item xs={12}>
-
-                    <FormControlLabel
-                    value="option2"
-       
-                    label="Oui"
-                    control={<Radio />}
-                    onChange={handleRadioChange}
-                  />
-                  {showTextField && 
                   
-    <FormControlLabel
-      control={
-        
-        <Checkbox
-          checked={checked}
-          onChange={handleChange1}
-          name="checked"
-          color="primary"
-        />
-      }
-      
-       />  &&  <TextField
-       hiddenLabel
-       id="filled-hidden-label-small"
-       size="small"
-       style={{ width: '95%', backgroundColor: "white" }}
-
-     />
-     
-     && <Typography>hello</Typography>
-     
-     
-     
-     
-     
-     
-     }
-        </Grid>
-
-
-
-
-
-
-
-
-
-
-
-                 < Grid item xs={6}>
-                  <FormControlLabel
+        <FormControlLabel
         value="option1"
         control={<Radio />}
         label="Non"
-        onChange={handleRadioChange}
-        
-      />{! showTextField && ! <TextField  />  } </Grid>
-                </RadioGroup>
-            </FormControl>
+        onChange={handleChange}
+        disabled={checked } 
+       
+      />
+                  
+                    <FormControlLabel
+                    value="option2"
+                    checked={checked}
+                    label="Oui"
+                    control={<Radio />}
+                    onChange={handleChangeOption1}
+           
+                  />
+  
+</RadioGroup>  </FormControl></Grid>
+
+ <Grid item xs={12} >
+<div>
+      <FormControlLabel
+        control={
+          <Checkbox
+           
+            onChange={handleChangeOption1}
+            name="checkedOption1"
+            color="primary"
+          />
+        }
+        label="L'état de santé du patient est-il grave,complexe ?"
+      />
+      <TextField
+          hiddenLabel 
+           defaultValue="Grave / Complexe"
+           id="filled-hidden-label-small"
+           size="small"
+           style={{ width: '30%', backgroundColor: "white" }}
+           onChange={handleChangeTextField}
+           disabled={!checked }  
+
+      />
+   
+    </div></Grid>
+   
+                        <Grid item xs={12} md={2}> 
+                            <Typography variant="h7">Cela était-il évitable?</Typography></Grid>
+                            <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+        <FormControlLabel value="no" control={<Radio />} label="Non" />
+      </RadioGroup>
+    </FormControl></Grid>
+
+
+</Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      
- </Grid></Grid>
+
+            
+                
+         
+     
+
                         </Card>
                     
                     <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px',marginTop: '20px' }}>
