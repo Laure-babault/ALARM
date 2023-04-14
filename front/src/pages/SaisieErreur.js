@@ -17,13 +17,39 @@ import myPdf1 from '../pdf/medicaments_risque.pdf';
 import myPdf2 from '../pdf/administration_risque.pdf';
 import myPdf3 from '../pdf/cotation.pdf';
 import { FormControl } from '@mui/material/';
-
+import FormLabel from '@mui/material/FormLabel'
+import Radio from '@mui/material/Radio';
+import { Checkbox} from '@material-ui/core';
 
 //Definition des nom des étapes sur le menu
 const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape 5', 'Validation'];
 
 function SaisieErreur() {
-   
+    const [value, setValue] = useState('option1');
+    const [checked, setChecked] = useState(false);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+    const [showTextField, setShowTextField] = useState(false);
+    const handleRadioChange = (event) => {
+      setShowTextField(event.target.value === 'option2')
+      
+    }; 
+
+
+
+    const handleChange1 = (event) => {
+        setChecked(event.target.checked);
+      };
+
+
+
+
+
+
+
+
 
     const [activeStep, setActiveStep] = React.useState(0);
     const [skipped, setSkipped] = React.useState(new Set());
@@ -516,10 +542,87 @@ function SaisieErreur() {
                 {activeStep === 3 && (
                      <><Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px' ,marginTop: '20px'}}>
                         <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
+                      
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur est-elle liée à des facteurs propres aux patients ?</Typography>
-                            <label><input type="radio" name="option1" value="option1" />Oui </label> 
-                             <label><input type="radio" name="option1" value="option2" />Non </label> </Grid>
+        
+
+                            <Grid item xs={12}>
+
+                            
+            <FormControl>
+              
+                <RadioGroup value={value} onChange={handleChange}
+                    defaultValue="yes"
+                    name="radio-buttons-group"
+                >
+
+
+
+
+                     
+                  < Grid item xs={12}>
+
+                    <FormControlLabel
+                    value="option2"
+       
+                    label="Oui"
+                    control={<Radio />}
+                    onChange={handleRadioChange}
+                  />
+                  {showTextField && 
+                  
+    <FormControlLabel
+      control={
+        
+        <Checkbox
+          checked={checked}
+          onChange={handleChange1}
+          name="checked"
+          color="primary"
+        />
+      }
+      
+       />  &&  <TextField
+       hiddenLabel
+       id="filled-hidden-label-small"
+       size="small"
+       style={{ width: '95%', backgroundColor: "white" }}
+
+     />
+     
+     && <Typography>hello</Typography>
+     
+     
+     
+     
+     
+     
+     }
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+                 < Grid item xs={6}>
+                  <FormControlLabel
+        value="option1"
+        control={<Radio />}
+        label="Non"
+        onChange={handleRadioChange}
+        
+      />{! showTextField && ! <TextField  />  } </Grid>
+                </RadioGroup>
+            </FormControl>
+     
+ </Grid></Grid>
                         </Card>
                     
                     <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px',marginTop: '20px' }}>
@@ -601,6 +704,7 @@ function SaisieErreur() {
                             </Grid>
                  
                      </Card>
+                     
                        
                 )}
 
