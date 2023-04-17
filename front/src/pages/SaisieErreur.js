@@ -340,10 +340,7 @@ function SaisieErreur() {
 
 
                     </Card>
-                    
-                    
-                    
-                    
+
                     <Card style={{ backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' , marginTop: '20px' }}>
                         <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
                         <Grid container spacing={2}>
@@ -351,8 +348,8 @@ function SaisieErreur() {
 
                                <Grid item xs={6}>
                                  <Typography variant="h7">Est-ce un never-event :</Typography>
-                                 <label> <input type="radio" name="options" value="option1" /> Oui </label>  
-                                 <label> <input type="radio" name="options" value="option2" />Non </label>
+                                 <label> <input type="radio" name="options1" value="option1" /> Oui </label>  
+                                 <label> <input type="radio" name="options1" value="option2" />Non </label>
                             </Grid>
                                 </Grid> 
                                 <Grid item xs={2}>
@@ -373,9 +370,9 @@ function SaisieErreur() {
                                  </Grid>
                                 <Grid item xs={12}>
                                     <Typography variant="h7">S'agit-il d'un patient à risque ? :</Typography>
-                                        <label><input type="radio" name="options" value="option1" /> Oui </label>  
-                                        <label> <input type="radio" name="options" value="option2" />Non </label>
-                                        <label><input type="radio" name="options" value="option3" />Je ne sais pas </label>
+                                        <label><input type="radio" name="options2" value="option3" /> Oui </label>  
+                                        <label> <input type="radio" name="options2" value="option4" />Non </label>
+                                        <label><input type="radio" name="options2" value="option5" />Je ne sais pas </label>
                                         <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>
 
 
@@ -406,9 +403,9 @@ function SaisieErreur() {
 
                                  <Grid item xs={12}>
                                      <Typography variant="h7">S'agit-il d'un médicament à risque ? :</Typography>
-                                            <label> <input type="radio" name="options" value="option1" /> Oui </label>  
-                                            <label><input type="radio" name="options" value="option2" />Non </label>  
-                                            <label><input type="radio" name="options" value="option2" />Je ne sais pas </label>                              
+                                            <label> <input type="radio" name="options3" value="option6" /> Oui </label>  
+                                            <label><input type="radio" name="options3" value="option7" />Non </label>  
+                                            <label><input type="radio" name="options3" value="option8" />Je ne sais pas </label>                              
                                             <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
                             </Grid>
 
@@ -440,20 +437,20 @@ function SaisieErreur() {
 
                                   <Grid item xs={2}><Typography variant="h7">Elle concerne :</Typography></Grid>
                                   <Grid item xs={10}> 
-                                    <label> <input type="radio" name="options" value="option1" />Un médicament qui est <b>Réfrigéré</b> </label>
-                                    <label><input type="radio" name="options" value="option2" />Un médicament qui est <b>Non Réfrigéré</b> </label><br></br>
-                                    <label><input type="radio" name="options" value="option3" />Un supéfiant </label><br></br>
-                                    <label><input type="radio" name="options" value="option4" />Une chimiothérapie <b>Réfrigérée</b> </label>
-                                    <label><input type="radio" name="options" value="option5" /> Une chimiothérapie <b>Non Réfrigérée</b> </label>
+                                    <label> <input type="radio" name="options4" value="option9" />Un médicament qui est <b>Réfrigéré</b> </label>
+                                    <label><input type="radio" name="options4" value="option10" />Un médicament qui est <b>Non Réfrigéré</b> </label><br></br>
+                                    <label><input type="radio" name="options4" value="option11" />Un supéfiant </label><br></br>
+                                    <label><input type="radio" name="options4" value="option12" />Une chimiothérapie <b>Réfrigérée</b> </label>
+                                    <label><input type="radio" name="options4" value="option13" /> Une chimiothérapie <b>Non Réfrigérée</b> </label>
                                   </Grid>
 
 
 
                                   <Grid item xs={12}>
                                       <Typography variant="h7">S'agit-il d'un e voie d'administration à risque ? :</Typography>
-                                        <label> <input type="radio" name="options" value="option1" />Oui </label> 
-                                        <label><input type="radio" name="options" value="option2" /> Non </label> 
-                                        <label> <input type="radio" name="options" value="option2" />Je ne sais pas</label><Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> 
+                                        <label> <input type="radio" name="options5" value="option14" />Oui </label> 
+                                        <label><input type="radio" name="options5" value="option15" /> Non </label> 
+                                        <label> <input type="radio" name="options5" value="option16" />Je ne sais pas</label><Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> 
                                      </Grid>
 
                                   <Grid item xs={12}>
@@ -511,13 +508,6 @@ function SaisieErreur() {
 
                     
                         </Card>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                         <Card style={{  backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' , marginTop: '20px' }}>
@@ -595,9 +585,8 @@ function SaisieErreur() {
                        
                         </>
 
-
-
                 )}
+
 
                 {/* contenu de l'étape 3 */}
                 {activeStep === 2 && (
@@ -764,12 +753,6 @@ function SaisieErreur() {
 </Grid>
 
 
-
-
-
-
-
-
 <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                         <Grid item xs={12} md={6} > 
                             </Grid>
@@ -814,16 +797,10 @@ function SaisieErreur() {
 </Grid>
 
 
-
-
-
-
-
 <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                         <Grid item xs={12} md={6} > 
                             </Grid>
                            
-
  <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -905,14 +882,6 @@ function SaisieErreur() {
 
 </Grid></Grid>
  </Card>
-
-
-
-
-
-
-
-
 
 
 
@@ -3261,11 +3230,10 @@ function SaisieErreur() {
            size="small"
            style={{ width: '30%', backgroundColor: "white"}}
            onChange={handleChangeTextField}
-        
-
       />
    
-    </div></Grid>
+    </div>
+    </Grid>
    
                         <Grid item xs={12} md={2}> 
                             <Typography variant="h7" style={{paddingLeft:"31px"}}>Cela était-il évitable?</Typography></Grid>
