@@ -3,7 +3,6 @@ package com.alarm.dao.implementations;
 import java.util.List;
 
 import com.alarm.dao.interfaces.InterfaceCrexDAO;
-import com.alarm.entity.Analyse;
 import com.alarm.entity.Crex;
 
 import jakarta.persistence.EntityManager;

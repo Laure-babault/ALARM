@@ -3,7 +3,6 @@ package com.alarm.dao.implementations;
 import java.util.List;
 
 import com.alarm.dao.interfaces.InterfaceEtapeCircuitMedicamentDAO;
-import com.alarm.entity.Crex;
 import com.alarm.entity.EtapeCircuitMedicament;
 
 import jakarta.persistence.EntityManager;
