@@ -10,8 +10,8 @@ public interface InterfaceErreurMedicamenteuseDAO {
 	
 	List<Erreur_medicamenteuse> getAll(); 
 	
-	void addAnalyse(Erreur_medicamenteuse analyse);
+	void addErreurMedicamenteuse(Erreur_medicamenteuse erreur_medicamenteuse);
 	
-	void updateAnalyse(Erreur_medicamenteuse analyse);
+	void updateErreurMedicamenteuse(Erreur_medicamenteuse erreur_medicamenteuse);
 
 }

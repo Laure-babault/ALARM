@@ -10,8 +10,8 @@ public interface InterfaceCrexDAO {
 
 	List<Crex> getAll();
 
-	void addAnalyse(Crex analyse);
+	void addCrex(Crex crex);
 
-	void updateAnalyse(Crex analyse);
+	void updateCrex(Crex crex);
 
 }

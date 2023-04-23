@@ -10,8 +10,8 @@ public interface InterfaceActionQuestionDAO {
 
 	List<Action_question> getAll();
 
-	void addAnalyse(Action_question analyse);
+	void addActionQuestion(Action_question action_question);
 
-	void updateAnalyse(Action_question analyse);
+	void updateActionQuestion(Action_question action_question);
 
 }
