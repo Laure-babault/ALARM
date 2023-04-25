@@ -27,6 +27,16 @@ const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape
 function SaisieErreur() {
     const [value, setValue] = useState('option1');
     const [valuee, setValuee] = useState('no');
+    
+    const [checked, setChecked] = useState(false);
+   
+
+
+
+    const handleChange3 = (event) => {
+      setChecked(event.target.checked);
+    };
+
 
 
   const handleChange = (event) => {
@@ -127,6 +137,15 @@ function SaisieErreur() {
         container.style.display = "none";
       };
 
+      const handleNoClick8 = () => {
+        const container = document.getElementById("container8",);
+        container.style.display = "block";
+      };
+      const handleYesClick8 = () => {
+        const container = document.getElementById("container8");
+        container.style.display = "none";
+      };
+
 
 
     const [activeStep, setActiveStep] = React.useState(0);
@@ -206,8 +225,27 @@ function SaisieErreur() {
                 {/* contenu de l'étape 1 */}
                 {activeStep === 0 && (
                     <Card style={{ backgroundColor: '#F5B7B1 ' , boxShadow: '5px 5px 5px #F1948A ' , padding: '20px'}}>
-                        <h2>Je m'identifie ( Etape Optionnel ) </h2>
-                        <Grid container spacing={2}>
+                        <Grid container xs={12}>
+      <Grid item sm={4}>
+       
+        <div><h2>Je m'identifie ( Etape Optionnel ) </h2></div>
+      </Grid>
+      <Grid item sm={8} style={{marginTop:'13px'}}>
+        <div> <FormControl >
+      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+        <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick8} label="Oui" />
+        <FormControlLabel value="no" control={<Radio />}   onClick={handleNoClick8} label="Non" />
+      </RadioGroup>
+    </FormControl></div>
+      </Grid>
+    </Grid>
+                      
+                      
+          
+                        <Grid item xs={12}>  
+          
+                                <Container id="container8" >
+                                <Grid container spacing={2}>
                         <Grid item xs={12} sm={4}>
                             <Typography variant="h7">Nom :</Typography>
                                <TextField
@@ -234,6 +272,20 @@ function SaisieErreur() {
                                  size="small"/>
                             </Grid>
                         </Grid>
+                 </Container></Grid> 
+
+
+
+
+
+
+
+
+
+
+
+
+             
 
                                <h2>Evénement </h2>
                                
@@ -352,7 +404,7 @@ function SaisieErreur() {
                       
                                            <Grid item xs={2}> 
                          <Typography variant="h7" >Est-ce un never-event :</Typography>       </Grid>                
-                         <Grid item xs={10}>    <FormControl component="fieldset">
+                         <Grid item xs={10} >    <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
                            <FormControlLabel value="no" control={<Radio />} label="Non" />
@@ -410,26 +462,170 @@ function SaisieErreur() {
 
                                 <Grid item xs={2}>
                                    <Typography variant="h7">Le(s)quel(s) :</Typography></Grid>
-                                <Grid item xs={10}>
-                                    <label for="option1"><input type="checkbox" id="option1" name="options" value="option1"/>NE1</label>
-                                    <label for="option2"><input type="checkbox" id="option2" name="options" value="option2"/> NE2</label>
-                                    <label for="option3"> <input type="checkbox" id="option3" name="options" value="option3"/> NE3</label> 
-                                    <label for="option4"><input type="checkbox" id="option3" name="options" value="option3"/>NE4</label> 
-                                    <label for="option5"><input type="checkbox" id="option3" name="options" value="option3"/>NE5</label> 
-                                    <label for="option6"><input type="checkbox" id="option3" name="options" value="option3"/>NE6</label> <br></br><br></br>
-                                    <label for="option7"><input type="checkbox" id="option3" name="options" value="option3"/>NE7</label> 
-                                    <label for="option8"><input type="checkbox" id="option3" name="options" value="option3"/> NE8</label> 
-                                    <label for="option9"><input type="checkbox" id="option3" name="options" value="option3"/>NE9</label> 
-                                    <label for="option11"><input type="checkbox" id="option3" name="options" value="option3"/>NE11</label> 
-                                    <label for="option12"><input type="checkbox" id="option3" name="options" value="option3"/>NE12</label> 
+                                <Grid item xs={6}>
+
+                              <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked1"
+          color="primary"
+        />
+      }
+      label="NE1"
+    />
+                    <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked2"
+          color="primary"
+        />
+      }
+      label="NE2"
+    />
+                <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked3"
+          color="primary"
+        />
+      }
+      label="NE3"
+    />
+
+
+
+<FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked4"
+          color="primary"
+        />
+      }
+      label="NE4"
+    />
+                <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked5"
+          color="primary"
+        />
+      }
+      label="NE5"
+    />
+                    <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked6"
+          color="primary"
+        />
+      }
+      label="NE6"
+    />
+                <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked7"
+          color="primary"
+        />
+      }
+      label="NE7"
+    />
+
+<FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked8"
+          color="primary"
+        />
+      }
+      label="NE8"
+    />
+                    <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked9"
+          color="primary"
+        />
+      }
+      label="NE9"
+    />
+                    <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked10"
+          color="primary"
+        />
+      }
+      label="NE10"
+    />
+                    <FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked11"
+          color="primary"
+        />
+      }
+      label="NE11"
+    />
+
+<FormControlLabel control={
+                              <Checkbox
+          checked={checked}
+          onChange={handleChange3}
+          name="checked12"
+          color="primary"
+        />
+      }
+      label="NE12"
+    />
+               
 
                                  </Grid>
-                                <Grid item xs={12}>
-                                    <Typography variant="h7">S'agit-il d'un patient à risque ? :</Typography>
-                                        <label><input type="radio" name="options2" value="option3" /> Oui </label>  
-                                        <label> <input type="radio" name="options2" value="option4" />Non </label>
-                                        <label><input type="radio" name="options2" value="option5" />Je ne sais pas </label>
-                                        <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>
+                                 <Grid item xs={6}> 
+                         <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>                           
+                          <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>                
+                         <Grid item xs={6} >    <FormControl component="fieldset">
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                           <FormControlLabel value="no" control={<Radio />} label="Non" />
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+                           
+
+                         </RadioGroup>
+                       </FormControl>
+                       </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                                 <Grid item xs={12}>
@@ -457,13 +653,34 @@ function SaisieErreur() {
                                     />
                                 </Grid>
 
-                                 <Grid item xs={12}>
-                                     <Typography variant="h7">S'agit-il d'un médicament à risque ? :</Typography>
-                                            <label> <input type="radio" name="options3" value="option6" /> Oui </label>  
-                                            <label><input type="radio" name="options3" value="option7" />Non </label>  
-                                            <label><input type="radio" name="options3" value="option8" />Je ne sais pas </label>                              
-                                            <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
-                            </Grid>
+
+
+                                <Grid item xs={7}> 
+                         <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>                           
+                         <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link></Grid>                
+                         <Grid item xs={5} >    <FormControl component="fieldset">
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                           <FormControlLabel value="no" control={<Radio />} label="Non" />
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+                           
+
+                         </RadioGroup>
+                       </FormControl>
+                       </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                                  <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie du médicament à risque :</Typography>
@@ -491,23 +708,90 @@ function SaisieErreur() {
                                     />
                                  </Grid>
 
-                                  <Grid item xs={2}><Typography variant="h7">Elle concerne :</Typography></Grid>
-                                  <Grid item xs={10}> 
-                                    <label> <input type="radio" name="options4" value="option9" />Un médicament qui est <b>Réfrigéré</b> </label>
-                                    <label><input type="radio" name="options4" value="option10" />Un médicament qui est <b>Non Réfrigéré</b> </label><br></br>
-                                    <label><input type="radio" name="options4" value="option11" />Un supéfiant </label><br></br>
-                                    <label><input type="radio" name="options4" value="option12" />Une chimiothérapie <b>Réfrigérée</b> </label>
-                                    <label><input type="radio" name="options4" value="option13" /> Une chimiothérapie <b>Non Réfrigérée</b> </label>
-                                  </Grid>
 
 
 
-                                  <Grid item xs={12}>
-                                      <Typography variant="h7">S'agit-il d'un e voie d'administration à risque ? :</Typography>
-                                        <label> <input type="radio" name="options5" value="option14" />Oui </label> 
-                                        <label><input type="radio" name="options5" value="option15" /> Non </label> 
-                                        <label> <input type="radio" name="options5" value="option16" />Je ne sais pas</label><Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> 
-                                     </Grid>
+
+
+
+
+                                 <Grid item xs={2}> 
+                         <Typography variant="h7" >Elle concerne :</Typography>                           
+                        </Grid>                
+                         <Grid item xs={10} >    <FormControl component="fieldset">
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                         <Typography variant="h7" style={{marginRight: '20px' }}>Un médicament qui est :</Typography>                           
+
+                           <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+     
+                           <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
+                           
+
+                         </RadioGroup>
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+
+                           <FormControlLabel value="Unsupéfiant" control={<Radio />} label="Un supéfiant" />
+     
+                           
+
+                         </RadioGroup>
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                         <Typography variant="h7" style={{ marginTop:'5px',marginRight: '20px' }}>Une chimiothérapie : </Typography>                           
+
+                           <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+     
+                           <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
+                           
+
+                         </RadioGroup>
+                       </FormControl>
+                       </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  <Grid item xs={8}> 
+                         <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? :</Typography>                           
+                         <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> </Grid>                
+                         <Grid item xs={4} >    <FormControl component="fieldset">
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                           <FormControlLabel value="no" control={<Radio />} label="Non" />
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+                           
+
+                         </RadioGroup>
+                       </FormControl>
+                       </Grid>
+
 
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie de la voie d'administration à risque :</Typography>
