@@ -344,14 +344,70 @@ function SaisieErreur() {
                     <Card style={{ backgroundColor: '#EBDEF0' , boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px' , marginTop: '20px' }}>
                         <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
                         <Grid container spacing={2}>
-                            <Grid item xs={12}>
+                        
 
-                               <Grid item xs={6}>
-                                 <Typography variant="h7">Est-ce un never-event :</Typography>
-                                 <label> <input type="radio" name="options1" value="option1" /> Oui </label>  
-                                 <label> <input type="radio" name="options1" value="option2" />Non </label>
-                            </Grid>
-                                </Grid> 
+
+                           
+                   
+                      
+                                           <Grid item xs={2}> 
+                         <Typography variant="h7" >Est-ce un never-event :</Typography>       </Grid>                
+                         <Grid item xs={10}>    <FormControl component="fieldset">
+                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                           <FormControlLabel value="no" control={<Radio />} label="Non" />
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+                         </RadioGroup>
+                       </FormControl></Grid>
+                   
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <Grid item xs={2}>
                                    <Typography variant="h7">Le(s)quel(s) :</Typography></Grid>
                                 <Grid item xs={10}>
@@ -623,9 +679,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container">
+                        <Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}} id="container">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -904,9 +960,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container1">
+                        <Grid container spacing={1} style={{ padding:"5px", marginBottom:"20px"}} id="container1">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -1292,9 +1348,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container2">
+                        <Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}} id="container2">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -1588,9 +1644,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container3">
+                        <Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}} id="container3">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -2165,9 +2221,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container4">
+                        <Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}} id="container4">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -2576,9 +2632,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container5">
+                        <Grid container spacing={1} style={{ padding:"5px", marginBottom:"20px"}} id="container5">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -2844,8 +2900,10 @@ function SaisieErreur() {
       </RadioGroup>
     </FormControl></Grid>
 
-
-
+</Grid>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
+                        <Grid item xs={12} md={6} > 
+                            </Grid>
     <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -2879,8 +2937,10 @@ function SaisieErreur() {
         <FormControlLabel value="yes" control={<Radio />} label="Oui" />
         <FormControlLabel value="no" control={<Radio />} label="Non" />
       </RadioGroup>
-    </FormControl></Grid>
-
+    </FormControl></Grid></Grid>
+    <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
+                        <Grid item xs={12} md={6} > 
+                            </Grid>
     <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -2914,7 +2974,10 @@ function SaisieErreur() {
         <FormControlLabel value="yes" control={<Radio />} label="Oui" />
         <FormControlLabel value="no" control={<Radio />} label="Non" />
       </RadioGroup>
-    </FormControl></Grid>
+    </FormControl></Grid></Grid>
+    <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
+                        <Grid item xs={12} md={6} > 
+                            </Grid>
     <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -2949,8 +3012,8 @@ function SaisieErreur() {
         <FormControlLabel value="no" control={<Radio />} label="Non" />
       </RadioGroup>
     </FormControl></Grid>
-
-</Grid></Grid></Card>
+</Grid>
+</Grid></Card>
 
 
 
@@ -2977,9 +3040,9 @@ function SaisieErreur() {
                </Grid>
 
 
-                        <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ", padding:"5px", marginBottom:"20px"}} id="container6">
+                        <Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}} id="container6">
                        
-<Grid container spacing={1} style={{padding:"5px", marginBottom:"20px"}}>
+<Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                     
  <Grid item xs={12} >
 <div>
@@ -3242,10 +3305,12 @@ function SaisieErreur() {
         <FormControlLabel value="yes" control={<Radio />} label="Oui" />
         <FormControlLabel value="no" control={<Radio />} label="Non" />
       </RadioGroup>
-    </FormControl></Grid>
+    </FormControl></Grid></Grid>
 
 
-
+    <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
+                        <Grid item xs={12} md={6} > 
+                            </Grid>
     <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -3279,8 +3344,10 @@ function SaisieErreur() {
         <FormControlLabel value="yes" control={<Radio />} label="Oui" />
         <FormControlLabel value="no" control={<Radio />} label="Non" />
       </RadioGroup>
-    </FormControl></Grid>
-
+    </FormControl></Grid></Grid>
+    <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
+                        <Grid item xs={12} md={6} > 
+                            </Grid>
     <Grid item xs={12} >
 <div>
       <FormControlLabel
@@ -3316,9 +3383,9 @@ function SaisieErreur() {
       </RadioGroup>
     </FormControl></Grid>
  
-   
+   </Grid>
 
-</Grid></Grid></Card>
+</Grid></Card>
 
 
 
