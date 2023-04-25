@@ -418,9 +418,9 @@ function SaisieErreur() {
                            
                    
                       
-                                           <Grid item xs={3}> 
+                                           <Grid item xs={2}> 
                          <Typography variant="h7" >Est-ce un never-event :</Typography>       </Grid>                
-                         <Grid item xs={9} >    <FormControl component="fieldset">
+                         <Grid item xs={10} >    <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange3}>
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
                            <FormControlLabel value="no" control={<Radio />} label="Non" />
@@ -616,10 +616,10 @@ function SaisieErreur() {
                
 
                                  </Grid>
-                                 <Grid item xs={7}> 
+                                 <Grid item xs={5}> 
                          <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>                           
                           <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>                
-                         <Grid item xs={5} >    <FormControl component="fieldset">
+                         <Grid item xs={7} >    <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
                            <FormControlLabel value="no" control={<Radio />} label="Non" />
@@ -679,10 +679,10 @@ function SaisieErreur() {
 
 
 
-                                <Grid item xs={7}> 
+                                <Grid item xs={6}> 
                          <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>                           
                          <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link></Grid>                
-                         <Grid item xs={5} >    <FormControl component="fieldset">
+                         <Grid item xs={6} >    <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
                            <FormControlLabel value="no" control={<Radio />} label="Non" />
@@ -754,13 +754,13 @@ function SaisieErreur() {
                          </RadioGroup>
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
 
-                           <FormControlLabel value="Unsupéfiant" control={<Radio />} label="Un supéfiant" />
+                           <FormControlLabel value="Unsupéfiant" style={{ marginTop:'5px',marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
      
                            
 
                          </RadioGroup>
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                         <Typography variant="h7" style={{ marginTop:'5px',marginRight: '20px' }}>Une chimiothérapie : </Typography>                           
+                         <Typography variant="h7" style={{ marginTop:'10px',marginRight: '40px' }}>Une chimiothérapie : </Typography>                           
 
                            <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
      
@@ -802,10 +802,10 @@ function SaisieErreur() {
 
 
 
-                                  <Grid item xs={8}> 
+                                  <Grid item xs={7}> 
                          <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? :</Typography>                           
                          <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> </Grid>                
-                         <Grid item xs={4} >    <FormControl component="fieldset">
+                         <Grid item xs={5} >    <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
                            <FormControlLabel value="no" control={<Radio />} label="Non" />
