@@ -20,11 +20,19 @@ import { FormControl } from '@mui/material/';
 import FormLabel from '@mui/material/FormLabel'
 import Radio from '@mui/material/Radio';
 import { Checkbox} from '@material-ui/core';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
+import { makeStyles } from '@material-ui/core/styles';
+
 
 //Definition des nom des étapes sur le menu
 const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape 5', 'Validation'];
 
 function SaisieErreur() {
+    
     const [value, setValue] = useState('option1');
     const [valuee, setValuee] = useState('no');
     
@@ -47,7 +55,7 @@ function SaisieErreur() {
       checked12: false,
 
     });
-  
+
     const handleChange1 = (event) => {
       setState({ ...state, [event.target.name]: event.target.checked });
     };
@@ -210,7 +218,6 @@ function SaisieErreur() {
     };
 
 
-  
 
     return (
         <div>
@@ -292,26 +299,47 @@ function SaisieErreur() {
 
 
 
-
-
-
-
-
-
-
-
-
-             
-
                                <h2>Evénement </h2>
                                
                     <Grid container spacing={2} justifyContent={'left'}>
-                          <Grid item xs={12}>
-                             <Typography variant="h7">Date de l'analyse :</Typography>  <input type="date"></input>
+                          <Grid container item xs={12}>
+                          <Grid item xs={2}>
+                             <Typography variant="h7">Date de l'analyse :</Typography>   </Grid> 
+                             <Grid item xs={5} style={{marginTop:"-20px"}}>
+                             
+                             <form >
+  <TextField
+    id="datetime-local"
+    type="datetime-local"
+    defaultValue="2017-05-24T10:30"
+   
+    InputLabelProps={{
+      shrink: true,
+    }}
+  />
+</form></Grid> 
                           </Grid>
-                        <Grid item xs={12}>
-                            <Typography variant="h7">Présenté au CREX du :</Typography> <input type="date"></input> 
-                         </Grid>
+
+
+                          <Grid container item xs={12}>
+                          <Grid item xs={2}>
+                             <Typography variant="h7">Présenté au CREX du :</Typography>   </Grid> 
+                             <Grid item xs={5} style={{marginTop:"-10px"}}>
+                             <form >
+  <TextField
+    id="datetime-local"
+    type="datetime-local"
+    defaultValue="2017-05-24T10:30"
+
+    InputLabelProps={{
+      shrink: true,
+    }}
+  />
+</form></Grid> 
+                          </Grid>
+
+
+
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
                         </Grid>
@@ -330,18 +358,57 @@ function SaisieErreur() {
                         <h2>ETAPE 1 : Quel est le problème ? (Description de l'événement) </h2>
 
 
-                        <Grid container spacing={2} justifyContent={'left'}>
-                            <Grid item xs={12}>
-                                <Typography variant="h7">Date de la déclaration :</Typography>
-                                <input type='date'></input>
-                             </Grid>
+                     
 
-                            <Grid item xs={12}>
-                                <Typography variant="h7">Date de l'événement :</Typography>
-                                <input type='date'></input>
+                             <Grid container spacing={2} justifyContent={'left'}>
+                          <Grid container item xs={12} style={{marginTop:"-5px",marginTop:"5px"}}>
+                          <Grid item xs={2}>
+                             <Typography variant="h7">Date de la déclaration :</Typography>   </Grid> 
+                             <Grid item xs={5} >
+                             <form >
+  <TextField
+    id="datetime-local"
+    type="datetime-local"
+    defaultValue="2017-05-24T10:30"
 
-                            </Grid>
+    InputLabelProps={{
+      shrink: true,
+    }}
+  />
+</form></Grid> 
+                          </Grid>  </Grid>
 
+
+
+
+                          <Grid container spacing={2} justifyContent={'left'} style={{marginTop:"5px"}}>
+                          <Grid container item xs={12}>
+                          <Grid item xs={2}>
+                             <Typography variant="h7">Date de l'événement :</Typography>   </Grid> 
+                             <Grid item xs={5} >
+                             <form >
+  <TextField
+    id="datetime-local"
+    type="datetime-local"
+    defaultValue="2017-05-24T10:30"
+   
+    InputLabelProps={{
+      shrink: true,
+    }}
+  />
+</form></Grid> 
+                          </Grid>
+
+
+
+
+
+
+
+
+
+
+                           
                             <Grid item xs={12}>
                                 <Typography variant="h7">Service :</Typography>
                                 
@@ -1164,6 +1231,7 @@ function SaisieErreur() {
 <Grid container spacing={1} style={{backgroundColor: "#E8F8F5 ",padding:"5px", marginBottom:"20px"}}>
                         <Grid item xs={12} md={6} > 
                             </Grid>
+                      
                            
  <Grid item xs={12} >
 <div>
