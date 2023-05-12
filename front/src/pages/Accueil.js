@@ -15,7 +15,9 @@ function Accueil() {
         <Grid item xs={7}>
           <Box>
             <p>Tout professionnel de l'établissement peut déclarer une erreur médicamenteuse</p>
-            <Button component={Link} to="/SaisieErreur" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}  >Déclarer une erreur médicale</Button>
+            <Button component={Link} to="/SaisieErreur" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }}  >Analyser une erreur médicale</Button>
+            <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Déclarer les erreurs médicales</Button>
+
           </Box>
           <Box>
             <p> Accès réservé au personnelle habilité</p>
