@@ -17,15 +17,8 @@ import myPdf1 from '../pdf/medicaments_risque.pdf';
 import myPdf2 from '../pdf/administration_risque.pdf';
 import myPdf3 from '../pdf/cotation.pdf';
 import { FormControl } from '@mui/material/';
-import FormLabel from '@mui/material/FormLabel'
 import Radio from '@mui/material/Radio';
 import { Checkbox} from '@material-ui/core';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-
-import { makeStyles } from '@material-ui/core/styles';
 
 
 //Definition des nom des étapes sur le menu
@@ -36,7 +29,6 @@ function SaisieErreur() {
     const [value, setValue] = useState('option1');
     const [valuee, setValuee] = useState('no');
     
-    const [checked, setChecked] = useState(false);
    
 
 
@@ -222,7 +214,7 @@ function SaisieErreur() {
     return (
         <div>
             <Box sx={{ textAlign: 'center' }}>
-                <h1 >Saisie d'erreur Médicale</h1>
+                <h1 >Analyse des causes de l'erreur médicamenteuse N° </h1>
             </Box>
             <Box sx={{ width: '100%' }}>
                 <Stepper activeStep={activeStep}>
@@ -340,6 +332,24 @@ function SaisieErreur() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <Grid item xs={12}>
                             <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
                         </Grid>
@@ -360,23 +370,7 @@ function SaisieErreur() {
 
                      
 
-                             <Grid container spacing={2} justifyContent={'left'}>
-                          <Grid container item xs={12} style={{marginTop:"-5px",marginTop:"5px"}}>
-                          <Grid item xs={2}>
-                             <Typography variant="h7">Date de la déclaration :</Typography>   </Grid> 
-                             <Grid item xs={5} >
-                             <form >
-  <TextField
-    id="datetime-local"
-    type="datetime-local"
-    defaultValue="2017-05-24T10:30"
-
-    InputLabelProps={{
-      shrink: true,
-    }}
-  />
-</form></Grid> 
-                          </Grid>  </Grid>
+                        
 
 
 
@@ -405,6 +399,15 @@ function SaisieErreur() {
 
 
 
+                           
+                          <Grid item xs={12}>
+                                <Typography variant="h7">Pole :</Typography>
+                                
+
+                              
+
+                            </Grid>
+
 
 
 
@@ -413,16 +416,7 @@ function SaisieErreur() {
                                 <Typography variant="h7">Service :</Typography>
                                 
 
-                                <Select style={{height: '50%',width: 'auto', backgroundColor: "white" }}>
-                                    <MenuItem style ={{display:'block'}} value={10}>Chirurigie</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={20}>Médico-Technique</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Gérontologie</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Médecine</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Mère enfant</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Plateau Technique</MenuItem>
-                                  
-
-                                </Select>
+                              
 
                             </Grid>
 
@@ -470,6 +464,19 @@ function SaisieErreur() {
                                         placeholder="Conséquences" />
                                  </Grid>
                             </Grid>
+                            <Grid item xs={12}>
+                                <Typography variant="h7">Décrire ici les premières actions mises en place à la découverte de l'événement  ? </Typography>  
+                                <Grid item xs={12}>
+                                    <TextField
+                                        id="outlined-multiline-static"
+                                        multiline
+                                        rows={1}
+
+                                        variant="outlined"
+                                        style={{ width: '95%', backgroundColor: "white" }}
+                                        placeholder="Actions" />
+                                 </Grid>
+                            </Grid>
 
                         </Grid>
 
@@ -485,16 +492,9 @@ function SaisieErreur() {
                            
                    
                       
-                                           <Grid item xs={2}> 
+                                           <Grid item xs={12}> 
                          <Typography variant="h7" >Est-ce un never-event :</Typography>       </Grid>                
-                         <Grid item xs={10} >    <FormControl component="fieldset">
-                         <RadioGroup row valuee={valuee} onChange={handleChange3}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
-                         </RadioGroup>
-                       </FormControl></Grid>
-                   
+                        
                
 
 
@@ -543,159 +543,18 @@ function SaisieErreur() {
 
 
 
-                                <Grid item xs={2}>
+                                <Grid item xs={12}>
                                    <Typography variant="h7">Le(s)quel(s) :</Typography></Grid>
-                                <Grid item xs={6}>
-                                <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked1}
-            onChange={handleChange1}
-            name="checked1"
-            color="primary"
-          />
-        }
-        label="NE1"
-      />
-      <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked2}
-            onChange={handleChange1}
-            name="checked2"
-            color="primary"
-          />
-        }
-        label="NE2"
-      />
-      <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked3}
-            onChange={handleChange1}
-            name="checked3"
-            color="primary"
-          />
-        }
-        label="NE3"
-      />
-      <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked4}
-            onChange={handleChange1}
-            name="checked4"
-            color="primary"
-          />
-        }
-        label="NE4"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked5}
-            onChange={handleChange1}
-            name="checked5"
-            color="primary"
-          />
-        }
-        label="NE5"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked6}
-            onChange={handleChange1}
-            name="checked6"
-            color="primary"
-          />
-        }
-        label="NE6"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked7}
-            onChange={handleChange1}
-            name="checked7"
-            color="primary"
-          />
-        }
-        label="NE7"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked8}
-            onChange={handleChange1}
-            name="checked8"
-            color="primary"
-          />
-        }
-        label="NE8"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked9}
-            onChange={handleChange1}
-            name="checked9"
-            color="primary"
-          />
-        }
-        label="NE9"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked10}
-            onChange={handleChange1}
-            name="checked10"
-            color="primary"
-          />
-        }
-        label="NE10"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked11}
-            onChange={handleChange1}
-            name="checked11"
-            color="primary"
-          />
-        }
-        label="NE11"
-      />
-       <FormControlLabel
-        control={
-          <Checkbox
-            checked={state.checked12}
-            onChange={handleChange1}
-            name="checked12"
-            color="primary"
-          />
-        }
-        label="NE12"
-      />
+                              
 
- 
-               
 
-                                 </Grid>
-                                 <Grid item xs={5}> 
+
+
+
+                                 <Grid item xs={12}> 
                          <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>                           
                           <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>                
-                         <Grid item xs={7} >    <FormControl component="fieldset">
-                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
-                           
-
-                         </RadioGroup>
-                       </FormControl>
-                       </Grid>
+                        
 
 
 
@@ -722,12 +581,6 @@ function SaisieErreur() {
                                 <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie du patient à risque :</Typography>
                              
-                                        <Select style={{ height: ' 50%' ,width: 'auto', backgroundColor: "white" }}> 
-                                            <MenuItem style ={{display:'block'}} value={10}>Patient à risque du fait de leur age ou de leur(s) pathologie(s)</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={20}>Patient à risque du faite de la compléxité de leur traitement</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Patients à risque du fait de traceurs biologiques </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Patients à risque du fait de fragilité(s) connues(s) </MenuItem>
-                                        </Select>
                                 
                                 </Grid>
                                
@@ -735,30 +588,15 @@ function SaisieErreur() {
                                
                                  <Grid item xs={12}>
                                     <Typography variant="h7">Commentaires sur l'état du patient :</Typography>
-                                        <TextField
-                                    hiddenLabel
-                                    id="filled-hidden-label-small"
-                                    size="small"
-                                    style={{ width: '95%', backgroundColor: "white" }}
-
-                                    />
+                                        
                                 </Grid>
 
 
 
-                                <Grid item xs={6}> 
+                                <Grid item xs={12}> 
                          <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>                           
                          <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link></Grid>                
-                         <Grid item xs={6} >    <FormControl component="fieldset">
-                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
-                           
-
-                         </RadioGroup>
-                       </FormControl>
-                       </Grid>
+                        
 
 
 
@@ -776,27 +614,13 @@ function SaisieErreur() {
                                  <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie du médicament à risque :</Typography>
                              
-                                     <Select style={{ height: ' 50%' ,width: 'auto', backgroundColor: "white" }}> 
-                                            <MenuItem style ={{display:'block'}} value={10}>Anti-cancéreux</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={20}>Morphiniques</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Electrolyse injectables </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Insulines </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Anticoagulants </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Médicaments perfusés parv pompe </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Benzodiazépines </MenuItem>
-                                        </Select>
+                                    
                                  </Grid>
                                
 
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Nom du médicament :</Typography>
-                                        <TextField
-                                    hiddenLabel
-                                    id="filled-hidden-label-small"
-                                    size="small"
-                                    style={{ width: '95%', backgroundColor: "white" }}
-
-                                    />
+                                      
                                  </Grid>
 
 
@@ -869,52 +693,29 @@ function SaisieErreur() {
 
 
 
-                                  <Grid item xs={7}> 
-                         <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? :</Typography>                           
-                         <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link> </Grid>                
-                         <Grid item xs={5} >    <FormControl component="fieldset">
-                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
-                           
-
-                         </RadioGroup>
-                       </FormControl>
-                       </Grid>
+                                  <Grid item xs={12}> 
+                         <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? </Typography>                           
+                         </Grid>                
+                        
 
 
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Catégorie de la voie d'administration à risque :</Typography>
-                                        <Select style={{ height: ' 50%' ,width: 'auto', backgroundColor: "white" }}> 
-                                            <MenuItem style ={{display:'block'}} value={10}>La voie Injectable Intra-Veineuse</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={20}>La voie orale dès l'écrasement du comprimé ou ouverture de la gélule </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>La voie intrathécale </MenuItem>
-                                        </Select>
+                                     <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
                                
                                    </Grid>
 
-                                  <Grid item xs={12}>
-                                       <Typography variant="h7">Nom de la voie d'administration :</Typography>
-                                           <TextField
-                                              hiddenLabel
-                                              id="filled-hidden-label-small"
-                                              size="small"
-                                              style={{ width: '95%', backgroundColor: "white" }}
 
-                                            />
+
+                                  <Grid item xs={12}>
+                                       
                                     </Grid>
 
 
                                   <Grid item xs={12}>
                                      <Typography variant="h7">Degré de réalisation :</Typography>
                              
-                                        <Select style={{ height: ' 50%' ,width: 'auto', backgroundColor: "white" }}> 
-                                            <MenuItem style ={{display:'block'}} value={10}>Erreur avérée et interceptée avant atteinte du patient</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={20}>Erreur avérée et non interceptée : elle a atteint le patient </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Erreur potentielle : Evènement Porteur de Risque (EPR) </MenuItem>
-                                        </Select>
-                                            <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
+                                     
                                  </Grid>
 
 
@@ -922,17 +723,7 @@ function SaisieErreur() {
                                     <Grid item xs={12}>
                                         <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
                                     
-                                        <Select style={{ height: ' 50%' ,width: 'auto', backgroundColor: "white" }}> 
-
-                                            <MenuItem style ={{display:'block'}} value={10}>Prescription</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={20}>Dispensation </MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Transport</MenuItem>
-                                            <MenuItem style ={{display:'block'}} value={30}>Administration</MenuItem>
-
-                                            <MenuItem style ={{display:'block'}} value={30}>Suivi et ré-évaluation</MenuItem>
-                                        
-                                        </Select>
-                                        <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
+                                      
                                     </Grid>
 
                                </Grid>
@@ -1023,8 +814,9 @@ function SaisieErreur() {
                 {activeStep === 2 && (
                      <Card style={{  backgroundColor: '#D6EAF8 ' , boxShadow: '5px 5px 5px #AED6F1  ' , padding: '20px'}}>
                      <h2>ETAPE 2 : Quels sont les dysfonctionnements, les erreurs ?</h2>
+
                      <Grid item xs={12}>
-                                
+                                <h4>Défaillances actives ou immédiates ou défauts de soin</h4>
                                     <TextField
                                         id="outlined-multiline-static"
                                         multiline
