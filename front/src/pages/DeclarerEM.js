@@ -202,7 +202,7 @@ function DeclarerEM() {
                          <Grid container item xs={12}>
                           <Grid item xs={2}>
                              <Typography variant="h7">Date de la déclaration:</Typography>   </Grid> 
-                             <Grid item xs={5} >
+                             <Grid item xs={2} >
                              
                              <form >
   <TextField
@@ -904,12 +904,12 @@ InputLabelProps={{
 
 
                                     <Grid container spacing={2}>
-      <Grid item xs={12} sm={2} style={{marginTop:"10px"}}>
+      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
   <Typography variant="h7" >Degré de réalisation :</Typography>  
   
     
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={5}>
       <FormControlLabel
         control={
           <Checkbox
@@ -978,7 +978,7 @@ InputLabelProps={{
 
 
     <Grid container spacing={2}>
-      <Grid item xs={12} sm={2} style={{marginTop:"10px"}}>
+      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
   <Typography variant="h7" >Etape de survenue dans le circuit médicament :</Typography>  
   
     
