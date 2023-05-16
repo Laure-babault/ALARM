@@ -207,31 +207,128 @@ function SaisieErreur() {
           })}
         </Stepper>
 
+
+
+
+
+
+
+
+
         {/* contenu de l'étape 1 */}
         {activeStep === 0 && (
           <Card style={{ backgroundColor: '#F5B7B1 ', boxShadow: '5px 5px 5px #F1948A ', padding: '20px' }}>
-            <Grid container xs={12}>
-              <Grid item sm={4}>
 
-                <div><h2>Je m'identifie ( Etape Optionnel ) </h2></div>
+            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+              <Grid item xs={4}>
+                <Typography variant="h6"><b>Je m'identifie ( Etape Optionnel )</b> </Typography>
               </Grid>
-              <Grid item sm={8} style={{ marginTop: '13px' }}>
-                <div> <FormControl >
+              <Grid item xs={7}>
+                <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange}>
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick8} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick8} label="Non" />
                   </RadioGroup>
-                </FormControl></div>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12}>
+
+                <Container id="container8" >
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="h7">Nom :</Typography>
+                      <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        style={{ backgroundColor: "white" }}
+                        size="small" />
+                    </Grid>
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="h7">Prénom :</Typography>
+                      <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        style={{ backgroundColor: "white" }}
+                        size="small" />
+                    </Grid>
+
+                    <Grid item xs={12} sm={4}>
+                      <Typography variant="h7">Fonction :</Typography>
+                      <TextField
+                        hiddenLabel
+                        id="filled-hidden-label-small"
+                        style={{ backgroundColor: "white" }}
+                        size="small" />
+                    </Grid>
+                  </Grid>
+                </Container></Grid>
+            </Grid>
+
+
+            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
+
+
+            <Typography variant="h6" style={{ marginTop: "2rem" }}><b>Evénement</b></Typography>
+
+            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+              <Grid item xs={2}>
+                <Typography variant="h7">Date de l'analyse :</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <form >
+                  <TextField
+                    id="datetime-local"
+                    type="datetime-local"
+                    defaultValue="2017-05-24T10:30"
+
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
+                </form>
               </Grid>
             </Grid>
 
 
 
-            <Grid item xs={12}>
 
-              <Container id="container8" >
+
+
+            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+              <Grid item xs={2}>
+                <Typography variant="h7">Présenté au CREX du :</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <form >
+                  <TextField
+                    id="datetime-local"
+                    type="datetime-local"
+                    defaultValue="2017-05-24T10:30"
+
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
+                </form>
+              </Grid>
+            </Grid>
+
+
+            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
+
+
+
+
+            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+              <Grid item xs={6}>
+                <Typography variant="h6"><b>Ajouter l'équipe</b> </Typography>
+              </Grid>
+
+              <Grid item xs={12}>
+
+
                 <Grid container spacing={2}>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={3} >
                     <Typography variant="h7">Nom :</Typography>
                     <TextField
                       hiddenLabel
@@ -239,16 +336,16 @@ function SaisieErreur() {
                       style={{ backgroundColor: "white" }}
                       size="small" />
                   </Grid>
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={3} >
                     <Typography variant="h7">Prénom :</Typography>
                     <TextField
                       hiddenLabel
                       id="filled-hidden-label-small"
                       style={{ backgroundColor: "white" }}
-                      size="small" />
+                      size="small" label />
                   </Grid>
 
-                  <Grid item xs={12} sm={4}>
+                  <Grid item xs={3} >
                     <Typography variant="h7">Fonction :</Typography>
                     <TextField
                       hiddenLabel
@@ -256,80 +353,42 @@ function SaisieErreur() {
                       style={{ backgroundColor: "white" }}
                       size="small" />
                   </Grid>
+                  <Grid item xs={3} >
+                    <Typography variant="h7">Service :</Typography>
+                    <TextField
+                      hiddenLabel
+                      id="filled-hidden-label-small"
+                      style={{ backgroundColor: "white" }}
+                      size="small" />
+                  </Grid>
                 </Grid>
-              </Container></Grid>
-
-
-
-            <h2>Evénement </h2>
-
-            <Grid container spacing={2} justifyContent={'left'}>
-              <Grid container item xs={12}>
-                <Grid item xs={2}>
-                  <Typography variant="h7">Date de l'analyse :</Typography>   </Grid>
-                <Grid item xs={5} style={{ marginTop: "-20px" }}>
-
-                  <form >
-                    <TextField
-                      id="datetime-local"
-                      type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
-
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  </form></Grid>
-              </Grid>
-
-
-              <Grid container item xs={12}>
-                <Grid item xs={2}>
-                  <Typography variant="h7">Présenté au CREX du :</Typography>   </Grid>
-                <Grid item xs={5} style={{ marginTop: "-10px" }}>
-                  <form >
-                    <TextField
-                      id="datetime-local"
-                      type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
-
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  </form></Grid>
-              </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <Grid item xs={12}>
-                <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant="h7">Déclaration faite par :</Typography>
               </Grid>
             </Grid>
 
+
+            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
+
+
+
+            <Grid item xs={12} style={{ marginTop: "1rem" }}>
+              <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
+            </Grid>
+            <Grid item xs={12} style={{ marginTop: "1rem" }}>
+              <Typography variant="h7" >Déclaration faite par :</Typography>
+            </Grid>
+
+
           </Card>
         )}
+
+
+
+
+
+
+
+
+
 
         {/* contenu de l'étape 2 */}
         {activeStep === 1 && (
@@ -340,28 +399,53 @@ function SaisieErreur() {
 
 
 
+            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+              <Grid item xs={2}>
+                <Typography variant="h7">Date de l'événement :</Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <form >
+                  <TextField
+                    id="datetime-local"
+                    type="datetime-local"
+                    defaultValue="2017-05-24T10:30"
+
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                  />
+                </form>
+              </Grid>
+            </Grid>
+
+
+            <Grid item xs={12} style={{ marginTop: "1rem" }}>
+              <Typography variant="h7">Pole :</Typography>
+
+
+
+
+            </Grid>
+
+            <Grid item xs={12} style={{ marginTop: "1rem" }}>
+              <Typography variant="h7">Service :</Typography>
+
+
+
+
+            </Grid>
+
+
+
+
+
+
 
 
 
 
 
             <Grid container spacing={2} justifyContent={'left'} style={{ marginTop: "5px" }}>
-              <Grid container item xs={12}>
-                <Grid item xs={2}>
-                  <Typography variant="h7">Date de l'événement :</Typography>   </Grid>
-                <Grid item xs={5} >
-                  <form >
-                    <TextField
-                      id="datetime-local"
-                      type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
-
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  </form></Grid>
-              </Grid>
 
 
 
@@ -370,29 +454,15 @@ function SaisieErreur() {
 
 
 
-              <Grid item xs={12}>
-                <Typography variant="h7">Pole :</Typography>
-
-
-
-
-              </Grid>
 
 
 
 
 
-              <Grid item xs={12}>
-                <Typography variant="h7">Service :</Typography>
 
 
 
-
-              </Grid>
-
-
-
-              <Grid item xs={12}>
+              <Grid item xs={12} >
                 <Typography variant="h7">Quoi? Que s'est-il passé ? </Typography>
                 <Grid item xs={12}>
                   <TextField
@@ -401,7 +471,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white" }}
+                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
                     placeholder="Détails" />
                 </Grid>
 
@@ -416,7 +486,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white" }}
+                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
                     placeholder="Conséquences" />
                 </Grid>
               </Grid>
@@ -430,8 +500,8 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white" }}
-                    placeholder="Conséquences" />
+                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
+                    placeholder="Problème" />
                 </Grid>
               </Grid>
               <Grid item xs={12}>
@@ -443,7 +513,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white" }}
+                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
                     placeholder="Actions" />
                 </Grid>
               </Grid>
@@ -453,250 +523,217 @@ function SaisieErreur() {
 
           </Card>
 
+
+
+
+
             <Card style={{ backgroundColor: '#EBDEF0', boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px', marginTop: '20px' }}>
               <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
+
+
+
+
+
               <Grid container spacing={2}>
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7" >Est-ce un never-event :</Typography>       </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Le(s)quel(s) :</Typography></Grid>
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>
-                  <Link href={myPdf}>Consulter les catégories du patient à risque</Link> </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Catégorie du patient à risque :</Typography>
-
+                <Grid item xs={12} sm={6}> <Typography variant="h7" >Est-ce un never-event :</Typography>
 
                 </Grid>
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Commentaires sur l'état du patient :</Typography>
-
-                </Grid>
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>
-                  <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link></Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Catégorie du médicament à risque :</Typography>
-
-
-                </Grid>
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Nom du médicament :</Typography>
-
-                </Grid>
-
-
-
-
-
-
-
-
-                <Grid item xs={2}>
-                  <Typography variant="h7" >Elle concerne :</Typography>
-                </Grid>
-                <Grid item xs={10} >    <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <Typography variant="h7" style={{ marginRight: '20px' }}>Un médicament qui est :</Typography>
-
-                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
-
-                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
-
-
-                  </RadioGroup>
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-
-                    <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
-
-
-
-                  </RadioGroup>
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <Typography variant="h7" style={{ marginTop: '10px', marginRight: '40px' }}>Une chimiothérapie : </Typography>
-
-                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
-
-                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
-
-
-                  </RadioGroup>
-                </FormControl>
-                </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? </Typography>
-                </Grid>
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Catégorie de la voie d'administration à risque :</Typography>
-                  <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
-
-                </Grid>
-
-
-
-                <Grid item xs={12}>
-
-                </Grid>
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Degré de réalisation :</Typography>
-
-
-                </Grid>
-
-
-
-                <Grid item xs={12}>
-                  <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
-
-
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
                 </Grid>
 
               </Grid>
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }} >
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={4}>
+
+                  <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={4}>
+
+                  {/* Affichage */}
+
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <Link href={myPdf}>Consulter les catégories du patient à risque</Link>
+
+                </Grid>
+              </Grid>
+
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+
+
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Commentaires sur l'état du patient :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={4}>
+
+                  <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={4}>
+
+                  {/* Affichage */}
+
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
+
+                </Grid>
+              </Grid>
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Catégorie du médicament à risque :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Nom du médicament :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={2}> <Typography variant="h7">Elle concerne :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                  <FormControl component="fieldset">
+                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                      <Typography variant="h7" style={{ marginRight: '20px' }}>Un médicament qui est :</Typography>
+
+                      <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+
+                      <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
+
+
+                    </RadioGroup>
+                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
+
+                      <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
+
+
+
+                    </RadioGroup>
+                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                      <Typography variant="h7" style={{ marginTop: '10px', marginRight: '40px' }}>Une chimiothérapie : </Typography>
+
+                      <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+
+                      <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
+
+
+                    </RadioGroup>
+                  </FormControl>
+                </Grid>
+
+              </Grid>
+
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">S'agit-il d'un e voie d'administration à risque ? </Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={4}> <Typography variant="h7">Catégorie de la voie d'administration à risque : </Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  {/* Affichage */}
+                </Grid>
+                <Grid item xs={12} sm={5}>
+                  <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
+                </Grid>
+              </Grid>
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+                <Grid item xs={12} sm={6}> <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  {/* Affichage */}
+                </Grid>
+
+              </Grid>
+
+
+
 
 
             </Card>
@@ -704,12 +741,18 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#EBDEF0', boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px', marginTop: '20px' }}>
               <h2>Cotation de l'événement</h2>
+
+
+
+
+
               <Grid container spacing={2}>
+                <Grid item xs={12} sm={2}>
 
+                  <Typography variant="h7" >Gravité :</Typography>
 
-                <Grid item xs={12}>
-                  <Typography variant="h7">Gravité :</Typography>
-
+                </Grid>
+                <Grid item xs={12} sm={4}>
                   <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
                     <MenuItem style={{ display: 'block' }} value={10}>Risque innacceptable </MenuItem>
@@ -717,16 +760,23 @@ function SaisieErreur() {
                     <MenuItem style={{ display: 'block' }} value={30}>Risque acceptable </MenuItem>
 
                   </Select>
-                  <Link href={myPdf3}>Consulter l'échelle de cotation des événements indésirables </Link>
+
                 </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Link href={myPdf3}>Consulter l'échelle de cotation des événements indésirables </Link>
 
-
+                </Grid>
               </Grid>
 
 
+
               <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid item xs={12} sm={2}>
+
                   <Typography variant="h7">Occurence :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={2}>
 
                   <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
@@ -739,13 +789,20 @@ function SaisieErreur() {
                   </Select>
 
 
-
                 </Grid>
+
               </Grid>
 
+
+
               <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid item xs={12} sm={2}>
+
                   <Typography variant="h7">Niveau de  maîtrise  :</Typography>
+
+                </Grid>
+                <Grid item xs={12} sm={2}>
+
 
                   <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
@@ -758,12 +815,21 @@ function SaisieErreur() {
                   </Select>
 
 
+                </Grid>
+
+              </Grid>
+
+
+
+
+              <Grid container spacing={2}>
+                <Grid item xs={12} sm={2}>
+
+                  <Typography variant="h7">Criticité :</Typography>
 
                 </Grid>
-              </Grid>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <Typography variant="h7">Criticité :</Typography>
+                <Grid item xs={12} sm={2}>
+
 
                   <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
@@ -771,7 +837,11 @@ function SaisieErreur() {
                     <MenuItem style={{ display: 'block' }} value={20}>45 à 125 Risque inacceptable  </MenuItem>
                     <MenuItem style={{ display: 'block' }} value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
 
-                  </Select>  </Grid></Grid>
+                  </Select>
+
+                </Grid>
+
+              </Grid>
 
             </Card>
 
@@ -780,11 +850,30 @@ function SaisieErreur() {
         )}
 
 
+
+
+
+
+
+
+
+
+
         {/* contenu de l'étape 3 */}
         {activeStep === 2 && (
           <Card style={{ backgroundColor: '#D6EAF8 ', boxShadow: '5px 5px 5px #AED6F1  ', padding: '20px' }}>
             <h2>ETAPE 2 : Quels sont les dysfonctionnements, les erreurs ?</h2>
 
+
+            <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
+              <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
+
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                {/* Affichage */}
+              </Grid>
+
+            </Grid>
             <Grid item xs={12}>
               <h4>Défaillances actives ou immédiates ou défauts de soin</h4>
               <TextField
@@ -799,24 +888,59 @@ function SaisieErreur() {
 
           </Card>
         )}
+
+
+
+
+
+
+
+
+
+
+
+
         {activeStep === 3 && (
           <><Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
             <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
-            <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-              < Grid item xs={6} >
-                <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs propres aux patients ?</b></Typography>
+
+
+
+            <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+              <Grid item xs={12} sm={7}>    <Typography variant="h6" style={{ marginBottom: '1rem' }}><b>L'erreur est-elle liée à des facteurs propres aux patients ?</b></Typography>
+
               </Grid>
-              < Grid item xs={6} >
+              <Grid item xs={12} sm={5}>
                 <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick} label="Non" />
                   </RadioGroup>
-                </FormControl></Grid>
+                </FormControl>
+              </Grid>
+
             </Grid>
 
 
-            <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container">
 
               <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -845,7 +969,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -887,7 +1011,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -933,7 +1057,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -947,8 +1071,7 @@ function SaisieErreur() {
 
 
               <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                <Grid item xs={12} md={6} >
-                </Grid>
+
 
 
                 <Grid item xs={12} >
@@ -977,7 +1100,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1021,7 +1144,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
 
@@ -1065,7 +1188,7 @@ function SaisieErreur() {
 
                   </div></Grid>
 
-                <Grid item xs={12} md={2}>
+                <Grid item xs={12} md={3}>
                   <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                 <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1085,21 +1208,31 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={6} >
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs individuels ?</b></Typography>
+
                 </Grid>
-                < Grid item xs={6} >
+                <Grid item xs={12} sm={5}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick1} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick1} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
 
 
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container1">
+
+
+
+
+
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container1">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -1128,7 +1261,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1170,7 +1303,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1216,7 +1349,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1266,7 +1399,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1315,7 +1448,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1358,7 +1491,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1404,7 +1537,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1447,7 +1580,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1473,21 +1606,38 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={6} >
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'équipe ?</b></Typography>
+
                 </Grid>
-                < Grid item xs={6} >
+                <Grid item xs={12} sm={5}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick2} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick2} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
 
 
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container2">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -1516,7 +1666,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1558,7 +1708,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1604,7 +1754,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1654,7 +1804,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1703,7 +1853,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1746,7 +1896,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1769,21 +1919,43 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={6} >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des tâche à accomplir ?</b></Typography>
                 </Grid>
-                < Grid item xs={6} >
+                <Grid item xs={12} sm={5}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick3} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick3} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
 
 
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container3">
+
+
+
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container3">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -1812,7 +1984,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1854,7 +2026,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1900,7 +2072,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1950,7 +2122,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -1999,7 +2171,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2042,7 +2214,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2085,7 +2257,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2128,7 +2300,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2172,7 +2344,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2218,7 +2390,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2269,7 +2441,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2314,7 +2486,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2346,21 +2518,42 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={6} >
+
+
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={8} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'environnement ?</b></Typography>
                 </Grid>
-                < Grid item xs={6} >
+                <Grid item xs={12} sm={3}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick4} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick4} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
 
 
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container4">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -2389,7 +2582,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2431,7 +2624,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2477,7 +2670,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2527,7 +2720,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2576,7 +2769,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2619,7 +2812,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2662,7 +2855,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2705,7 +2898,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2757,18 +2950,25 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={7} >
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={8} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'organisation ?</b></Typography>
                 </Grid>
-                < Grid item xs={5} >
+                <Grid item xs={12} sm={3}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick5} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick5} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
+
+
+
+
+
 
 
               <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container5">
@@ -2800,7 +3000,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2842,7 +3042,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2859,8 +3059,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -2888,7 +3087,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2908,8 +3107,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -2938,7 +3136,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -2957,8 +3155,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -2987,7 +3184,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3000,8 +3197,7 @@ function SaisieErreur() {
                 </Grid>
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -3030,7 +3226,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3041,8 +3237,7 @@ function SaisieErreur() {
 
                 </Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3069,7 +3264,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3078,8 +3273,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3106,7 +3300,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3115,8 +3309,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3143,7 +3336,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3165,21 +3358,37 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container style={{ padding: "5px", marginBottom: "20px" }}>
-                < Grid item xs={7} >
+              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
+                <Grid item xs={12} sm={9} style={{ marginBottom: '1rem' }}>
                   <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</b></Typography>
                 </Grid>
-                < Grid item xs={5} >
+                <Grid item xs={12} sm={3}>
                   <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick6} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick6} label="Non" />
                     </RadioGroup>
-                  </FormControl></Grid>
+                  </FormControl>
+                </Grid>
+
               </Grid>
 
 
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3208,7 +3417,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3250,7 +3459,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3267,8 +3476,6 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
 
 
                   <Grid item xs={12} >
@@ -3296,7 +3503,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3316,8 +3523,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -3346,7 +3552,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3365,8 +3571,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -3395,7 +3600,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3408,8 +3613,7 @@ function SaisieErreur() {
                 </Grid>
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
 
 
                   <Grid item xs={12} >
@@ -3437,7 +3641,7 @@ function SaisieErreur() {
                     </div>
                   </Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3448,8 +3652,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3476,7 +3679,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3485,8 +3688,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3513,7 +3715,7 @@ function SaisieErreur() {
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={2}>
+                  <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
@@ -3564,17 +3766,30 @@ function SaisieErreur() {
           <Card style={{ backgroundColor: '#FDEBD0', boxShadow: '5px 5px 5px #FAD7A0 ', padding: '20px' }}>
             <h2>ETAPE 4 : Qu'est ce qui aurait pu empêcher la survenue de l'événement ?</h2>
 
-            <Grid item xs={12}>
-              <Typography variant="h7">Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
-              < Grid item xs={5} >
+
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6} style={{ marginTop: "0.8rem" }}>
+
+                <Typography variant="h7" >Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
+
+              </Grid>
+              <Grid item xs={12} sm={6}>
+
                 <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick7} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick7} label="Non" />
                   </RadioGroup>
                 </FormControl>
+
               </Grid>
-              <Container id="container7" >
+
+
+            </Grid>
+
+
+            <Grid item xs={12} sm={12}>
+              <Grid container id="container7" >
                 <Grid item xs={12}>
                   <Typography variant="h7">Si non , quelles ont été les défenses manquantes ou non opérationnelles ?</Typography>
                   <br></br>  <TextField
@@ -3582,10 +3797,17 @@ function SaisieErreur() {
                     multiline
                     rows={5}
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white" }}
+                    style={{ width: '95%', backgroundColor: "white", marginTop: "0.5rem" }}
                   />
                 </Grid>
-              </Container></Grid>
+
+
+              </Grid>  </Grid>
+
+
+
+
+
           </Card>
 
 

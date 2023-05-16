@@ -12,6 +12,8 @@ import Link from '@material-ui/core/Link';
 import myPdf from '../pdf/patients_risque.pdf';
 import myPdf1 from '../pdf/medicaments_risque.pdf';
 import myPdf2 from '../pdf/administration_risque.pdf';
+import myPdf3 from '../pdf/neverevents.pdf';
+import myPdf4 from '../pdf/degres.pdf';
 import { FormControl } from '@mui/material/';
 import Radio from '@mui/material/Radio';
 import { Checkbox} from '@material-ui/core';
@@ -121,26 +123,21 @@ function DeclarerEM() {
              <Card style={{ backgroundColor: '#e2d2c1  ' , boxShadow: '5px 5px 5px #c7a988  ' , padding: '20px', margin:"40px"}}>
                      <h2>Identité</h2>   
 
-
-
-
-
-
                      <Grid container spacing={2}>
-      <Grid item xs={12} sm={4} style={{marginTop:"20px"}}>
-  <Typography variant="h6" ><b>Déclarer de manière anonyme</b></Typography>  
-  
-    
+      <Grid item xs={4}>
+      <Typography variant="h6" ><b>Déclarer de manière anonyme</b></Typography>
       </Grid>
-      <Grid item xs={12} sm={4}>
+      <Grid item xs={4}>
       <FormControl >
       <RadioGroup row valuee={valuee} onChange={handleChange}>
         <FormControlLabel value="yes" control={<Radio />} onClick={handleNoClick8} label="Oui" />
         <FormControlLabel value="no" control={<Radio />}   onClick={handleYesClick8} label="Non" />
       </RadioGroup>
     </FormControl>
+
+    
       </Grid>
-        <Container id="container8" style={{marginTop:"20px"}} >
+      <Container id="container8" style={{marginTop:"20px"}} >
                                 <Grid container spacing={2}>
                         <Grid item xs={12} sm={4}>
                             <Typography variant="h7">Nom :</Typography>
@@ -171,6 +168,10 @@ function DeclarerEM() {
                  </Container>
     </Grid>
 
+
+
+
+                  
 
 
 
@@ -256,9 +257,9 @@ InputLabelProps={{
                                     <MenuItem style ={{display:'block'}} value={10}>Chirurigie</MenuItem>
                                     <MenuItem style ={{display:'block'}} value={20}>Médico-Technique</MenuItem>
                                     <MenuItem style ={{display:'block'}} value={30}>Gérontologie</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Médecine</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Mère enfant</MenuItem>
-                                    <MenuItem style ={{display:'block'}} value={30}>Plateau Technique</MenuItem>
+                                    <MenuItem style ={{display:'block'}} value={40}>Médecine</MenuItem>
+                                    <MenuItem style ={{display:'block'}} value={50}>Mère enfant</MenuItem>
+                                    <MenuItem style ={{display:'block'}} value={60}>Plateau Technique</MenuItem>
                                   
 
                                 </Select></Grid> </Grid>   
@@ -269,8 +270,8 @@ InputLabelProps={{
              
              
              
-                            <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+                            <Grid container spacing={2} style={{marginTop:"20px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Est-ce un never-event :</Typography>  
   
     
@@ -285,7 +286,7 @@ InputLabelProps={{
         
       </Grid>
       <Grid item xs={12} sm={5} style={{marginTop:"10px"}}>
-    <Link href={myPdf}>Cliquer pour consulter les 12 Never-Event</Link> 
+    <Link href={myPdf3}>Cliquer pour consulter les 12 Never-Event</Link> 
     
        
       </Grid>
@@ -331,8 +332,8 @@ InputLabelProps={{
     <>
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >S'agit-il d'un never-event (NE) :</Typography>  
   
     
@@ -356,8 +357,8 @@ InputLabelProps={{
 
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Si oui Le(s)quel(s) :</Typography>  
   
     
@@ -505,8 +506,8 @@ InputLabelProps={{
 
 
          
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>  
   
     
@@ -535,8 +536,8 @@ InputLabelProps={{
 
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Catégorie du patient à risque :</Typography>  
   
     
@@ -565,7 +566,7 @@ InputLabelProps={{
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
-                                    style={{ width: '95%', backgroundColor: "white" }}
+                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem'  }}
 
                                     />
                                 </Grid>
@@ -583,8 +584,8 @@ InputLabelProps={{
 
 
 
-                                <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+                                <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>  
   
     
@@ -617,8 +618,8 @@ InputLabelProps={{
 
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Si oui, préciser la catégorie:</Typography>  
   
     
@@ -736,13 +737,13 @@ InputLabelProps={{
                                
 
                                   <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
-                                     <Typography variant="h7">Nom du médicament :</Typography>
+                                     <Typography variant="h7" >Nom du médicament :</Typography>
                                         <TextField
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
-                                    style={{ width: '95%', backgroundColor: "white" }}
-
+                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem' }}
+                                    
                                     />
                                  </Grid>
 
@@ -760,8 +761,8 @@ InputLabelProps={{
 
 
 
-                                 <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+                                 <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? :</Typography>  
   
     
@@ -793,8 +794,8 @@ InputLabelProps={{
 
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Si oui, préciser la catégorie:</Typography>  
   
     
@@ -903,8 +904,8 @@ InputLabelProps={{
 
 
 
-                                    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+                                    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Degré de réalisation :</Typography>  
   
     
@@ -956,7 +957,7 @@ InputLabelProps={{
       />
       </Grid>
       <Grid item xs={12} sm={4} style={{marginTop:"10px"}}>
-      <Link href={myPdf2}>Cliquez pour consulter les degré de réalisation </Link>
+      <Link href={myPdf4}>Cliquez pour consulter les degré de réalisation </Link>
     
        
       </Grid>
@@ -977,13 +978,13 @@ InputLabelProps={{
 
 
 
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={3} style={{marginTop:"10px"}}>
+    <Grid container spacing={2} style={{marginTop:"5px"}}>
+      <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Etape de survenue dans le circuit médicament :</Typography>  
   
     
       </Grid>
-      <Grid item xs={12} sm={4}>
+      <Grid item xs={12} sm={9}>
       <FormControlLabel
         control={
           <Checkbox
@@ -1101,8 +1102,8 @@ InputLabelProps={{
                                <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black"}}></hr>   
 
                        <Grid item xs={12} style={{marginTop:"20px" , marginBottom:"10px"}}>
-                                <Typography variant="h7">Description de l'événement : </Typography>  
-                                 <Grid item xs={12}>
+                                <Typography variant="h7" >Description de l'événement : </Typography>  
+                                 <Grid item xs={12} style={{ marginTop: '0.5rem' }}>
                                     <TextField
                                         id="outlined-multiline-static"
                                         multiline
@@ -1118,7 +1119,7 @@ InputLabelProps={{
 
                             <Grid item xs={12} style={{marginTop:"20px" , marginBottom:"10px"}}>
                                 <Typography variant="h7">Quel impact cela a-t-il eu ? </Typography>  
-                                 <Grid item xs={12}>
+                                 <Grid item xs={12} style={{ marginTop: '0.5rem' }}>
                                     <TextField
                                         id="outlined-multiline-static"
                                         multiline
