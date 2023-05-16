@@ -28,13 +28,20 @@ function SaisieErreur() {
 
   const [value, setValue] = useState('option1');
   const [valuee, setValuee] = useState('no');
+  const [value3, setValue3] = useState('no');
+
+  const [containerVisible, setContainerVisible] = useState(false);
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
   const handleChange2 = (event) => {
-    setValuee(event.target.valuee);
+    setValuee(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setValue3(event.target.value);
+    setContainerVisible(event.target.value === 'yes');
   };
 
   const handleChangeTextField = (event) => {
@@ -44,12 +51,15 @@ function SaisieErreur() {
 
 
   const handleNoClick = () => {
-    const container = document.getElementById("container",);
+    const container = document.getElementById("container"); 
+
     container.style.display = "none";
+
   };
   const handleYesClick = () => {
     const container = document.getElementById("container");
     container.style.display = "block";
+    
   };
 
   const handleNoClick1 = () => {
@@ -218,165 +228,165 @@ function SaisieErreur() {
         {/* contenu de l'étape 1 */}
         {activeStep === 0 && (
           <Card style={{ backgroundColor: '#F5B7B1 ', boxShadow: '5px 5px 5px #F1948A ', padding: '20px' }}>
-
-            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-              <Grid item xs={4}>
-                <Typography variant="h6"><b>Je m'identifie ( Etape Optionnel )</b> </Typography>
-              </Grid>
-              <Grid item xs={7}>
-                <FormControl >
+           
+           <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
+      <Grid item xs={4}>
+      <Typography variant="h6"><b>Je m'identifie ( Etape Optionnel )</b> </Typography>
+      </Grid>
+      <Grid item xs={7}>
+      <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange}>
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick8} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick8} label="Non" />
                   </RadioGroup>
                 </FormControl>
-              </Grid>
-              <Grid item xs={12}>
+      </Grid>
+      <Grid item xs={12}>
 
-                <Container id="container8" >
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} sm={4}>
-                      <Typography variant="h7">Nom :</Typography>
-                      <TextField
-                        hiddenLabel
-                        id="filled-hidden-label-small"
-                        style={{ backgroundColor: "white" }}
-                        size="small" />
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                      <Typography variant="h7">Prénom :</Typography>
-                      <TextField
-                        hiddenLabel
-                        id="filled-hidden-label-small"
-                        style={{ backgroundColor: "white" }}
-                        size="small" />
-                    </Grid>
+<Container id="container8" >
+  <Grid container spacing={2}>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h7">Nom :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h7">Prénom :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
 
-                    <Grid item xs={12} sm={4}>
-                      <Typography variant="h7">Fonction :</Typography>
-                      <TextField
-                        hiddenLabel
-                        id="filled-hidden-label-small"
-                        style={{ backgroundColor: "white" }}
-                        size="small" />
-                    </Grid>
-                  </Grid>
-                </Container></Grid>
-            </Grid>
-
-
-            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
-
-
-            <Typography variant="h6" style={{ marginTop: "2rem" }}><b>Evénement</b></Typography>
-
-            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-              <Grid item xs={2}>
-                <Typography variant="h7">Date de l'analyse :</Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <form >
-                  <TextField
-                    id="datetime-local"
-                    type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
-
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                </form>
-              </Grid>
-            </Grid>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h7">Fonction :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
+  </Grid>
+</Container></Grid>
+    </Grid>
+           
+           
+    <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black",marginTop:"20px",marginButtom:"20px"}}></hr>   
 
 
-
-
-
-
-            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-              <Grid item xs={2}>
-                <Typography variant="h7">Présenté au CREX du :</Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <form >
-                  <TextField
-                    id="datetime-local"
-                    type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
-
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                </form>
-              </Grid>
-            </Grid>
-
-
-            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
-
-
-
-
-            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-              <Grid item xs={6}>
-                <Typography variant="h6"><b>Ajouter l'équipe</b> </Typography>
-              </Grid>
-
-              <Grid item xs={12}>
-
-
-                <Grid container spacing={2}>
-                  <Grid item xs={3} >
-                    <Typography variant="h7">Nom :</Typography>
+    <Typography variant="h6" style={{marginTop:"2rem"}}><b>Evénement</b></Typography>
+            
+    <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
+      <Grid item xs={2}>
+      <Typography variant="h7">Date de l'analyse :</Typography> 
+      </Grid>
+      <Grid item xs={6}>
+      <form >
                     <TextField
-                      hiddenLabel
-                      id="filled-hidden-label-small"
-                      style={{ backgroundColor: "white" }}
-                      size="small" />
-                  </Grid>
-                  <Grid item xs={3} >
-                    <Typography variant="h7">Prénom :</Typography>
-                    <TextField
-                      hiddenLabel
-                      id="filled-hidden-label-small"
-                      style={{ backgroundColor: "white" }}
-                      size="small" label />
-                  </Grid>
+                      id="datetime-local"
+                      type="datetime-local"
+                      defaultValue="2017-05-24T10:30"
 
-                  <Grid item xs={3} >
-                    <Typography variant="h7">Fonction :</Typography>
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                    />
+                  </form>
+      </Grid>
+    </Grid>
+
+
+
+
+
+
+    <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
+      <Grid item xs={2}>
+      <Typography variant="h7">Présenté au CREX du :</Typography>  
+      </Grid>
+      <Grid item xs={6}>
+      <form >
                     <TextField
-                      hiddenLabel
-                      id="filled-hidden-label-small"
-                      style={{ backgroundColor: "white" }}
-                      size="small" />
-                  </Grid>
-                  <Grid item xs={3} >
-                    <Typography variant="h7">Service :</Typography>
-                    <TextField
-                      hiddenLabel
-                      id="filled-hidden-label-small"
-                      style={{ backgroundColor: "white" }}
-                      size="small" />
-                  </Grid>
-                </Grid>
+                      id="datetime-local"
+                      type="datetime-local"
+                      defaultValue="2017-05-24T10:30"
+
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                    />
+                  </form>
+      </Grid>
+    </Grid>
+
+
+    <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black",marginTop:"20px",marginButtom:"20px"}}></hr>   
+
+
+
+
+    <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
+      <Grid item xs={6}>
+      <Typography variant="h6"><b>Ajouter l'équipe</b> </Typography>
+      </Grid>
+   
+      <Grid item xs={12}>
+
+
+  <Grid container spacing={2}>
+    <Grid item xs={3} >
+      <Typography variant="h7">Nom :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
+    <Grid item xs={3} >
+      <Typography variant="h7">Prénom :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small"  label/>
+    </Grid>
+
+    <Grid item xs={3} >
+      <Typography variant="h7">Fonction :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
+    <Grid item xs={3} >
+      <Typography variant="h7">Service :</Typography>
+      <TextField
+        hiddenLabel
+        id="filled-hidden-label-small"
+        style={{ backgroundColor: "white" }}
+        size="small" />
+    </Grid>
+  </Grid>
+</Grid>
+    </Grid>
+
+
+    <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black",marginTop:"20px",marginButtom:"20px"}}></hr>   
+
+
+
+              <Grid item xs={12}  style={{marginTop:"1rem"}}>
+                <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
               </Grid>
-            </Grid>
-
-
-            <hr style={{ border: "0", borderBottom: "1px dashed black", background: "#black", marginTop: "20px", marginButtom: "20px" }}></hr>
-
-
-
-            <Grid item xs={12} style={{ marginTop: "1rem" }}>
-              <Typography variant="h7">L'erreur médicamenteuse a été déclarée de manière anonyme : </Typography>
-            </Grid>
-            <Grid item xs={12} style={{ marginTop: "1rem" }}>
-              <Typography variant="h7" >Déclaration faite par :</Typography>
-            </Grid>
-
+              <Grid item xs={12} style={{marginTop:"1rem"}}>
+                <Typography variant="h7" >Déclaration faite par :</Typography>
+              </Grid>
+        
 
           </Card>
         )}
@@ -399,53 +409,54 @@ function SaisieErreur() {
 
 
 
-            <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-              <Grid item xs={2}>
-                <Typography variant="h7">Date de l'événement :</Typography>
+            <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
+      <Grid item xs={2}>
+      <Typography variant="h7">Date de l'événement :</Typography> 
+      </Grid>
+      <Grid item xs={6}>
+      <form >
+                    <TextField
+                      id="datetime-local"
+                      type="datetime-local"
+                      defaultValue="2017-05-24T10:30"
+
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                    />
+                  </form>
+      </Grid>
+    </Grid>
+
+
+              <Grid item xs={12} style={{ marginTop: "1rem" }}>
+                <Typography variant="h7">Pole :</Typography>
+
+
+
+
               </Grid>
-              <Grid item xs={6}>
-                <form >
-                  <TextField
-                    id="datetime-local"
-                    type="datetime-local"
-                    defaultValue="2017-05-24T10:30"
 
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                  />
-                </form>
+     <Grid item xs={12} style={{ marginTop: "1rem" }}>
+                <Typography variant="h7">Service :</Typography>
+
+
+
+
               </Grid>
-            </Grid>
-
-
-            <Grid item xs={12} style={{ marginTop: "1rem" }}>
-              <Typography variant="h7">Pole :</Typography>
-
-
-
-
-            </Grid>
-
-            <Grid item xs={12} style={{ marginTop: "1rem" }}>
-              <Typography variant="h7">Service :</Typography>
-
-
-
-
-            </Grid>
-
-
-
-
-
-
-
-
-
-
-
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
             <Grid container spacing={2} justifyContent={'left'} style={{ marginTop: "5px" }}>
+             
 
 
 
@@ -457,8 +468,7 @@ function SaisieErreur() {
 
 
 
-
-
+         
 
 
 
@@ -471,7 +481,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
+                    style={{ width: '95%', backgroundColor: "white" ,marginTop: "1rem"}}
                     placeholder="Détails" />
                 </Grid>
 
@@ -486,7 +496,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
+                    style={{ width: '95%', backgroundColor: "white",marginTop: "1rem" }}
                     placeholder="Conséquences" />
                 </Grid>
               </Grid>
@@ -500,7 +510,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
+                    style={{ width: '95%', backgroundColor: "white" ,marginTop: "1rem"}}
                     placeholder="Problème" />
                 </Grid>
               </Grid>
@@ -513,7 +523,7 @@ function SaisieErreur() {
                     rows={1}
 
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white", marginTop: "1rem" }}
+                    style={{ width: '95%', backgroundColor: "white",marginTop: "1rem" }}
                     placeholder="Actions" />
                 </Grid>
               </Grid>
@@ -529,211 +539,211 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#EBDEF0', boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px', marginTop: '20px' }}>
               <h2>Caractériser l'erreur médicamenteuse (EM)</h2>
-
+             
 
 
 
 
               <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7" >Est-ce un never-event :</Typography>
+      <Grid item xs={12} sm={6}> <Typography variant="h7" >Est-ce un never-event :</Typography> 
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
+
+
+
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}} >
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
+
+
+
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={4}>
+  
+        <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={4}>
+ 
+          {/* Affichage */}
+   
+      </Grid>
+      <Grid item xs={12} sm={4}>
+      <Link href={myPdf}>Consulter les catégories du patient à risque</Link>
+     
+      </Grid>
+    </Grid>
 
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
 
-              </Grid>
 
 
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }} >
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
 
-              </Grid>
+    
 
 
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={4}>
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Commentaires sur l'état du patient :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
-                  <Typography variant="h7" >S'agit-il d'un patient à risque ? :</Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={4}>
+    <Grid container spacing={2}style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={4}>
+  
+        <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={4}>
+ 
+          {/* Affichage */}
+   
+      </Grid>
+      <Grid item xs={12} sm={4}>
+      <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
+     
+      </Grid>
+    </Grid>
 
-                  {/* Affichage */}
 
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Link href={myPdf}>Consulter les catégories du patient à risque</Link>
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Catégorie du médicament à risque :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
-                </Grid>
-              </Grid>
 
 
 
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Nom du médicament :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Le(s)quel(s) :</Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={2}> <Typography variant="h7">Elle concerne :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={8}>
+      <FormControl component="fieldset">
+                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                    <Typography variant="h7" style={{ marginRight: '20px' }}>Un médicament qui est :</Typography>
 
-              </Grid>
+                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
 
+                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
 
 
+                  </RadioGroup>
+                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
 
+                    <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
 
 
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Commentaires sur l'état du patient :</Typography>
+                  </RadioGroup>
+                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                    <Typography variant="h7" style={{ marginTop: '10px', marginRight: '40px' }}>Une chimiothérapie : </Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
+                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
 
-              </Grid>
+                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
 
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={4}>
+                  </RadioGroup>
+                </FormControl>
+      </Grid>
+    
+    </Grid>
 
-                  <Typography variant="h7" >S'agit-il d'un médicament à risque ? :</Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={4}>
 
-                  {/* Affichage */}
 
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Link href={myPdf1}>Consulter les catégories du médicament à risque</Link>
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">S'agit-il d'un e voie d'administration à risque ? </Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
-                </Grid>
-              </Grid>
 
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={4}> <Typography variant="h7">Catégorie de la voie d'administration à risque : </Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={3}>
+          {/* Affichage */}
+      </Grid>
+      <Grid item xs={12} sm={5}>
+      <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
+      </Grid>
+    </Grid>
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Catégorie du médicament à risque :</Typography>
 
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
 
-              </Grid>
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
 
+    <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
 
 
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Nom du médicament :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
-
-              </Grid>
-
-
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={2}> <Typography variant="h7">Elle concerne :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={8}>
-                  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <Typography variant="h7" style={{ marginRight: '20px' }}>Un médicament qui est :</Typography>
-
-                      <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
-
-                      <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
-
-
-                    </RadioGroup>
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-
-                      <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
-
-
-
-                    </RadioGroup>
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <Typography variant="h7" style={{ marginTop: '10px', marginRight: '40px' }}>Une chimiothérapie : </Typography>
-
-                      <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
-
-                      <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
-
-
-                    </RadioGroup>
-                  </FormControl>
-                </Grid>
-
-              </Grid>
-
-
-
-
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">S'agit-il d'un e voie d'administration à risque ? </Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
-
-              </Grid>
-
-
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={4}> <Typography variant="h7">Catégorie de la voie d'administration à risque : </Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={3}>
-                  {/* Affichage */}
-                </Grid>
-                <Grid item xs={12} sm={5}>
-                  <Link href={myPdf2}>Consulter les catégories de la voie d'administration à risque </Link>
-                </Grid>
-              </Grid>
-
-
-
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
-
-              </Grid>
-
-
-              <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-                <Grid item xs={12} sm={6}> <Typography variant="h7">Etape de survenue dans le circuit médicament :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* Affichage */}
-                </Grid>
-
-              </Grid>
-
-
-
+ 
 
 
             </Card>
@@ -741,108 +751,108 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#EBDEF0', boxShadow: '5px 5px 5px #C39BD3 ', padding: '20px', marginTop: '20px' }}>
               <h2>Cotation de l'événement</h2>
+              
+              
+              
+              
+              
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={2}>
+  
+        <Typography variant="h7" >Gravité :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={4}>
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+
+<MenuItem style={{ display: 'block' }} value={10}>Risque innacceptable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={20}>Risque acceptable sous controle  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Risque acceptable </MenuItem>
+
+</Select>
+   
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      <Link href={myPdf3}>Consulter l'échelle de cotation des événements indésirables </Link>
+     
+      </Grid>
+    </Grid>
+              
+              
+              
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={2}>
+  
+      <Typography variant="h7">Occurence :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={2}>
+     
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+
+<MenuItem style={{ display: 'block' }} value={10}>Très probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={20}>Très <b>peu</b> probable  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Peu probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Très probable à certain </MenuItem>
+
+</Select>
+
+   
+      </Grid>
+
+    </Grid>
+                     
+              
+              
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={2}>
+  
+      <Typography variant="h7">Niveau de  maîtrise  :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={2}>
+     
+  
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+
+<MenuItem style={{ display: 'block' }} value={10}>Très bon </MenuItem>
+<MenuItem style={{ display: 'block' }} value={20}>Bon  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Moyen </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Faible </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>Inexistant </MenuItem>
+
+</Select>
+
+   
+      </Grid>
+
+    </Grid>
 
 
 
+                     
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={2}>
+  
+      <Typography variant="h7">Criticité :</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={2}>
+     
+  
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
+<MenuItem style={{ display: 'block' }} value={10}>1 à 14 Risque acceptable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={20}>45 à 125 Risque inacceptable  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
 
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={2}>
+</Select> 
+   
+      </Grid>
 
-                  <Typography variant="h7" >Gravité :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
-
-                    <MenuItem style={{ display: 'block' }} value={10}>Risque innacceptable </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={20}>Risque acceptable sous controle  </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Risque acceptable </MenuItem>
-
-                  </Select>
-
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <Link href={myPdf3}>Consulter l'échelle de cotation des événements indésirables </Link>
-
-                </Grid>
-              </Grid>
-
-
-
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={2}>
-
-                  <Typography variant="h7">Occurence :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={2}>
-
-                  <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
-
-                    <MenuItem style={{ display: 'block' }} value={10}>Très probable </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={20}>Très <b>peu</b> probable  </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Peu probable </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Probable </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Très probable à certain </MenuItem>
-
-                  </Select>
-
-
-                </Grid>
-
-              </Grid>
-
-
-
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={2}>
-
-                  <Typography variant="h7">Niveau de  maîtrise  :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={2}>
-
-
-                  <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
-
-                    <MenuItem style={{ display: 'block' }} value={10}>Très bon </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={20}>Bon  </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Moyen </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Faible </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>Inexistant </MenuItem>
-
-                  </Select>
-
-
-                </Grid>
-
-              </Grid>
-
-
-
-
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={2}>
-
-                  <Typography variant="h7">Criticité :</Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={2}>
-
-
-                  <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
-
-                    <MenuItem style={{ display: 'block' }} value={10}>1 à 14 Risque acceptable </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={20}>45 à 125 Risque inacceptable  </MenuItem>
-                    <MenuItem style={{ display: 'block' }} value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
-
-                  </Select>
-
-                </Grid>
-
-              </Grid>
-
+    </Grid>               
+              
             </Card>
 
           </>
@@ -865,15 +875,15 @@ function SaisieErreur() {
             <h2>ETAPE 2 : Quels sont les dysfonctionnements, les erreurs ?</h2>
 
 
-            <Grid container spacing={2} style={{ marginTop: '0.5rem' }}>
-              <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
-
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                {/* Affichage */}
-              </Grid>
-
-            </Grid>
+            <Grid container spacing={2} style={{marginTop: '0.5rem'}}>
+      <Grid item xs={12} sm={6}> <Typography variant="h7">Degré de réalisation : </Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={6}>
+          {/* Affichage */}
+      </Grid>
+    
+    </Grid>
             <Grid item xs={12}>
               <h4>Défaillances actives ou immédiates ou défauts de soin</h4>
               <TextField
@@ -905,300 +915,316 @@ function SaisieErreur() {
             <h2>ETAPE 3 : Pourquoi cela est-il arrivé ? (causes latentes systématiques)</h2>
 
 
+ 
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={7} >   
+       <Typography variant="h6" style={{marginBottom: '1rem'}}><b>L'erreur est-elle liée à des facteurs propres aux patients ?</b></Typography>
+          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value3} onChange={handleChange3}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
 
-            <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-              <Grid item xs={12} sm={7}>    <Typography variant="h6" style={{ marginBottom: '1rem' }}><b>L'erreur est-elle liée à des facteurs propres aux patients ?</b></Typography>
 
-              </Grid>
-              <Grid item xs={12} sm={5}>
-                <FormControl >
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick} label="Non" />
-                  </RadioGroup>
-                </FormControl>
-              </Grid>
+     
+      <Grid item xs={12} >
+      {containerVisible && (
+      
 
-            </Grid>
 
+      <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container">
 
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="L'état de santé du patient est-il grave,complexe ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
+      </Grid>
 
 
 
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="L'EI est-il survenu dans un contexte de prise en charge en urgence ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
-            <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container">
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
-                        />
-                      }
-                      label="L'état de santé du patient est-il grave,complexe ?"
-                    />
-                    <TextField
-                      hiddenLabel
+      </Grid>
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white" }}
-                      onChange={handleChangeTextField}
 
 
-                    />
 
-                  </div></Grid>
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl></Grid>
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-              </Grid>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="L'expression du patient ou la communication étaient-elles difficiles ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
+            />
 
+          </div></Grid>
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
-                        />
-                      }
-                      label="L'EI est-il survenu dans un contexte de prise en charge en urgence ?"
-                    />
-                    <TextField
-                      hiddenLabel
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white" }}
-                      onChange={handleChangeTextField}
 
+      </Grid>
 
-                    />
 
-                  </div></Grid>
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+      
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl></Grid>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
-              </Grid>
+                />
+              }
+              label="La personnalité du patient est-elle particulière et peut-elle expliquer en partie le dysfonctionnement ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                <Grid item xs={12} md={6} >
-                </Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
-                        />
-                      }
-                      label="L'expression du patient ou la communication étaient-elles difficiles ?"
-                    />
-                    <TextField
-                      hiddenLabel
+      </Grid>
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white" }}
-                      onChange={handleChangeTextField}
 
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-                    />
 
-                  </div></Grid>
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl></Grid>
+                />
+              }
+              label="Existe-t-il des facteurs sociaux particuliers suceptibles d'expliquer tout ou partie des dysfonctionnements ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
-              </Grid>
 
+            />
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
 
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl> </Grid>
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
 
-                        />
-                      }
-                      label="La personnalité du patient est-elle particulière et peut-elle expliquer en partie le dysfonctionnement ?"
-                    />
-                    <TextField
-                      hiddenLabel
+      </Grid>
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                      onChange={handleChangeTextField}
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
 
-                    />
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
-                  </div></Grid>
+                />
+              }
+              label="Autre ?"
+            />
+            <TextField
+              hiddenLabel
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl></Grid>
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
 
-              </Grid>
+            />
 
+          </div></Grid>
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                <Grid item xs={12} md={6} >
-                </Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
+      </Grid></Grid>
 
-                        />
-                      }
-                      label="Existe-t-il des facteurs sociaux particuliers suceptibles d'expliquer tout ou partie des dysfonctionnements ?"
-                    />
-                    <TextField
-                      hiddenLabel
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                      onChange={handleChangeTextField}
 
 
-                    />
 
-                  </div></Grid>
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
 
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl> </Grid>
+      )}
+      </Grid>  
+    
+    </Grid>
 
 
-              </Grid>
 
-              <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                <Grid item xs={12} md={6} >
-                </Grid>
 
 
-                <Grid item xs={12} >
-                  <div>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          onChange={handleChange}
-                          name="checkedOption1"
-                          color="primary"
 
-                        />
-                      }
-                      label="Autre ?"
-                    />
-                    <TextField
-                      hiddenLabel
 
-                      id="filled-hidden-label-small"
-                      size="small"
-                      style={{ width: '30%', backgroundColor: "white" }}
-                      onChange={handleChangeTextField}
 
 
-                    />
 
-                  </div></Grid>
 
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                    <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} label="Non" />
-                  </RadioGroup>
-                </FormControl></Grid>
 
 
-              </Grid></Grid>
+
+
+
+
+          
+
+
           </Card>
 
 
@@ -1208,23 +1234,21 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs individuels ?</b></Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={5}>
-                  <FormControl >
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs individuels ?</b></Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={5}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick1} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick1} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
-
-
+      </Grid>
+    
+    </Grid>
 
 
 
@@ -1232,7 +1256,9 @@ function SaisieErreur() {
 
 
 
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container1">
+
+
+              <Grid container spacing={1} style={{ padding: "5px", margin: "2px"}} id="container1">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -1606,23 +1632,21 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'équipe ?</b></Typography>
-
-                </Grid>
-                <Grid item xs={12} sm={5}>
-                  <FormControl >
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'équipe ?</b></Typography>
+          
+      </Grid>
+      <Grid item xs={12} sm={5}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick2} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick2} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
-
-
+      </Grid>
+    
+    </Grid>
 
 
 
@@ -1636,6 +1660,8 @@ function SaisieErreur() {
 
 
 
+
+            
 
               <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container2">
 
@@ -1934,26 +1960,26 @@ function SaisieErreur() {
 
 
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={7} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des tâche à accomplir ?</b></Typography>
-                </Grid>
-                <Grid item xs={12} sm={5}>
-                  <FormControl >
+              <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des tâche à accomplir ?</b></Typography>          
+      </Grid>
+      <Grid item xs={12} sm={5}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick3} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick3} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
-
-
+      </Grid>
+    
+    </Grid>
 
 
 
 
+               
+         
 
               <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container3">
 
@@ -2520,20 +2546,20 @@ function SaisieErreur() {
 
 
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={8} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'environnement ?</b></Typography>
-                </Grid>
-                <Grid item xs={12} sm={3}>
-                  <FormControl >
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={8} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'environnement ?</b></Typography>
+      </Grid>
+      <Grid item xs={12} sm={3}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick4} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick4} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
+      </Grid>
+    
+    </Grid>
 
 
 
@@ -2950,20 +2976,20 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={8} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'organisation ?</b></Typography>
-                </Grid>
-                <Grid item xs={12} sm={3}>
-                  <FormControl >
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={8} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'organisation ?</b></Typography>
+      </Grid>
+      <Grid item xs={12} sm={3}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick5} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick5} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
+      </Grid>
+    
+    </Grid>
 
 
 
@@ -3059,7 +3085,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+              
 
 
                   <Grid item xs={12} >
@@ -3107,7 +3133,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+               
 
 
                   <Grid item xs={12} >
@@ -3155,7 +3181,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                  
 
 
                   <Grid item xs={12} >
@@ -3197,7 +3223,7 @@ function SaisieErreur() {
                 </Grid>
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                 
 
 
                   <Grid item xs={12} >
@@ -3237,7 +3263,7 @@ function SaisieErreur() {
 
                 </Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3273,7 +3299,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3309,7 +3335,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+               
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3358,22 +3384,20 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
-              <Grid container spacing={2} style={{ marginTop: '1rem' }}>
-                <Grid item xs={12} sm={9} style={{ marginBottom: '1rem' }}>
-                  <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</b></Typography>
-                </Grid>
-                <Grid item xs={12} sm={3}>
-                  <FormControl >
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={12} sm={9} style={{marginBottom: '1rem'}}>   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</b></Typography>
+      </Grid>
+      <Grid item xs={12} sm={3}>
+      <FormControl >
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
                       <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick6} label="Oui" />
                       <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick6} label="Non" />
                     </RadioGroup>
                   </FormControl>
-                </Grid>
-
-              </Grid>
-
-
+      </Grid>
+    
+    </Grid>
 
 
 
@@ -3387,6 +3411,8 @@ function SaisieErreur() {
 
 
 
+
+            
 
               <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
 
@@ -3476,7 +3502,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+              
 
                   <Grid item xs={12} >
                     <div>
@@ -3523,7 +3549,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+           
 
 
                   <Grid item xs={12} >
@@ -3571,7 +3597,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+               
 
 
                   <Grid item xs={12} >
@@ -3613,7 +3639,7 @@ function SaisieErreur() {
                 </Grid>
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                
 
 
                   <Grid item xs={12} >
@@ -3652,7 +3678,7 @@ function SaisieErreur() {
 
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+                
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3688,7 +3714,7 @@ function SaisieErreur() {
                     </RadioGroup>
                   </FormControl></Grid></Grid>
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
+              
                   <Grid item xs={12} >
                     <div>
                       <FormControlLabel
@@ -3768,28 +3794,28 @@ function SaisieErreur() {
 
 
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} style={{ marginTop: "0.8rem" }}>
-
-                <Typography variant="h7" >Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
-
-              </Grid>
-              <Grid item xs={12} sm={6}>
-
-                <FormControl >
+      <Grid item xs={12} sm={6} style={{marginTop:"0.8rem"}}>
+    
+      <Typography variant="h7" >Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
+   
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      
+      <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange2}>
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick7} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick7} label="Non" />
                   </RadioGroup>
                 </FormControl>
-
-              </Grid>
-
-
-            </Grid>
-
-
-            <Grid item xs={12} sm={12}>
-              <Grid container id="container7" >
+      
+      </Grid>
+      
+    
+    </Grid>
+    
+   
+      <Grid item xs={12} sm={12}>
+<Grid container id="container7" >
                 <Grid item xs={12}>
                   <Typography variant="h7">Si non , quelles ont été les défenses manquantes ou non opérationnelles ?</Typography>
                   <br></br>  <TextField
@@ -3797,17 +3823,17 @@ function SaisieErreur() {
                     multiline
                     rows={5}
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white", marginTop: "0.5rem" }}
+                    style={{ width: '95%', backgroundColor: "white",marginTop:"0.5rem"}}
                   />
                 </Grid>
-
+             
 
               </Grid>  </Grid>
 
 
 
 
-
+           
           </Card>
 
 
