@@ -29,8 +29,49 @@ function SaisieErreur() {
   const [value, setValue] = useState('option1');
   const [valuee, setValuee] = useState('no');
   const [value3, setValue3] = useState('no');
+  const [value4, setValue4] = useState('no');
+  const [value5, setValue5] = useState('no');
+
+  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue1, setSelectedValue1] = useState('');
+  const [selectedValue2, setSelectedValue2] = useState('');
+  const [percentageResult, setPercentageResult] = useState('');
 
   const [containerVisible, setContainerVisible] = useState(false);
+  const handleChange11 = (event) => {
+    const selectedValue = event.target.value;
+    calculatePercentage(selectedValue, selectedValue1, selectedValue2);
+    setSelectedValue(selectedValue);
+  };
+  const isButtonRed = percentageResult >= 45 && percentageResult <= 125;
+  const isButtonyellow = percentageResult >= 15 && percentageResult <= 44;
+  const isButtongreen = percentageResult >= 1 && percentageResult <= 14;
+
+
+  const handleChange12 = (event) => {
+    const selectedValue = event.target.value;
+    calculatePercentage(selectedValue, selectedValue1, selectedValue2);
+    setSelectedValue1(selectedValue);
+  };
+
+  const handleChange13 = (event) => {
+    const selectedValue = event.target.value;
+    calculatePercentage(selectedValue, selectedValue1, selectedValue2);
+    setSelectedValue2(selectedValue);
+  };
+
+  const calculatePercentage = (value1, value2, value3) => {
+    // Effectuez votre calcul du pourcentage ici en utilisant les valeurs sélectionnées
+    const calculatedPercentage = value1 * value2 *value3;
+    setPercentageResult(calculatedPercentage);
+  };
+
+
+
+
+
+
+
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -44,53 +85,22 @@ function SaisieErreur() {
     setContainerVisible(event.target.value === 'yes');
   };
 
+  const handleChange4 = (event) => {
+    setValue4(event.target.value);
+    setContainerVisible(event.target.value === 'yes');
+  };
+  const handleChange5 = (event) => {
+    setValue5(event.target.value);
+    setContainerVisible(event.target.value === 'yes');
+  };
+
+
+
+
   const handleChangeTextField = (event) => {
     setValue(event.target.value);
   };
 
-
-
-  const handleNoClick = () => {
-    const container = document.getElementById("container"); 
-
-    container.style.display = "none";
-
-  };
-  const handleYesClick = () => {
-    const container = document.getElementById("container");
-    container.style.display = "block";
-    
-  };
-
-  const handleNoClick1 = () => {
-    const container = document.getElementById("container1",);
-    container.style.display = "none";
-  };
-  const handleYesClick1 = () => {
-    const container = document.getElementById("container1");
-    container.style.display = "block";
-  };
-
-
-
-  const handleNoClick2 = () => {
-    const container = document.getElementById("container2",);
-    container.style.display = "none";
-  };
-  const handleYesClick2 = () => {
-    const container = document.getElementById("container2");
-    container.style.display = "block";
-  };
-
-
-  const handleNoClick3 = () => {
-    const container = document.getElementById("container3",);
-    container.style.display = "none";
-  };
-  const handleYesClick3 = () => {
-    const container = document.getElementById("container3");
-    container.style.display = "block";
-  };
 
   const handleNoClick4 = () => {
     const container = document.getElementById("container4",);
@@ -763,11 +773,14 @@ function SaisieErreur() {
    
       </Grid>
       <Grid item xs={12} sm={4}>
-      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }} value={selectedValue} onChange={handleChange11}>
 
-<MenuItem style={{ display: 'block' }} value={10}>Risque innacceptable </MenuItem>
-<MenuItem style={{ display: 'block' }} value={20}>Risque acceptable sous controle  </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Risque acceptable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={1}>1 </MenuItem>
+<MenuItem style={{ display: 'block' }} value={2}>2 </MenuItem>
+<MenuItem style={{ display: 'block' }} value={3}>3</MenuItem>
+<MenuItem style={{ display: 'block' }} value={4}>4</MenuItem>
+<MenuItem style={{ display: 'block' }} value={5}>5</MenuItem>
+
 
 </Select>
    
@@ -788,13 +801,13 @@ function SaisieErreur() {
       </Grid>
       <Grid item xs={12} sm={2}>
      
-      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }} value={selectedValue1} onChange={handleChange12}>
 
-<MenuItem style={{ display: 'block' }} value={10}>Très probable </MenuItem>
-<MenuItem style={{ display: 'block' }} value={20}>Très <b>peu</b> probable  </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Peu probable </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Probable </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Très probable à certain </MenuItem>
+<MenuItem style={{ display: 'block' }} value={1}>Très probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={2}>Très <b>peu</b> probable  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={3}>Peu probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={4}>Probable </MenuItem>
+<MenuItem style={{ display: 'block' }} value={5}>Très probable à certain </MenuItem>
 
 </Select>
 
@@ -814,13 +827,13 @@ function SaisieErreur() {
       <Grid item xs={12} sm={2}>
      
   
-      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
+      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }} value={selectedValue2} onChange={handleChange13}>
 
-<MenuItem style={{ display: 'block' }} value={10}>Très bon </MenuItem>
-<MenuItem style={{ display: 'block' }} value={20}>Bon  </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Moyen </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Faible </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>Inexistant </MenuItem>
+<MenuItem style={{ display: 'block' }} value={1}>Très bon </MenuItem>
+<MenuItem style={{ display: 'block' }} value={2}>Bon  </MenuItem>
+<MenuItem style={{ display: 'block' }} value={3}>Moyen </MenuItem>
+<MenuItem style={{ display: 'block' }} value={4}>Faible </MenuItem>
+<MenuItem style={{ display: 'block' }} value={5}>Inexistant </MenuItem>
 
 </Select>
 
@@ -836,19 +849,26 @@ function SaisieErreur() {
       <Grid item xs={12} sm={2}>
   
       <Typography variant="h7">Criticité :</Typography>
-   
+   {percentageResult && (
+        <p>Calcul de la criticité : {percentageResult}</p>
+        
+      )}
       </Grid>
       <Grid item xs={12} sm={2}>
      
-  
-      <Select style={{ height: ' 50%', width: 'auto', backgroundColor: "white" }}>
 
-<MenuItem style={{ display: 'block' }} value={10}>1 à 14 Risque acceptable </MenuItem>
-<MenuItem style={{ display: 'block' }} value={20}>45 à 125 Risque inacceptable  </MenuItem>
-<MenuItem style={{ display: 'block' }} value={30}>15 à 44 Risque acceptable sous controle </MenuItem>
+       {isButtonRed && (
+        <button style={{ backgroundColor: 'red' }}>Risque inacceptable</button>
+      )}
 
-</Select> 
-   
+{isButtonyellow && (
+        <button style={{ backgroundColor: 'yellow' }}>Risque acceptable sous controle</button>
+      )}
+
+
+{isButtongreen && (
+        <button style={{ backgroundColor: 'green' }}>Risque acceptable</button>
+      )}
       </Grid>
 
     </Grid>               
@@ -936,7 +956,6 @@ function SaisieErreur() {
 
 
       <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container">
-
       <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
         <Grid item xs={12} >
@@ -1234,31 +1253,29 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
+
+
+
+
             <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs individuels ?</b></Typography>
-          
-      </Grid>
-      <Grid item xs={12} sm={5}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick1} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick1} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
-    
-    </Grid>
+      <Grid item xs={7} >   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs individuels ?</b></Typography>          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value4} onChange={handleChange4}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
 
 
+     
+      <Grid item xs={12} >
+      {containerVisible && (
+      
 
 
-
-
-
-
-
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px"}} id="container1">
+      <Grid container spacing={1} style={{ padding: "5px", margin: "2px"}} id="container1">
 
                 <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -1618,6 +1635,18 @@ function SaisieErreur() {
 
                 </Grid>
               </Grid>
+
+
+
+
+
+
+
+      )}
+      </Grid>  
+    
+    </Grid>
+          
             </Card>
 
 
@@ -1632,307 +1661,414 @@ function SaisieErreur() {
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
+
+
+
+
+
+
+
+
+
+
+
             <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'équipe ?</b></Typography>
-          
-      </Grid>
-      <Grid item xs={12} sm={5}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick2} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick2} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
+
+            <Grid item xs={7} >   
+      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'équipe ?</b></Typography>          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value5} onChange={handleChange5}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
     
     </Grid>
 
 
+    <Grid item xs={12} >
+      {containerVisible && (
+      
 
 
+      <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container2">
 
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="La composition de l'équipe chargée du soin était-elle mauvaise ou inadaptée ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
+      </Grid>
 
 
-            
 
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container2">
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="La composition de l'équipe chargée du soin était-elle mauvaise ou inadaptée ?"
-                      />
-                      <TextField
-                        hiddenLabel
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="A-t-on relevé un défaut de communication interne orale et/ou écrite au sein de l'équipe ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
-                      />
 
-                    </div></Grid>
+            />
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
+          </div></Grid>
 
-                </Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
+      </Grid>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="A-t-on relevé un défaut de communication interne orale et/ou écrite au sein de l'équipe ?"
-                      />
-                      <TextField
-                        hiddenLabel
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
 
-                      />
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
+                />
+              }
+              label="A-t-on relevé une collaboration insuffisante entre professionnels ?"
+            />
+            <TextField
+              hiddenLabel
 
-                    </div></Grid>
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white" }}
+              onChange={handleChangeTextField}
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
 
+            />
 
-                </Grid>
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
+      </Grid>
 
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
 
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="A-t-on relevé une collaboration insuffisante entre professionnels ?"
-                      />
-                      <TextField
-                        hiddenLabel
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
 
 
-                      />
 
-                    </div></Grid>
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
-                </Grid>
+                />
+              }
+              label="Existe-t-il des conflits ou une mauvaise ambiance au sein de l'équipe / un défaut de cohésion ?"
+            />
+            <TextField
+              hiddenLabel
 
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
+      </Grid>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
 
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
 
-                          />
-                        }
-                        label="Existe-t-il des conflits ou une mauvaise ambiance au sein de l'équipe / un défaut de cohésion ?"
-                      />
-                      <TextField
-                        hiddenLabel
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
 
 
-                      />
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-                    </div></Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
+                />
+              }
+              label="La supervision des responsables et des autres personnels a-t-elle été inadéquate ?"
+            />
+            <TextField
+              hiddenLabel
 
-                </Grid>
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
 
+            />
 
+          </div></Grid>
 
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
 
+      </Grid>
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
 
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
+                />
+              }
+              label="Y'a-t-il un manque ou un défaut de recherche d'aide,d'avis,de collaboration ?"
+            />
+            <TextField
+              hiddenLabel
 
-                          />
-                        }
-                        label="La supervision des responsables et des autres personnels a-t-elle été inadéquate ?"
-                      />
-                      <TextField
-                        hiddenLabel
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
 
+            />
 
-                      />
+          </div></Grid>
 
-                    </div></Grid>
+        <Grid item xs={12} md={3}>
+          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+          <RadioGroup row valuee={valuee} onChange={handleChange2}>
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+            <FormControlLabel value="no" control={<Radio />} label="Non" />
+          </RadioGroup>
+        </FormControl></Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
 
+      </Grid>
+      <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+        <Grid item xs={12} md={6} >
+        </Grid>
 
-                </Grid>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
+        <Grid item xs={12} >
+          <div>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  onChange={handleChange}
+                  name="checkedOption1"
+                  color="primary"
 
+                />
+              }
+              label="Autre?"
+            />
+            <TextField
+              hiddenLabel
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
+              id="filled-hidden-label-small"
+              size="small"
+              style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+              onChange={handleChangeTextField}
 
-                          />
-                        }
-                        label="Y a-t-il un manque ou un défaut de recherche d'aide, d'avis, de collaboration ?"
-                      />
-                      <TextField
-                        hiddenLabel
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+            />
 
+          </div></Grid>
 
-                      />
+        
+        
 
-                    </div></Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
+      </Grid>
 
 
-                </Grid></Grid></Card>
+
+
+
+
+
+
+
+
+
+  
+</Grid> 
+
+
+
+
+
+
+      )}
+   </Grid></Card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1946,40 +2082,21 @@ function SaisieErreur() {
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
 
 
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={7} >   
+       <Typography variant="h6" style={{marginBottom: '1rem'}}><b>L'erreur est-elle liée à des tâche à accomplir ?</b></Typography>
+          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value3} onChange={handleChange3}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>     </Grid>   
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-              <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={7} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des tâche à accomplir ?</b></Typography>          
-      </Grid>
-      <Grid item xs={12} sm={5}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick3} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick3} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
-    
-    </Grid>
-
-
-
-
-               
-         
 
               <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container3">
 
