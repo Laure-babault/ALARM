@@ -37,7 +37,11 @@ function SaisieErreur() {
   const [selectedValue2, setSelectedValue2] = useState('');
   const [percentageResult, setPercentageResult] = useState('');
 
-  const [containerVisible, setContainerVisible] = useState(false);
+  const [containerVisible, setContainerVisible] = useState(false); 
+  
+  
+
+ 
   const handleChange11 = (event) => {
     const selectedValue = event.target.value;
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
@@ -46,8 +50,6 @@ function SaisieErreur() {
   const isButtonRed = percentageResult >= 45 && percentageResult <= 125;
   const isButtonyellow = percentageResult >= 15 && percentageResult <= 44;
   const isButtongreen = percentageResult >= 1 && percentageResult <= 14;
-
-
   const handleChange12 = (event) => {
     const selectedValue = event.target.value;
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
@@ -62,7 +64,7 @@ function SaisieErreur() {
 
   const calculatePercentage = (value1, value2, value3) => {
     // Effectuez votre calcul du pourcentage ici en utilisant les valeurs sélectionnées
-    const calculatedPercentage = value1 * value2 *value3;
+    const calculatedPercentage = value1 * value2 * value3;
     setPercentageResult(calculatedPercentage);
   };
 
