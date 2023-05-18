@@ -31,15 +31,31 @@ function SaisieErreur() {
   const [value3, setValue3] = useState('no');
   const [value4, setValue4] = useState('no');
   const [value5, setValue5] = useState('no');
+  const [value6, setValue6] = useState('no');
+
+  const [value7, setValue7] = useState('no');
+
+  const [value8, setValue8] = useState('no');
+  const [value9, setValue9] = useState('no');
+
+
 
   const [selectedValue, setSelectedValue] = useState('');
   const [selectedValue1, setSelectedValue1] = useState('');
   const [selectedValue2, setSelectedValue2] = useState('');
   const [percentageResult, setPercentageResult] = useState('');
 
-  const [containerVisible, setContainerVisible] = useState(false); 
-  
-  
+  const [containerVisible1, setContainerVisible1] = useState(false); 
+  const [containerVisible2, setContainerVisible2] = useState(false); 
+  const [containerVisible3, setContainerVisible3] = useState(false); 
+  const [containerVisible4, setContainerVisible4] = useState(false); 
+  const [containerVisible5, setContainerVisible5] = useState(false); 
+  const [containerVisible6, setContainerVisible6] = useState(false); 
+  const [containerVisible7, setContainerVisible7] = useState(false); 
+
+
+
+
 
  
   const handleChange11 = (event) => {
@@ -84,17 +100,35 @@ function SaisieErreur() {
   };
   const handleChange3 = (event) => {
     setValue3(event.target.value);
-    setContainerVisible(event.target.value === 'yes');
+    setContainerVisible1(event.target.value === 'yes');
   };
 
   const handleChange4 = (event) => {
     setValue4(event.target.value);
-    setContainerVisible(event.target.value === 'yes');
+    setContainerVisible2(event.target.value === 'yes');
   };
   const handleChange5 = (event) => {
     setValue5(event.target.value);
-    setContainerVisible(event.target.value === 'yes');
+    setContainerVisible3(event.target.value === 'yes');
   };
+  const handleChange6 = (event) => {
+    setValue6(event.target.value);
+    setContainerVisible4(event.target.value === 'yes');
+  };
+
+  const handleChange7 = (event) => {
+    setValue7(event.target.value);
+    setContainerVisible5(event.target.value === 'yes');
+  };
+  const handleChange8 = (event) => {
+    setValue8(event.target.value);
+    setContainerVisible6(event.target.value === 'yes');
+  };
+  const handleChange9 = (event) => {
+    setValue9(event.target.value);
+    setContainerVisible7(event.target.value === 'yes');
+  };
+
 
 
 
@@ -104,37 +138,11 @@ function SaisieErreur() {
   };
 
 
-  const handleNoClick4 = () => {
-    const container = document.getElementById("container4",);
-    container.style.display = "none";
-  };
-  const handleYesClick4 = () => {
-    const container = document.getElementById("container4");
-    container.style.display = "block";
-  };
-
-
-  const handleNoClick5 = () => {
-    const container = document.getElementById("container5",);
-    container.style.display = "none";
-  };
-  const handleYesClick5 = () => {
-    const container = document.getElementById("container5");
-    container.style.display = "block";
-  };
+  
 
 
 
-  const handleNoClick6 = () => {
-    const container = document.getElementById("container6",);
-    container.style.display = "none";
-  };
-  const handleYesClick6 = () => {
-    const container = document.getElementById("container6");
-    container.style.display = "block";
-  };
-
-
+  
 
   const handleNoClick7 = () => {
     const container = document.getElementById("container7",);
@@ -953,7 +961,7 @@ function SaisieErreur() {
 
      
       <Grid item xs={12} >
-      {containerVisible && (
+      {containerVisible1 && (
       
 
 
@@ -1273,7 +1281,7 @@ function SaisieErreur() {
 
      
       <Grid item xs={12} >
-      {containerVisible && (
+      {containerVisible2 && (
       
 
 
@@ -1690,7 +1698,7 @@ function SaisieErreur() {
 
 
     <Grid item xs={12} >
-      {containerVisible && (
+      {containerVisible3 && (
       
 
 
@@ -2002,14 +2010,6 @@ function SaisieErreur() {
 
 
 
-
-
-
-
-
-
-
-
   
 </Grid> 
 
@@ -2090,1407 +2090,439 @@ function SaisieErreur() {
           
       </Grid>      <Grid item xs={5} >
  <FormControl>
-        <RadioGroup row value={value3} onChange={handleChange3}>
+        <RadioGroup row value={value6} onChange={handleChange6}>
           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
           <FormControlLabel value="no" control={<Radio />} label="Non" />
         </RadioGroup>
-      </FormControl>     </Grid>     </Grid>   
+      </FormControl>     </Grid>   
+       </Grid>   
 
 
 
 
 
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container3">
+            
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                  <Grid item xs={12} > 
+                  {containerVisible4 && (
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Le(s) protocole(s) étaient-ils absents ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Le(s) protocole(s), procédure(s) étaient-ils inadaptés ou peu compréhensibles ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Le(s) protocole(s), procédure(s) étaient-ils indisponibles au moment de survenue de l'événement ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Le(s) protocole(s), procédure(s) étaient-ils inutilisables ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Le(s) protocole(s), procédure(s) étaient-ils insuffisamment diffusés et/ou connus ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Y a-t-il un retard dans la prestation ou la programmation des examens cliniques et paracliniques ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Y a-t-il eu un défaut d'accessibilité,de disponibilité de l'information en temps voulu ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La recherche d'information auprès d'un autre professionnel a-t-elle été difficile ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La planification des tâches était-elle inadaptée  ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Les soins/actes ne relevaient-ils pas du champ de compétence,d'activité du service ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Le(s) protocoles(s), procédure(s) n'ont-ils pas été respectés ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Autre?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-              </Grid></Card>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
-
-
-
-            <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={8} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'environnement ?</b></Typography>
-      </Grid>
-      <Grid item xs={12} sm={3}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick4} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick4} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
-    
-    </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container4">
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les locaux ou le matériel utilisé étaient-ils inadaptés ou indisponibles ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les fournitures ou équipements étaient-ils défectueux,mal entretenus ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les fornitures ou équipements étaient-ils inexistants ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Les fournitures ou équipements ont-ils été mal utilisés ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Les supports d'information, les notices d'utilisation étaient-ils indisponibles ou inadaptés ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La formation ou entrainement des professionnels étaient-ils inexistants,inadaptés, non réalisés ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Les conditions de travail étaient-elles inadaptées ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La charge de travail était-elle importante au moment de l'événement ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                  <Grid item xs={12} md={6} >
-                  </Grid>
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Autre ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid></Grid>
-
-              </Grid></Card>
-
-
-
-
-
-            <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
-
-            <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={8} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant l'organisation ?</b></Typography>
-      </Grid>
-      <Grid item xs={12} sm={3}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick5} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick5} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
-    
-    </Grid>
-
-
-
-
-
-
-
-              <Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container5">
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Y a-t-il eu un changement récent d'organisation interne ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Y a-t-il une limitation trop restrictive de la prise de décision des acteurs du terrain ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-              
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les responsabilités et les tâches étaient-elles non ou mal définies ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-               
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Y a-t-il eu un défaut de coordination dans le service ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
                   
+                  
+                   <><Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container3">
 
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
+                    <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                    <Grid item xs={12}> <div>
+                    
+                        <FormControlLabel
+                          control={<Checkbox
                             onChange={handleChange}
                             name="checkedOption1"
-                            color="primary"
+                            color="primary" />}
+                          label="Le(s) protocole(s) étaient-ils absents ?" />
+                        <TextField
+                          hiddenLabel
 
-                          />
-                        }
-                        label="Y a-t-il eu un défaut de coordination entre les services,les structures ?"
-                      />
-                      <TextField
-                        hiddenLabel
+                          id="filled-hidden-label-small"
+                          size="small"
+                          style={{ width: '30%', backgroundColor: "white" }}
+                          onChange={handleChangeTextField} />
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
+                      </div></Grid>
 
+                    <Grid item xs={12} md={3}>
+                      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      </RadioGroup>
+                    </FormControl></Grid></Grid>
 
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
+                  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
-                </Grid>
 
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                 
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le(s) protocole(s), procédure(s) étaient-ils inadaptés ou peu compréhensibles ?" />
+                          <TextField
+                            hiddenLabel
 
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
 
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
+                        </div></Grid>
 
-                          />
-                        }
-                        label="Y a-t-il eu un défaut d'adaptation à une situation imprévue ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La gestion des ressources humaines était-elle inadéquate ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
 
 
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid></Grid>
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La procédure de sortie était-elle inadéquate ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
 
 
-                      />
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le(s) protocole(s), procédure(s) étaient-ils indisponibles au moment de survenue de l'événement ?" />
+                          <TextField
+                            hiddenLabel
 
-                    </div></Grid>
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid></Grid>
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-               
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
+                        </div></Grid>
 
-                          />
-                        }
-                        label="Autre ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
 
 
-                      />
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
 
-                    </div></Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-                </Grid>
-              </Grid></Card>
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le(s) protocole(s), procédure(s) étaient-ils inutilisables ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le(s) protocole(s), procédure(s) étaient-ils insuffisamment diffusés et/ou connus ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il un retard dans la prestation ou la programmation des examens cliniques et paracliniques ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il eu un défaut d'accessibilité,de disponibilité de l'information en temps voulu ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La recherche d'information auprès d'un autre professionnel a-t-elle été difficile ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La planification des tâches était-elle inadaptée  ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les soins/actes ne relevaient-ils pas du champ de compétence,d'activité du service ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le(s) protocoles(s), procédure(s) n'ont-ils pas été respectés ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Autre?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+
+
+
+                    </Grid></>
+
+
+
+
+
+
+
+
+
+
+)}
+</Grid></Card>
+
+
+
+
+
+
+
 
 
 
@@ -3502,22 +2534,702 @@ function SaisieErreur() {
 
 
             <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={7} >   
+       <Typography variant="h6" style={{marginBottom: '1rem'}}><b>L'erreur est-elle liée à des facteurs concernant l'environnement ?</b></Typography>
+          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value7} onChange={handleChange7}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
+       </Grid>   
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+                  <Grid item xs={12} >
+                  {containerVisible5 && (
+
+                    
+                    
+                     <><Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container4">
+
+                    <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                    <Grid item xs={12}> 
+                      <div>
+                        <FormControlLabel
+                          control={<Checkbox
+                            onChange={handleChange}
+                            name="checkedOption1"
+                            color="primary" />}
+                          label="Les locaux ou le matériel utilisé étaient-ils inadaptés ou indisponibles ?" />
+                        <TextField
+                          hiddenLabel
+
+                          id="filled-hidden-label-small"
+                          size="small"
+                          style={{ width: '30%', backgroundColor: "white" }}
+                          onChange={handleChangeTextField} />
+
+                      </div>
+</Grid>
+                    <Grid item xs={12} md={3}>
+                      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      </RadioGroup>
+                    </FormControl></Grid></Grid>
+
+                  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les fournitures ou équipements étaient-ils défectueux,mal entretenus ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les fornitures ou équipements étaient-ils inexistants ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les fournitures ou équipements ont-ils été mal utilisés ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les supports d'information, les notices d'utilisation étaient-ils indisponibles ou inadaptés ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La formation ou entrainement des professionnels étaient-ils inexistants,inadaptés, non réalisés ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les conditions de travail étaient-elles inadaptées ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La charge de travail était-elle importante au moment de l'événement ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                      <Grid item xs={12} md={6}>
+                      </Grid>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Autre ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+
+
+
+
+                    </Grid></>
+
+
+
+
+
+
+
+
+
+
+)}
+</Grid></Card>
+
+
+
+
+
+            <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
+            <Grid container spacing={2} style={{marginTop: '1rem'}}>
+      <Grid item xs={7} >   
+       <Typography variant="h6" style={{marginBottom: '1rem'}}><b>L'erreur est-elle liée à des facteurs concernant l'organisation ?</b></Typography>
+          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value8} onChange={handleChange8}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
+       </Grid>   
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+                  <Grid item xs={12} >     
+                   {containerVisible6 && (
+
+              <><Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container5">
+
+                    <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+                    <Grid item xs={12}> <div>
+                        <FormControlLabel
+                          control={<Checkbox
+                            onChange={handleChange}
+                            name="checkedOption1"
+                            color="primary" />}
+                          label="Y a-t-il eu un changement récent d'organisation interne ?" />
+                        <TextField
+                          hiddenLabel
+
+                          id="filled-hidden-label-small"
+                          size="small"
+                          style={{ width: '30%', backgroundColor: "white" }}
+                          onChange={handleChangeTextField} />
+
+                      </div></Grid>
+
+                    <Grid item xs={12} md={3}>
+                      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      </RadioGroup>
+                    </FormControl></Grid></Grid>
+
+                  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il une limitation trop restrictive de la prise de décision des acteurs du terrain ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les responsabilités et les tâches étaient-elles non ou mal définies ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il eu un défaut de coordination dans le service ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il eu un défaut de coordination entre les services,les structures ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Y a-t-il eu un défaut d'adaptation à une situation imprévue ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La gestion des ressources humaines était-elle inadéquate ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La procédure de sortie était-elle inadéquate ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Autre ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+
+
+
+                    </Grid></>
+
+
+
+
+
+
+
+
+
+
+
+)}
+</Grid></Card>
+
+
+
+
+
+
+
+
+
+            <Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
+
+
+
 
             <Grid container spacing={2} style={{marginTop: '1rem'}}>
-      <Grid item xs={12} sm={9} style={{marginBottom: '1rem'}}>   
-      <Typography variant="h6"><b>L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</b></Typography>
-      </Grid>
-      <Grid item xs={12} sm={3}>
-      <FormControl >
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick6} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick6} label="Non" />
-                    </RadioGroup>
-                  </FormControl>
-      </Grid>
-    
-    </Grid>
+      <Grid item xs={7} >   
+       <Typography variant="h6" style={{marginBottom: '1rem'}}><b>L'erreur est-elle liée à des facteurs concernant le contexte institutionnel ?</b></Typography>
+          
+      </Grid>      <Grid item xs={5} >
+ <FormControl>
+        <RadioGroup row value={value9} onChange={handleChange9}>
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        </RadioGroup>
+      </FormControl>     </Grid>   
+       </Grid>   
 
+
+
+           
 
 
 
@@ -3533,347 +3245,271 @@ function SaisieErreur() {
 
             
 
-              <Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les contraintes financières au niveau de l'établissement sont-elles à l'origine de l'événement ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les ressources sanitaires sont-elles insuffisantes, inadaptées ou défectueuses ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-              
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-                          />
-                        }
-                        label="Les échanges ou relations avec d'autres structures de soins sont-ils faibles ou difficiles ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-           
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Peut-on relever une absence de stratégie,politique/une absence de priorité/ou des stratégies contradictoires ou inadaptées ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-
-
-
-
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-               
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La sécurité et gestion des risques ne sont-elles pas perçues comme des objectifs importants ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-
-                </Grid>
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                
-
-
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="La culture du signalement des EI et de propositions de corrections est-elle inexistante ou défectueuse ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-                      />
-
-                    </div>
-                  </Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid></Grid>
-
-
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
-                
-                  <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary"
-
-                          />
-                        }
-                        label="Le contexte social était-il difficile ?"
-                      />
-                      <TextField
-                        hiddenLabel
-
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
-
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid></Grid>
-                <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
               
                   <Grid item xs={12} >
-                    <div>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
+
+                  {containerVisible7 && (
+                  <><Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
+
+                    <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                    <Grid item xs={12}> <div>
+                        <FormControlLabel
+                          control={<Checkbox
                             onChange={handleChange}
                             name="checkedOption1"
-                            color="primary"
+                            color="primary" />}
+                          label="Les contraintes financières au niveau de l'établissement sont-elles à l'origine de l'événement ?" />
+                        <TextField
+                          hiddenLabel
 
-                          />
-                        }
-                        label="Autre ?"
-                      />
-                      <TextField
-                        hiddenLabel
+                          id="filled-hidden-label-small"
+                          size="small"
+                          style={{ width: '30%', backgroundColor: "white" }}
+                          onChange={handleChangeTextField} />
 
-                        id="filled-hidden-label-small"
-                        size="small"
-                        style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                      </div></Grid>
 
+                    <Grid item xs={12} md={3}>
+                      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      </RadioGroup>
+                    </FormControl></Grid></Grid>
 
-                      />
-
-                    </div></Grid>
-
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
-                    </RadioGroup>
-                  </FormControl></Grid>
-
-                </Grid>
-
-              </Grid></Card>
+                  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les ressources sanitaires sont-elles insuffisantes, inadaptées ou défectueuses ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Les échanges ou relations avec d'autres structures de soins sont-ils faibles ou difficiles ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Peut-on relever une absence de stratégie,politique/une absence de priorité/ou des stratégies contradictoires ou inadaptées ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La sécurité et gestion des risques ne sont-elles pas perçues comme des objectifs importants ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="La culture du signalement des EI et de propositions de corrections est-elle inexistante ou défectueuse ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div>
+                      </Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Le contexte social était-il difficile ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+                      <Grid item xs={12}>
+                        <div>
+                          <FormControlLabel
+                            control={<Checkbox
+                              onChange={handleChange}
+                              name="checkedOption1"
+                              color="primary" />}
+                            label="Autre ?" />
+                          <TextField
+                            hiddenLabel
+
+                            id="filled-hidden-label-small"
+                            size="small"
+                            style={{ width: '30%', backgroundColor: "white" }}
+                            onChange={handleChangeTextField} />
+
+                        </div></Grid>
+
+                      <Grid item xs={12} md={3}>
+                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        </RadioGroup>
+                      </FormControl></Grid>
+
+
+
+
+
+                    </Grid></>
+
+
+
+
+
+
+
+
+
+
+
+)}
+</Grid></Card>
 
 
 
