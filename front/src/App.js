@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CREX from "./pages/CREX";
 import Archive from "./pages/Archive";
 import DeclarerEM from "./pages/DeclarerEM";
+import ConsultationAction from "./pages/ConsultationAction";
 //couleur vert  	#7DC4B2
 // couleur gris 	#506C7A
 
@@ -26,6 +27,8 @@ function App() {
 
                     <Route path="/Crex" element={<CREX/>} />
                     <Route path="/Archive" element={<Archive/>} />
+                    <Route path="/ConsultationAction" element={<ConsultationAction/>} />
+
                 </Routes>
             </BrowserRouter>
         </div>

@@ -58,7 +58,8 @@ function SaisieErreur() {
 
 
  
-  const handleChange11 = (event) => {
+  const handleChange11 = (event) => {  
+    
     const selectedValue = event.target.value;
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
     setSelectedValue(selectedValue);
@@ -85,7 +86,14 @@ function SaisieErreur() {
   };
 
 
+function getCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
 
+  
+    return `${month}-${year}`;
+    }
 
 
 
@@ -96,7 +104,7 @@ function SaisieErreur() {
   };
 
   const handleChange2 = (event) => {
-    setValuee(event.target.value);
+    setValuee(event.target.value );
   };
   const handleChange3 = (event) => {
     setValue3(event.target.value);
@@ -3610,13 +3618,11 @@ function SaisieErreur() {
                 <Grid item xs={1}>
                   <Typography variant="h7">Action préventive</Typography>
                 </Grid>
-                <Grid item xs={2}>
-                  <Typography variant="h7">Cause corrective</Typography>
-                </Grid>
+              
                 <Grid item xs={2}>
                   <Typography variant="h7">Action corrective</Typography>
                 </Grid>
-                <Grid item xs={1}>
+                <Grid item xs={2}>
                   <Typography variant="h7">Effet attendu</Typography>
                 </Grid>
                 <Grid item xs={1}>
@@ -3672,32 +3678,99 @@ function SaisieErreur() {
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
-                <Grid item xs={1}>
-                  <TextField
-                    hiddenLabel
-                    id="filled-hidden-label-small"
-                    size="small"
-                    style={{ width: '95%', backgroundColor: "white" }}
-                  />
+                
+                <Grid item xs={2}>
+                <form >
+                    <TextField
+                     id="month-year"
+                     type="month"
+                     defaultValue={getCurrentDateTime()}
+                     style={{backgroundColor: "white"}}
+                     InputLabelProps={{
+                       shrink: true,
+                      }}
+                    />
+                  </form>
                 </Grid>
                 <Grid item xs={2}>
-                  <TextField
-                    hiddenLabel
-                    id="filled-hidden-label-small"
-                    size="small"
-                    style={{ width: '95%', backgroundColor: "white" }}
-                  />
-                </Grid>
-                <Grid item xs={1}>
-                  <TextField
-                    hiddenLabel
-                    id="filled-hidden-label-small"
-                    size="small"
-                    style={{ width: '95%', backgroundColor: "white" }}
-                  />
+                   <form >
+                    <TextField
+                     id="month-year"
+                     type="month"
+                     defaultValue={getCurrentDateTime()}
+                     style={{backgroundColor: "white"}}
+                     InputLabelProps={{
+                       shrink: true,
+                      }}
+                    />
+                  </form>
                 </Grid>
               </Grid>
             </Grid>
+
+
+
+
+                <Grid item xs={12}>
+                  <TextField
+
+                 id="multiline-text"
+                 multiline
+                 rows={6}
+                 variant="outlined"
+                 placeholder='Autre'
+             
+                    style={{ width: '100%', backgroundColor: "white" , marginTop:'20px'}}
+                />
+                </Grid>
+            
+            
+             
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </Card>
 
         )}

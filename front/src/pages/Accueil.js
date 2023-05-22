@@ -18,12 +18,14 @@ function Accueil() {
         <Grid item xs={12}  sx={{ textAlign: 'center' }}>
           <Box>
             <p><b>Tout professionnel de l'établissement peut déclarer une erreur médicamenteuse</b></p>
-            <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Déclarer les erreurs médicales</Button>
+            <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', "&:hover": {
+      "background-color": '#92D6B5'
+    }}} >Déclarer les erreurs médicamenteuses</Button>
 
           </Box>    
         
         </Grid>
-        <Grid item xs={12} sx={{ textAlign: 'center', marginLeft: '40%' }}>
+        <Grid item xs={12} sx={{ textAlign: 'center', marginLeft: '40%',marginBottom:'25%' }}>
       <Box
         sx={{
           backgroundColor: '#ffdab9',
@@ -42,9 +44,11 @@ function Accueil() {
             component={Link}
             to="/Crex"
             variant='contained'
-            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width:'350px' }}
+            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width:'350px'  ,"&:hover": {
+              "background-color": '#92D6B5'
+            }}}
           >
-            Consulter les erreurs médicales
+            Consulter les erreurs médicamenteuses
           </Button>
         </Box>
         <Box>
@@ -52,7 +56,9 @@ function Accueil() {
             component={Link}
             to="/Crex"
             variant='contained'
-            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' ,width:'350px' }}
+            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' ,width:'350px', "&:hover": {
+              "background-color": '#92D6B5'
+            } }}
           >
             Session du CREX
           </Button>
@@ -62,7 +68,9 @@ function Accueil() {
             component={Link}
             to="/Archive"
             variant='contained'
-            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' ,width:'350px' }}
+            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' ,width:'350px' ,"&:hover": {
+              "background-color": '#92D6B5'
+            } }}
           >
             Consulter les Archives
           </Button>
@@ -72,16 +80,37 @@ function Accueil() {
             component={Link}
             to="/SaisieErreur"
             variant='contained'
-            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width:'350px'  }}
+            sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width:'350px' , "&:hover": {
+              "background-color": '#92D6B5'
+            } }}
           >
-            Analyser une erreur médicale
+            Analyser une erreur médicamenteuse
           </Button>
         </Box>
       </Box>
+      
     </Grid>
 
 
 
+
+
+    <Grid item xs={12}  sx={{ textAlign: 'center' }}>
+          <Box>
+            <p><b>Si vous souhaitez en savoir plus, vous pouvez consulter les actions mises en place</b></p>
+            <Button component={Link} to="/ConsultationAction" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', "&:hover": {
+      "background-color": '#92D6B5'
+    } }} >Consulter les actions mises en place</Button>
+
+          </Box>    
+        
+        </Grid>
+
+
+
+
+
+   
 
 
 

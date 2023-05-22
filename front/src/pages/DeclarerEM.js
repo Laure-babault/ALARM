@@ -503,6 +503,16 @@ InputLabelProps={{
              
 
 
+    <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
+                                    <Typography variant="h7" >Précision sur l'état du patient :</Typography>
+                                        <TextField 
+                                    hiddenLabel
+                                    id="filled-hidden-label-small"
+                                    size="small"
+                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem'  }}
+
+                                    />
+                                </Grid>
 
 
          
@@ -560,23 +570,23 @@ InputLabelProps={{
 
                                
                                
-                                 <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
-                                    <Typography variant="h7" >Précision sur l'état du patient :</Typography>
-                                        <TextField 
+                               
+
+
+
+
+
+
+                                <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
+                                     <Typography variant="h7" >Nom du médicament :</Typography>
+                                        <TextField
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
-                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem'  }}
-
+                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem' }}
+                                    
                                     />
-                                </Grid>
-
-
-
-
-
-
-
+                                 </Grid>
 
 
 
@@ -734,24 +744,22 @@ InputLabelProps={{
 
 
 
-                               
-
-                                  <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
-                                     <Typography variant="h7" >Nom du médicament :</Typography>
-                                        <TextField
-                                    hiddenLabel
-                                    id="filled-hidden-label-small"
-                                    size="small"
-                                    style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem' }}
-                                    
-                                    />
-                                 </Grid>
 
 
 
 
+                      
 
+    <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
+                                       <Typography variant="h7">Nom de la voie d'administration :</Typography>
+                                           <TextField
+                                              hiddenLabel
+                                              id="filled-hidden-label-small"
+                                              size="small"
+                                              style={{ width: '95%', backgroundColor: "white" }}
 
+                                            />
+                                    </Grid>
 
 
 
@@ -880,20 +888,6 @@ InputLabelProps={{
 
 
 
-
-
-                      
-
-                                  <Grid item xs={12} style={{marginTop:"10px" , marginBottom:"10px"}}>
-                                       <Typography variant="h7">Nom de la voie d'administration :</Typography>
-                                           <TextField
-                                              hiddenLabel
-                                              id="filled-hidden-label-small"
-                                              size="small"
-                                              style={{ width: '95%', backgroundColor: "white" }}
-
-                                            />
-                                    </Grid>
 
 
 

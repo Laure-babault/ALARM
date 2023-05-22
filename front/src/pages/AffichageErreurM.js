@@ -15,7 +15,6 @@ function AffichageErreurM(params) {
     return (
         <div className="affichageErreurM">
 
-
         </div>
     );
 }

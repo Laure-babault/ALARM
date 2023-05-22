@@ -1,36 +1,33 @@
 import React from "react";
 import { Box, Grid, Button, TextField } from "@mui/material";
-
+import {Paper, Avatar,Typography,Link } from '@material-ui/core'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 function Authentification() {
-
+  const paperStyle={padding : 30,height:'400PX',width:400, margin:"20px auto", marginTop:"10%" }
+  const avatarStyle={backgroundColor:'#7DC4B2'}
+  const btnstyle={margin:'8px 0',backgroundColor:'#7DC4B2',color:'white',padding:'10px'}
 
   return (
 
 
 
     <div className="Authentification">
-      <Grid container spacing={2} height='100%'>
-        <Grid item xs={5}>
-          <Box sx={{ textAlign: 'center' }}>
-            <h1 >Projet alarm</h1>
-          </Box>
+           <Grid>
+            <Paper elevation={10} style={paperStyle}>
+                <Grid align='center'>
+                     <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
+                    <h2>Se connecter</h2>
+                </Grid>
+                <TextField style={{marginBottom:'20px'}}  placeholder='Nom' fullWidth required/>
+                <TextField style={{marginBottom:'20px'}}  placeholder='Mot de passe' type='password' fullWidth required/>
+          
+                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+          
+              
+            </Paper>
         </Grid>
-        <Grid item xs={7}>
-          <Box>
-            <h2>Authentification</h2>
-          </Box>
-          <Box>
-            <TextField>
-
-            </TextField>
-          </Box>
-          <Box>
-            <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >
-              Connexion
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
 
     </div>
   );
