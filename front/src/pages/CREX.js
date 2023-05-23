@@ -30,6 +30,12 @@ function CREX() {
 
     const handleChange = (event) => {
       setSelectedOption(event.target.value);};
+
+      const handleConsulter = (row) => {
+        // Logique pour gérer le clic sur le bouton "Consulter" avec les données de la ligne correspondante
+        console.log('Consulter row:', row);
+      };
+    
     return (
     <div>
         <Box sx={{ textAlign: 'center' }}>
@@ -174,7 +180,6 @@ function CREX() {
   </Grid>
 </Grid>
 </div>
-            <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >Consulter les actions mises en place</Button>
 
 
             <Dialog open={openaffichageErreurM}
@@ -196,9 +201,23 @@ function CREX() {
             {field:'Never-event',headerName:'Never-event',flex:1, headerClassName:'header'},
             {field:'Description',headerName:'Description',flex:1, headerClassName:'header'},
             {field:'Impact',headerName:'Impact',flex:1, headerClassName:'header'},
-            {field:'Consulter',headerName:'Consulter',flex:1, headerClassName:'Consulter'},
-
-
+            {
+                field: 'Consulter',
+                headerName: 'Consulter',
+                flex: 1,
+                headerClassName: 'Consulter',
+                renderCell: (params) => {
+                  if (params.rowIndex === 0) {
+                    return (
+                      <Button variant="contained" color="primary" onClick={() => handleConsulter(params.row)}>
+                        Consulter
+                      </Button>
+                    );
+                  } else {
+                    return null;
+                  }
+                },
+              },
             
             
         ]}
@@ -207,7 +226,8 @@ function CREX() {
             rows={rows}
             columnVisibilityModel={{id:false}}
             onRowClick = {handleRowClick}
-            />
+           
+            /> 
 
         </div>
 

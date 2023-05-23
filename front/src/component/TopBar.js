@@ -10,6 +10,7 @@ function TopBar() {
 
   const StyledIconButton = styled(IconButton)(({ theme }) => ({
     color: "inherit",
+    marginTop:'10px',
     "&:hover": {
       "background-color": '#506C7A'
     }
@@ -23,7 +24,7 @@ function TopBar() {
 
         <Stack direction="row" width={"100%"} spacing={2} justifyContent="flex-end">
           <Link to="/">
-            <StyledIconButton aria-label="Menu" title="Menu">{<HomeIcon />}</StyledIconButton>
+            <StyledIconButton aria-label="Menu" title="Menu" >{<HomeIcon  />}</StyledIconButton>
           </Link>
           <Link to="/Authentification">
             <StyledIconButton aria-label="Deconnection" title="Deconnection">{<Avatar />}</StyledIconButton>

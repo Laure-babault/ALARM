@@ -225,26 +225,29 @@ function getCurrentDateTime() {
         <h1 >Analyse des causes de l'erreur médicamenteuse N° </h1>
       </Box>
       <Box sx={{ width: '100%' }}>
-        <Stepper activeStep={activeStep}>
-          {steps.map((label, index) => {
-            const stepProps = {};
-            const labelProps = {};
-            if (isStepOptional(index)) {
-              labelProps.optional = (
-                <Typography variant="caption">Optionnel</Typography>
-              );
-            }
-            if (isStepSkipped(index)) {
-              stepProps.completed = false;
-            }
-            return (
-              <Step key={label} {...stepProps}>
-                <StepLabel {...labelProps}>{label}</StepLabel>
-              </Step>
-            );
-          })}
-        </Stepper>
-
+      <Grid container spacing={2}>
+  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+    <Stepper activeStep={activeStep}>
+      {steps.map((label, index) => {
+        const stepProps = {};
+        const labelProps = {};
+        if (isStepOptional(index)) {
+          labelProps.optional = (
+            <Typography variant="caption">Optionnel</Typography>
+          );
+        }
+        if (isStepSkipped(index)) {
+          stepProps.completed = false;
+        }
+        return (
+          <Step key={label} {...stepProps}>
+            <StepLabel {...labelProps}>{label}</StepLabel>
+          </Step>
+        );
+      })}
+    </Stepper>
+  </Grid>
+</Grid>
 
 
 
@@ -3565,7 +3568,7 @@ function getCurrentDateTime() {
       <Grid item xs={12} sm={6}>
       
       <FormControl >
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                  <RadioGroup row valuee={valuee} onChange={handleChange2} defaultValue="no">
                     <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick7} label="Oui" />
                     <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick7} label="Non" />
                   </RadioGroup>
@@ -3685,7 +3688,7 @@ function getCurrentDateTime() {
                      id="month-year"
                      type="month"
                      defaultValue={getCurrentDateTime()}
-                     style={{backgroundColor: "white"}}
+                     style={{backgroundColor: "white", width: '95%'}}
                      InputLabelProps={{
                        shrink: true,
                       }}
@@ -3698,7 +3701,7 @@ function getCurrentDateTime() {
                      id="month-year"
                      type="month"
                      defaultValue={getCurrentDateTime()}
-                     style={{backgroundColor: "white"}}
+                     style={{backgroundColor: "white", width: '95%'}}
                      InputLabelProps={{
                        shrink: true,
                       }}

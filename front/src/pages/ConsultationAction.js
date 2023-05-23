@@ -35,7 +35,7 @@ function ConsultationAction() {
 
 <Grid container spacing={2}>
   <Grid item xs={12}>
-    <Card style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '20px',  margin:"9px", height:"90px"}}>
+    <Card style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '35px', height:"90px"}}>
     
 
     
