@@ -926,7 +926,7 @@ function getCurrentDateTime() {
     
     </Grid>
             <Grid item xs={12}>
-              <h4>Défaillances actives ou immédiates ou défauts de soin</h4>
+              <h3>Défaillances actives ou immédiates ou défauts de soin</h3>
               <TextField
                 id="outlined-multiline-static"
                 multiline
