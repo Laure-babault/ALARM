@@ -554,10 +554,10 @@ InputLabelProps={{
       </Grid>
       <Grid item xs={12} sm={4}>
       <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="1" />
-                           <FormControlLabel value="no" control={<Radio />} label="2" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="3" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="4" />
+                           <FormControlLabel value="1" control={<Radio />} label="1" />
+                           <FormControlLabel value="2" control={<Radio />} label="2" />
+                           <FormControlLabel value="3" control={<Radio />} label="3" />
+                           <FormControlLabel value="4" control={<Radio />} label="4" />
 
                          </RadioGroup>
       </Grid>
@@ -637,8 +637,8 @@ InputLabelProps={{
       <Grid item xs={12} sm={6}>
       <FormControl component="fieldset">
                          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="1" style={{color:"darkblue"}}/>
-                           <FormControlLabel value="no" control={<Radio />} label="2" style={{color:"red"}}/>
+                           <FormControlLabel value="1" control={<Radio />} label="1" style={{color:"darkblue"}}/>
+                           <FormControlLabel value="2" control={<Radio />} label="2" style={{color:"red"}}/>
                            <FormControlLabel value="3" control={<Radio />} label="3" style={{color:"green"}}/>
                            <FormControlLabel value="4" control={<Radio />} label="4" style={{color:"orange"}}/>
                            <FormControlLabel value="5" control={<Radio />} label="5"style={{color:"purple"}} />

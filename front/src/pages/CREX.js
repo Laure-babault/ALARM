@@ -207,7 +207,7 @@ function CREX() {
                 flex: 1,
                 headerClassName: 'Consulter',
                 renderCell: (params) => {
-                  if (params.rowIndex === 0) {
+                  if (params.rowNode === 0) {
                     return (
                       <Button variant="contained" color="primary" onClick={() => handleConsulter(params.row)}>
                         Consulter

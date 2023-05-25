@@ -19,10 +19,12 @@ import myPdf3 from '../pdf/cotation.pdf';
 import { FormControl } from '@mui/material/';
 import Radio from '@mui/material/Radio';
 import { Checkbox } from '@material-ui/core';
+import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
 
 
 //Definition des nom des étapes sur le menu
 const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape 5', 'Validation'];
+const colors = ['#F08080', '#7B68EE', '#4682B4 ', '#3CB371','#FFA07A','#FFA500','#F08080']; // Liste des couleurs pour chaque étape
 
 function SaisieErreur() {
 
@@ -197,6 +199,7 @@ function getCurrentDateTime() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+  const [openAlert, setOpenAlert] = React.useState(false);
 
   const handleSkip = () => {
     if (!isStepOptional(activeStep)) {
@@ -217,7 +220,9 @@ function getCurrentDateTime() {
     setActiveStep(0);
   };
 
-
+  const handleFinish = () => {
+    setOpenAlert(true);
+  };
 
   return (
     <div>
@@ -239,9 +244,35 @@ function getCurrentDateTime() {
         if (isStepSkipped(index)) {
           stepProps.completed = false;
         }
+        const color = colors[index % colors.length]; // Sélectionne une couleur différente pour chaque étape
+        const circleStyle = {
+          backgroundColor: color,
+          color: 'white',
+          position: 'relative',
+          zIndex: 1,
+          borderRadius:'9px',
+        };
+        const centerStyle = {
+          backgroundColor: 'white',
+          borderRadius: '50%',
+          height: 24,
+          width: 24,
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        };
+
         return (
           <Step key={label} {...stepProps}>
-            <StepLabel {...labelProps}>{label}</StepLabel>
+            <StepLabel {...labelProps} 
+                       StepIconProps={{
+                        style: circleStyle,
+                        children: (
+                          <div style={centerStyle} /> // Centre du cercle en blanc
+                        ),
+                      }}
+        >{label}</StepLabel>
           </Step>
         );
       })}
@@ -931,7 +962,7 @@ function getCurrentDateTime() {
                 id="outlined-multiline-static"
                 multiline
                 rows={5}
-
+placeholder='Défaillances actives ou immédiates ou défauts de soin'
                 variant="outlined"
                 style={{ width: '95%', backgroundColor: "white" }}
               />
@@ -3560,12 +3591,12 @@ function getCurrentDateTime() {
 
 
             <Grid container spacing={2}>
-      <Grid item xs={12} sm={6} style={{marginTop:"0.8rem"}}>
+      <Grid item xs={12} sm={7} >
     
-      <Typography variant="h7" >Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
+      <Typography variant="h6" >Est-ce que tout avait été mis en oeuvre pour éviter ce type d'EI ?</Typography>
    
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={5}>
       
       <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange2} defaultValue="no">
@@ -3583,13 +3614,13 @@ function getCurrentDateTime() {
       <Grid item xs={12} sm={12}>
 <Grid container id="container7" >
                 <Grid item xs={12}>
-                  <Typography variant="h7">Si non , quelles ont été les défenses manquantes ou non opérationnelles ?</Typography>
+                  <Typography variant="h6">Si non , quelles ont été les défenses manquantes ou non opérationnelles ?</Typography>
                   <br></br>  <TextField
                     id="outlined-multiline-static"
                     multiline
                     rows={5}
                     variant="outlined"
-                    style={{ width: '95%', backgroundColor: "white",marginTop:"0.5rem"}}
+                    style={{ width: '95%', backgroundColor: "white"}}
                   />
                 </Grid>
              
@@ -3785,33 +3816,46 @@ function getCurrentDateTime() {
             <Typography sx={{ mt: 2, mb: 1 }}>
               Saisie de l'erreur effectuer
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-              <Box sx={{ flex: '1 1 auto' }} />
-              <Button onClick={handleReset}>Reset</Button>
-            </Box>
+           
           </React.Fragment>
         ) : (
           <React.Fragment>
-
-            <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-              <Button
-                color="inherit"
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                sx={{ mr: 1 }}
-              >
-                Retour
-              </Button>
+ <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
               <Box sx={{ flex: '1 1 auto' }} />
-              {isStepOptional(activeStep) && (
-                <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                  Passer
-                </Button>
-              )}
-              <Button onClick={handleNext}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+              <Button onClick={handleReset}>Reset</Button>
             </Box>
+<Dialog open={openAlert} onClose={() => setOpenAlert(false)} aria-labelledby="alert-dialog-title">
+        <DialogTitle id="alert-dialog-title">Merci</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">La saisie de l'erreur est effectuée avec succès !</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setOpenAlert(false)} color="primary">
+            MERCI
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Actions */}
+      <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+        <Button
+          color="inherit"
+          disabled={activeStep === 0}
+          onClick={handleBack}
+          sx={{ mr: 1 }}
+        >
+          Retour
+        </Button>
+        <Box sx={{ flex: '1 1 auto' }} />
+        {isStepOptional(activeStep) && (
+          <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+            Passer
+          </Button>
+        )}
+        <Button onClick={activeStep === steps.length - 1 ? handleFinish : handleNext}>
+          {activeStep === steps.length - 1 ? 'Terminer' : 'Suivant'}
+        </Button>
+      </Box>
           </React.Fragment>
         )}
       </Box>
