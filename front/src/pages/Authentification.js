@@ -2,8 +2,7 @@ import React from "react";
 import { Box, Grid, Button, TextField } from "@mui/material";
 import {Paper, Avatar,Typography,Link } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+
 function Authentification() {
   const paperStyle={padding : 30,height:'400PX',width:400, margin:"20px auto", marginTop:"10%" }
   const avatarStyle={backgroundColor:'#7DC4B2'}
@@ -23,7 +22,7 @@ function Authentification() {
                 <TextField style={{marginBottom:'20px'}}  placeholder='Nom' fullWidth required/>
                 <TextField style={{marginBottom:'20px'}}  placeholder='Mot de passe' type='password' fullWidth required/>
           
-                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Se connecter</Button>
           
               
             </Paper>
