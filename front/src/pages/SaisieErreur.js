@@ -74,23 +74,24 @@ function SaisieErreur() {
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
     setSelectedValue(selectedValue);
   };
+
   const isButtonRed = percentageResult >= 45 && percentageResult <= 125;
   const isButtonyellow = percentageResult >= 15 && percentageResult <= 44;
   const isButtongreen = percentageResult >= 1 && percentageResult <= 14;
+ 
   const handleChange12 = (event) => {
-    const selectedValue = event.target.value;
+    const selectedValue1 = event.target.value;
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
-    setSelectedValue1(selectedValue);
+    setSelectedValue1(selectedValue1);
   };
 
   const handleChange13 = (event) => {
-    const selectedValue = event.target.value;
+    const selectedValue2 = event.target.value;
     calculatePercentage(selectedValue, selectedValue1, selectedValue2);
-    setSelectedValue2(selectedValue);
+    setSelectedValue2(selectedValue2);
   };
 
   const calculatePercentage = (value1, value2, value3) => {
-    // Effectuez votre calcul du pourcentage ici en utilisant les valeurs sélectionnées
     const calculatedPercentage = value1 * value2 * value3;
     setPercentageResult(calculatedPercentage);
   };
@@ -918,10 +919,10 @@ function getCurrentDateTime() {
       <Grid item xs={12} sm={2}>
   
       <Typography variant="h7">Criticité :</Typography>
-   {percentageResult && (
-        <p>Calcul de la criticité : {percentageResult}</p>
-        
-      )}
+ {/*{percentageResult && (
+  <p>Calcul de la criticité : {percentageResult}</p>
+)}*/}
+
       </Grid>
       <Grid item xs={12} sm={2}>
      
