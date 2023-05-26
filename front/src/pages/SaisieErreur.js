@@ -3845,7 +3845,7 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
 <Dialog open={openAlert} onClose={() => setOpenAlert(false)} aria-labelledby="alert-dialog-title">
         <DialogTitle id="alert-dialog-title">Merci</DialogTitle>
         <DialogContent>
-          <Typography variant="body1">La saisie de l'erreur est effectuée avec succès !</Typography>
+          <Typography variant="body1">L'analyse de cette erreur est effectuée avec succès !</Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpenAlert(false)} color="primary">
