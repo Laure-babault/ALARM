@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Card, Grid } from '@mui/material/';
 import { TextField } from '@mui/material/';
-import { useState } from 'react';
+import { useState,  useEffect } from 'react';
 import { MenuItem } from '@mui/material/';
 import { Select } from '@mui/material/';
 import { RadioGroup } from '@mui/material/';
@@ -20,6 +20,7 @@ import { FormControl } from '@mui/material/';
 import Radio from '@mui/material/Radio';
 import { Checkbox } from '@material-ui/core';
 import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
+import AddIcon from '@mui/icons-material/Add';
 
 
 //Definition des nom des étapes sur le menu
@@ -54,11 +55,18 @@ function SaisieErreur() {
   const [containerVisible5, setContainerVisible5] = useState(false); 
   const [containerVisible6, setContainerVisible6] = useState(false); 
   const [containerVisible7, setContainerVisible7] = useState(false); 
+  const [lines, setLines] = useState([]);
+
+  useEffect(() => {
+    setLines([{ id: 1 }]);
+  }, []);
 
 
-
-
-
+ 
+  const handleAddLine = () => {
+    const newLineId = lines.length + 1;
+    setLines([...lines, { id: newLineId }]);
+  };
  
   const handleChange11 = (event) => {  
     
@@ -391,52 +399,61 @@ function getCurrentDateTime() {
 
 
 
-    <Grid container spacing={2} style={{marginTop:"0.5rem"}}>
-      <Grid item xs={6}>
-      <Typography variant="h6"><b>Ajouter l'équipe</b> </Typography>
+    <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
+      
+    <Grid item xs={2}>
+        <Typography variant="h6"><b>Ajouter l'équipe</b></Typography>
       </Grid>
-   
-      <Grid item xs={12}>
+      <Grid item xs={10} container justify="flex-end" alignItems="center">
+       
+          <Button size="small" color="secondary" style={{ backgroundColor: '#ffb8c6 ', color:'black' }}onClick={handleAddLine}>
+          <AddIcon /> Ajouter plus de membre 
+          </Button>
+      
+      </Grid>
+      {lines.map(line => (
+        <Grid item xs={12} key={line.id}>
+          <Grid container spacing={2}>
+            <Grid item xs={3}>
+              <Typography variant="h7">Nom :</Typography>
+              <TextField
+                hiddenLabel
+                id={`nom-${line.id}`}
+                style={{ backgroundColor: "white" }}
+                size="small" />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="h7">Prénom :</Typography>
+              <TextField
+                hiddenLabel
+                id={`prenom-${line.id}`}
+                style={{ backgroundColor: "white" }}
+                size="small"
+                label />
+            </Grid>
 
+            <Grid item xs={3}>
+              <Typography variant="h7">Fonction :</Typography>
+              <TextField
+                hiddenLabel
+                id={`fonction-${line.id}`}
+                style={{ backgroundColor: "white" }}
+                size="small" />
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="h7">Service :</Typography>
+              <TextField
+                hiddenLabel
+                id={`service-${line.id}`}
+                style={{ backgroundColor: "white" }}
+                size="small" />
+            </Grid>
+          </Grid>
+        </Grid>
+      ))}
 
-  <Grid container spacing={2}>
-    <Grid item xs={3} >
-      <Typography variant="h7">Nom :</Typography>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        style={{ backgroundColor: "white" }}
-        size="small" />
+      
     </Grid>
-    <Grid item xs={3} >
-      <Typography variant="h7">Prénom :</Typography>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        style={{ backgroundColor: "white" }}
-        size="small"  label/>
-    </Grid>
-
-    <Grid item xs={3} >
-      <Typography variant="h7">Fonction :</Typography>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        style={{ backgroundColor: "white" }}
-        size="small" />
-    </Grid>
-    <Grid item xs={3} >
-      <Typography variant="h7">Service :</Typography>
-      <TextField
-        hiddenLabel
-        id="filled-hidden-label-small"
-        style={{ backgroundColor: "white" }}
-        size="small" />
-    </Grid>
-  </Grid>
-</Grid>
-    </Grid>
-
 
     <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black",marginTop:"20px",marginButtom:"20px"}}></hr>   
 
