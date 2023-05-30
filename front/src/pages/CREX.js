@@ -11,6 +11,7 @@ import { FormControlLabel } from '@mui/material/';
 import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function CREX() {
     const [selectedOption, setSelectedOption] = useState('');
@@ -206,19 +207,9 @@ function CREX() {
                 headerName: 'Consulter',
                 flex: 1,
                 headerClassName: 'Consulter',
-                renderCell: (params) => {
-                  if (params.rowNode === 0) {
-                    return (
-                      <Button variant="contained" color="primary" onClick={() => handleConsulter(params.row)}>
-                        Consulter
-                      </Button>
-                    );
-                  } else {
-                    return null;
-                  }
-                },
+             
               },
-            
+          
             
         ]}
             pageSize={[11]}            
@@ -228,7 +219,9 @@ function CREX() {
             onRowClick = {handleRowClick}
            
             /> 
-
+    <Button component={Link} to="/ConsulterEM" variant="contained" color="primary" >
+              Consulter
+            </Button>
         </div>
 
         

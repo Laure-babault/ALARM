@@ -20,7 +20,7 @@ import { Checkbox} from '@material-ui/core';
 import InfoIcon from '@mui/icons-material/Info';
 import { Modal, Paper} from '@material-ui/core';
 import WarningIcon from '@mui/icons-material/Warning';
-
+import { Button } from '@mui/material';
 function DeclarerEM() {
   
     const [value, setValue] = useState('option1');
@@ -1125,68 +1125,14 @@ InputLabelProps={{
                                  </Grid>
                                 
                             </Grid>
+
+        
                        
                         </>
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
+     
+                    <Box display="flex" justifyContent="center" alignItems="center" >
+      <Button variant="contained" color="primary"> Valider </Button>
+    </Box>    
              
              
                </Card>            
@@ -1194,7 +1140,7 @@ InputLabelProps={{
                     
                     
                     
-                    
+          
                     
                     
                     

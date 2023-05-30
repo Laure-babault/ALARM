@@ -8,6 +8,8 @@ import CREX from "./pages/CREX";
 import Archive from "./pages/Archive";
 import DeclarerEM from "./pages/DeclarerEM";
 import ConsultationAction from "./pages/ConsultationAction";
+import ConsulterEM from "./pages/ConsulterEM.js";
+import Dashboard from "./pages/Dashboard.js";
 //couleur vert  	#7DC4B2
 // couleur gris 	#506C7A
 
@@ -28,6 +30,8 @@ function App() {
                     <Route path="/Crex" element={<CREX/>} />
                     <Route path="/Archive" element={<Archive/>} />
                     <Route path="/ConsultationAction" element={<ConsultationAction/>} />
+                    <Route path="/ConsulterEM" element={<ConsulterEM/>} />
+                    <Route path="/Dashboard" element={<Dashboard/>} />
 
                 </Routes>
             </BrowserRouter>

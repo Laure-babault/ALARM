@@ -61,6 +61,15 @@ function Accueil() {
             Analyser une erreur médicamenteuse
           </Button>
         </Box>
+
+        <Box>
+          <Button component={Link} to="/Dashboard" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '350px', "&:hover": {
+            "background-color": '#92D6B5'
+          }}}>
+            Dashbord
+          </Button>
+        </Box>
+        
       </Box>
     </Grid> </Grid>
 
@@ -72,6 +81,8 @@ function Accueil() {
         }}}>Consulter les actions mises en place</Button>
       </Box>
     </Grid>
+
+    
   </Grid>
 </div>
 

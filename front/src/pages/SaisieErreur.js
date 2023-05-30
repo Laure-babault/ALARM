@@ -21,6 +21,7 @@ import Radio from '@mui/material/Radio';
 import { Checkbox } from '@material-ui/core';
 import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
 import AddIcon from '@mui/icons-material/Add';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 
 //Definition des nom des étapes sur le menu
@@ -286,6 +287,10 @@ function getCurrentDateTime() {
         );
       })}
     </Stepper>
+    <Grid container justifyContent="flex-end">
+    <Button onClick={handleReset} startIcon={<RefreshIcon />}>Réinitialiser
+      </Button>
+    </Grid>
   </Grid>
 </Grid>
 
@@ -3836,12 +3841,10 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
             </Typography>
            
           </React.Fragment>
+          
         ) : (
           <React.Fragment>
- <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-              <Box sx={{ flex: '1 1 auto' }} />
-              <Button onClick={handleReset}>Reset</Button>
-            </Box>
+
 <Dialog open={openAlert} onClose={() => setOpenAlert(false)} aria-labelledby="alert-dialog-title">
         <DialogTitle id="alert-dialog-title">Merci</DialogTitle>
         <DialogContent>
