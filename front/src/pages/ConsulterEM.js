@@ -531,7 +531,7 @@ function ConsulterEM() {
 
     </Card>     
     
-      <Card style={{ backgroundColor: '#d6e1d5', boxShadow: '5px 5px 5px #a4bca2', padding: '20px', margin: '9px', height: '240px' }}>
+      <Card style={{ backgroundColor: '#d6e1d5', boxShadow: '5px 5px 5px #a4bca2', padding: '20px', margin: '9px', height: 'auto' }}>
 
 
 

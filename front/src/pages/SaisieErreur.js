@@ -237,7 +237,7 @@ function getCurrentDateTime() {
   return (
     <div>
       <Box sx={{ textAlign: 'center' }}>
-        <h1 >Analyse des causes de l'erreur médicamenteuse N° </h1>
+        <h1 >Analyse des causes de l'erreur médicamenteuse  </h1>
       </Box>
       <Box sx={{ width: '100%' }}>
       <Grid container spacing={2}>
