@@ -23,6 +23,7 @@ import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/c
 import AddIcon from '@mui/icons-material/Add';
 import RefreshIcon from '@mui/icons-material/Refresh';
 
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 //Definition des nom des étapes sur le menu
 const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape 5', 'Validation'];
@@ -68,7 +69,10 @@ function SaisieErreur() {
     const newLineId = lines.length + 1;
     setLines([...lines, { id: newLineId }]);
   };
- 
+  const handleRemoveLine = (id) => {
+    const updatedLines = lines.filter(line => line.id !== id);
+    setLines(updatedLines);
+  };
   const handleChange11 = (event) => {  
     
     const selectedValue = event.target.value;
@@ -404,63 +408,80 @@ function getCurrentDateTime() {
 
 
 
-
     <Grid container spacing={2} style={{ marginTop: "0.5rem" }}>
-      
-    <Grid item xs={2}>
-        <Typography variant="h6"><b>Ajouter l'équipe</b></Typography>
-      </Grid>
-      <Grid item xs={10} container justify="flex-end" alignItems="center">
-       
-          <Button size="small" color="secondary" style={{ backgroundColor: '#ffb8c6 ', color:'black' }}onClick={handleAddLine}>
-          <AddIcon /> Ajouter plus de membre 
-          </Button>
-      
-      </Grid>
-      {lines.map(line => (
-        <Grid item xs={12} key={line.id}>
-          <Grid container spacing={2}>
-            <Grid item xs={3}>
-              <Typography variant="h7">Nom :</Typography>
-              <TextField
-                hiddenLabel
-                id={`nom-${line.id}`}
-                style={{ backgroundColor: "white" }}
-                size="small" />
-            </Grid>
-            <Grid item xs={3}>
-              <Typography variant="h7">Prénom :</Typography>
-              <TextField
-                hiddenLabel
-                id={`prenom-${line.id}`}
-                style={{ backgroundColor: "white" }}
-                size="small"
-                label />
-            </Grid>
+  <Grid item xs={2}>
+    <Typography variant="h6">
+      <b>Ajouter l'équipe</b>
+    </Typography>
+  </Grid>
+  <Grid item xs={6} container justify="flex-end" alignItems="center">
+    <Button
+      size="small"
+      color="secondary"
+      style={{ backgroundColor: "#ffb8c6", color: "black" }}
+      onClick={handleAddLine}
+    >
+      <AddIcon /> Ajouter plus de membre
+    </Button>
+  </Grid>
 
-            <Grid item xs={3}>
-              <Typography variant="h7">Fonction :</Typography>
-              <TextField
-                hiddenLabel
-                id={`fonction-${line.id}`}
-                style={{ backgroundColor: "white" }}
-                size="small" />
-            </Grid>
-            <Grid item xs={3}>
-              <Typography variant="h7">Service :</Typography>
-              <TextField
-                hiddenLabel
-                id={`service-${line.id}`}
-                style={{ backgroundColor: "white" }}
-                size="small" />
-            </Grid>
-          </Grid>
+  {lines.map((line) => (
+    <Grid item xs={12} key={line.id}>
+      <Grid container spacing={2} alignItems="center">
+        <Grid item xs={2}>
+          <Typography variant="h7">Nom :</Typography>
+          <TextField
+            hiddenLabel
+            id={`nom-${line.id}`}
+            style={{ backgroundColor: "white" }}
+            size="small"
+          />
         </Grid>
-      ))}
+        <Grid item xs={2}>
+          <Typography variant="h7">Prénom :</Typography>
+          <TextField
+            hiddenLabel
+            id={`prenom-${line.id}`}
+            style={{ backgroundColor: "white" }}
+            size="small"
+            label
+          />
+        </Grid>
 
-      
+        <Grid item xs={2}>
+          <Typography variant="h7">Fonction :</Typography>
+          <TextField
+            hiddenLabel
+            id={`fonction-${line.id}`}
+            style={{ backgroundColor: "white" }}
+            size="small"
+          />
+        </Grid>
+        <Grid item xs={2}>
+          <Typography variant="h7">Service :</Typography>
+          <TextField
+            hiddenLabel
+            id={`service-${line.id}`}
+            style={{ backgroundColor: "white" }}
+            size="small"
+          />
+        </Grid>
+
+        <Grid item xs={4} container justify="center">
+  <Button
+    size="small"
+    color="secondary"
+    style={{ backgroundColor: "#DC143C", color: "white"}}
+    onClick={() => handleRemoveLine(line.id)}
+  >
+    <DeleteOutlineOutlinedIcon />
+    Supprimer ce membre
+  </Button>
+</Grid>
+      </Grid>
     </Grid>
-
+  ))}
+</Grid>
     <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black",marginTop:"20px",marginButtom:"20px"}}></hr>   
 
 

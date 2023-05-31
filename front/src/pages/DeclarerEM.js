@@ -27,6 +27,7 @@ function DeclarerEM() {
     const [valuee, setValuee] = useState('yes');
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
+    const [Nom, setNom] = useState('');
 
     const handleOpen = () => {
       setOpen(true);
@@ -145,7 +146,8 @@ function DeclarerEM() {
                                  hiddenLabel
                                  id="filled-hidden-label-small"
                                  style={{backgroundColor: "white" }}
-                                 size="small"/> 
+                                 size="small"
+                                 value={Nom}/> 
                             </Grid>
                             <Grid item xs={12} sm={4}>
                             <Typography variant="h7">Prénom :</Typography>

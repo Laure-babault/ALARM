@@ -40,33 +40,7 @@ function ConsulterEM() {
     </Grid>
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
     </Card>    
-
-
-
-
-
-
-
-
-
-
-
 
 
 
