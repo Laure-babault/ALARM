@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Container, FormControlLabel, Stepper } from '@mui/material/';
+import { Chip, Container, FormControlLabel, Stepper } from '@mui/material/';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
@@ -30,6 +30,28 @@ const steps = ['Qui je suis', 'Etape 1', 'Etape 2', 'Etape 3', 'Etape 4', 'Etape
 const colors = ['#F08080', '#7B68EE', '#4682B4 ', '#3CB371','#FFA07A','#FFA500','#F08080']; // Liste des couleurs pour chaque étape
 
 function SaisieErreur() {
+  const [Nom, setNom] = useState('');
+  const [Prenom, setPrenom] = useState(''); 
+  const [DateAnalyse, setDateAnalyse] = useState(new Date());
+  const [DateCREX, setDateCREX] = useState(new Date());
+  const [Fonction, setFonction] = useState('');
+  const [NomMembre, setNomMembre] = useState('');
+  const [PrenomMembre, setPrenomMembre] = useState('');
+  const [FonctionMembre, setFonctionMembre] = useState('');
+  const [ServiceMembre, setServiceMembre] = useState('');
+  const [DateEvent, setDateEvent]=useState(new Date());
+  const [Quoi,setQuoi] = useState ('');
+  const [Impact,setImpact] = useState ('');
+  const [Probleme,setProbleme] = useState ('');
+  const [Actions,setActions] = useState ('');
+  const [medicament , setMedicament] = useState('');
+  const [Defaillances,setDefaillances] = useState ('');
+  const [radiobuton , setRadiobutton] =useState('');
+  const [field, setField] =useState('')
+
+
+ 
+
 
   const [value, setValue] = useState('option1');
   const [valuee, setValuee] = useState('no');
@@ -58,6 +80,7 @@ function SaisieErreur() {
   const [containerVisible6, setContainerVisible6] = useState(false); 
   const [containerVisible7, setContainerVisible7] = useState(false); 
   const [lines, setLines] = useState([]);
+
 
   useEffect(() => {
     setLines([{ id: 1 }]);
@@ -157,10 +180,7 @@ function getCurrentDateTime() {
 
 
 
-  const handleChangeTextField = (event) => {
-    setValue(event.target.value);
-  };
-
+ 
 
   
 
@@ -315,9 +335,9 @@ function getCurrentDateTime() {
       </Grid>
       <Grid item xs={7}>
       <FormControl >
-                  <RadioGroup row valuee={valuee} onChange={handleChange}>
-                    <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick8} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick8} label="Non" />
+                  <RadioGroup row >
+                    <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick8} label="Oui"  onChange={e=>setValuee(e.target.value)} />
+                    <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick8} label="Non"  onChange={e=>setValuee(e.target.value)}/>
                   </RadioGroup>
                 </FormControl>
       </Grid>
@@ -331,7 +351,9 @@ function getCurrentDateTime() {
         hiddenLabel
         id="filled-hidden-label-small"
         style={{ backgroundColor: "white" }}
-        size="small" />
+        size="small"
+        value={Nom}
+        onChange={e=>setNom(e.target.value)}/> 
     </Grid>
     <Grid item xs={12} sm={4}>
       <Typography variant="h7">Prénom :</Typography>
@@ -339,7 +361,9 @@ function getCurrentDateTime() {
         hiddenLabel
         id="filled-hidden-label-small"
         style={{ backgroundColor: "white" }}
-        size="small" />
+        size="small"
+        value={Prenom}
+        onChange={e=>setPrenom(e.target.value)}/>  
     </Grid>
 
     <Grid item xs={12} sm={4}>
@@ -348,7 +372,10 @@ function getCurrentDateTime() {
         hiddenLabel
         id="filled-hidden-label-small"
         style={{ backgroundColor: "white" }}
-        size="small" />
+        size="small" 
+        value={Fonction}
+        onChange={e=>setFonction(e.target.value)}/> 
+        
     </Grid>
   </Grid>
 </Container></Grid>
@@ -369,8 +396,8 @@ function getCurrentDateTime() {
                     <TextField
                       id="datetime-local"
                       type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
-
+                      value={DateAnalyse}
+                      onChange={e=>setDateAnalyse(e.target.value)}
                       InputLabelProps={{
                         shrink: true,
                       }}
@@ -393,8 +420,9 @@ function getCurrentDateTime() {
                     <TextField
                       id="datetime-local"
                       type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
-
+             
+                      value={DateCREX}
+                      onChange={e=>setDateCREX(e.target.value)}
                       InputLabelProps={{
                         shrink: true,
                       }}
@@ -433,6 +461,8 @@ function getCurrentDateTime() {
           <TextField
             hiddenLabel
             id={`nom-${line.id}`}
+            value={NomMembre}
+            onChange={e=>setNomMembre(e.target.value)}
             style={{ backgroundColor: "white" }}
             size="small"
           />
@@ -444,7 +474,9 @@ function getCurrentDateTime() {
             id={`prenom-${line.id}`}
             style={{ backgroundColor: "white" }}
             size="small"
-            label
+            value={PrenomMembre}
+            onChange={e=>setPrenomMembre(e.target.value)}
+         
           />
         </Grid>
 
@@ -455,6 +487,8 @@ function getCurrentDateTime() {
             id={`fonction-${line.id}`}
             style={{ backgroundColor: "white" }}
             size="small"
+            value={FonctionMembre}
+            onChange={e=>setFonctionMembre(e.target.value)}
           />
         </Grid>
         <Grid item xs={2}>
@@ -464,6 +498,8 @@ function getCurrentDateTime() {
             id={`service-${line.id}`}
             style={{ backgroundColor: "white" }}
             size="small"
+            value={ServiceMembre}
+            onChange={e=>setServiceMembre(e.target.value)}
           />
         </Grid>
 
@@ -520,17 +556,19 @@ function getCurrentDateTime() {
       <Typography variant="h7">Date de l'événement :</Typography> 
       </Grid>
       <Grid item xs={6}>
-      <form >
+      
                     <TextField
                       id="datetime-local"
                       type="datetime-local"
-                      defaultValue="2017-05-24T10:30"
+                      value={DateEvent}
+                     
+                      onChange={e=>setDateEvent(e.target.value)}
 
                       InputLabelProps={{
                         shrink: true,
                       }}
                     />
-                  </form>
+              
       </Grid>
     </Grid>
 
@@ -585,7 +623,9 @@ function getCurrentDateTime() {
                     id="outlined-multiline-static"
                     multiline
                     rows={1}
-
+                    value={Quoi}
+                     
+                    onChange={e=>setQuoi(e.target.value)}
                     variant="outlined"
                     style={{ width: '95%', backgroundColor: "white" ,marginTop: "1rem"}}
                     placeholder="Détails" />
@@ -600,7 +640,9 @@ function getCurrentDateTime() {
                     id="outlined-multiline-static"
                     multiline
                     rows={1}
-
+                    value={Impact}
+                     
+                    onChange={e=>setImpact(e.target.value)}
                     variant="outlined"
                     style={{ width: '95%', backgroundColor: "white",marginTop: "1rem" }}
                     placeholder="Conséquences" />
@@ -614,7 +656,9 @@ function getCurrentDateTime() {
                     id="outlined-multiline-static"
                     multiline
                     rows={1}
-
+                    value={Probleme}
+                     
+                    onChange={e=>setProbleme(e.target.value)}
                     variant="outlined"
                     style={{ width: '95%', backgroundColor: "white" ,marginTop: "1rem"}}
                     placeholder="Problème" />
@@ -627,7 +671,9 @@ function getCurrentDateTime() {
                     id="outlined-multiline-static"
                     multiline
                     rows={1}
-
+                    value={Actions}
+                     
+                    onChange={e=>setActions(e.target.value)}
                     variant="outlined"
                     style={{ width: '95%', backgroundColor: "white",marginTop: "1rem" }}
                     placeholder="Actions" />
@@ -769,28 +815,28 @@ function getCurrentDateTime() {
       </Grid>
       <Grid item xs={12} sm={8}>
       <FormControl component="fieldset">
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                  <RadioGroup row >
                     <Typography variant="h7" style={{ marginRight: '20px' }}>Un médicament qui est :</Typography>
 
-                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré"  onChange={e=>setMedicament(e.target.value)} />
 
-                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
-
-
-                  </RadioGroup>
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
-
-                    <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" />
-
+                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" onChange={e=>setMedicament(e.target.value)} />
 
 
                   </RadioGroup>
-                  <RadioGroup row valuee={valuee} onChange={handleChange2}>
+                  <RadioGroup row >
+
+                    <FormControlLabel value="Unsupéfiant" style={{ marginTop: '5px', marginLeft: '165px' }} control={<Radio />} label="Un supéfiant" onChange={e=>setMedicament(e.target.value)} />
+
+
+
+                  </RadioGroup>
+                  <RadioGroup row >
                     <Typography variant="h7" style={{ marginTop: '10px', marginRight: '40px' }}>Une chimiothérapie : </Typography>
 
-                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" />
+                    <FormControlLabel value="Réfugéré" control={<Radio />} label="Réfugéré" onChange={e=>setMedicament(e.target.value)} />
 
-                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" />
+                    <FormControlLabel value="noRéfugéré" control={<Radio />} label="Non Réfugéré" onChange={e=>setMedicament(e.target.value)} />
 
 
                   </RadioGroup>
@@ -954,16 +1000,51 @@ function getCurrentDateTime() {
      
 
        {isButtonRed && (
-        <button style={{ backgroundColor: 'red' }}>Risque inacceptable</button>
+        <Box
+  style={{
+    backgroundColor: 'red',
+    border: '1px solid black',
+    borderRadius: '4px',
+    padding: '8px',
+    cursor: 'pointer',
+    display: 'inline-block',
+    color:'white',
+  }}
+>
+  Risque inacceptable
+</Box>
       )}
 
 {isButtonyellow && (
-        <button style={{ backgroundColor: 'yellow' }}>Risque acceptable sous controle</button>
+  <Box
+  style={{
+    backgroundColor: 'yellow',
+    border: '1px solid black',
+    borderRadius: '4px',
+    padding: '8px',
+    cursor: 'pointer',
+    display: 'inline-block',
+  }}
+>
+  Risque acceptable sous control
+</Box>
       )}
 
 
 {isButtongreen && (
-        <button style={{ backgroundColor: 'green' }}>Risque acceptable</button>
+  <Box
+  style={{
+    backgroundColor: 'green',
+    border: '1px solid black',
+    borderRadius: '4px',
+    padding: '8px',
+    cursor: 'pointer',
+    display: 'inline-block',
+    color:'white',
+  }}
+>
+  Risque acceptable
+</Box>
       )}
       </Grid>
 
@@ -1006,8 +1087,11 @@ function getCurrentDateTime() {
                 id="outlined-multiline-static"
                 multiline
                 rows={5}
-placeholder='Défaillances actives ou immédiates ou défauts de soin'
+                placeholder='Défaillances actives ou immédiates ou défauts de soin'
                 variant="outlined"
+                value={Defaillances}
+                     
+                onChange={e=>setDefaillances(e.target.value)}
                 style={{ width: '95%', backgroundColor: "white" }}
               />
             </Grid>
@@ -1038,9 +1122,9 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           
       </Grid>      <Grid item xs={5} >
  <FormControl>
-        <RadioGroup row value={value3} onChange={handleChange3}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+        <RadioGroup row  value={value3} onChange={handleChange3} >
+          <FormControlLabel value="yes" control={<Radio />} label="Oui"  onChange={e=>setRadiobutton(e.target.value)}  />
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}  />
         </RadioGroup>
       </FormControl>     </Grid>   
 
@@ -1072,8 +1156,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
             />
 
@@ -1083,8 +1167,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}  />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}  />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1114,7 +1198,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
 
             />
@@ -1125,8 +1210,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui"   onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1160,8 +1245,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
             />
 
@@ -1171,8 +1256,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1203,8 +1288,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
             />
 
@@ -1214,8 +1299,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1247,8 +1332,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
             />
 
@@ -1259,8 +1344,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
 
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
           </RadioGroup>
         </FormControl> </Grid>
 
@@ -1291,7 +1376,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
+              value={field}
+              onChange={e=>setField(e.target.value)} 
 
 
             />
@@ -1302,8 +1388,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1359,8 +1445,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value4} onChange={handleChange4}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
         </RadioGroup>
       </FormControl>     </Grid>   
 
@@ -1393,8 +1479,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
                       />
 
@@ -1404,8 +1490,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                      <FormControlLabel value="no" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1435,8 +1521,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
-
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
                       />
 
@@ -1445,9 +1531,9 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                    <RadioGroup row valuee={valuee} onChange={handleChange2}> 
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1481,7 +1567,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1492,8 +1579,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1531,7 +1618,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1542,8 +1630,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1580,7 +1668,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1591,8 +1680,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui"onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1623,7 +1712,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1634,8 +1724,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1669,7 +1759,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1680,8 +1771,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1712,7 +1803,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        onChange={handleChangeTextField}
+                        value={field}
+                        onChange={e=>setField(e.target.value)}
 
 
                       />
@@ -1723,8 +1815,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                     <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" />
+                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1775,8 +1867,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value5} onChange={handleChange5}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
         </RadioGroup>
       </FormControl>     </Grid>   
     
@@ -1810,8 +1902,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -1821,8 +1913,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1852,8 +1944,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -1863,8 +1955,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1898,8 +1990,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -1909,8 +2001,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1948,8 +2040,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -1959,8 +2051,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1997,8 +2089,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -2008,8 +2100,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2039,8 +2131,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -2050,8 +2142,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
           <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-            <FormControlLabel value="no" control={<Radio />} label="Non" />
+            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2081,8 +2173,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              onChange={handleChangeTextField}
-
+              value={field}
+              onChange={e=>setField(e.target.value)}
 
             />
 
@@ -2177,8 +2269,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value6} onChange={handleChange6}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
         </RadioGroup>
       </FormControl>     </Grid>   
        </Grid>   
@@ -2211,7 +2303,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          onChange={handleChangeTextField} />
+                          value={field}
+                          onChange={e=>setField(e.target.value)}                           />
 
                       </div></Grid>
 
@@ -2219,8 +2312,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                       <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -2242,7 +2335,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2250,8 +2344,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2275,7 +2369,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)}                             />
 
                         </div></Grid>
 
@@ -2283,8 +2378,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2308,7 +2403,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2316,8 +2412,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2341,7 +2437,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2349,8 +2446,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2374,7 +2471,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2382,8 +2480,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2407,7 +2505,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2415,8 +2514,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2440,7 +2539,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2448,8 +2548,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2473,7 +2573,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2481,8 +2582,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2506,16 +2607,17 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        <RadioGroup row valuee={valuee} onChange={handleChange2}> 
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2539,7 +2641,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2547,8 +2650,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2572,7 +2675,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)}/>
 
                         </div></Grid>
 
@@ -2580,8 +2684,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2627,8 +2731,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value7} onChange={handleChange7}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui"  onChange={e=>setRadiobutton(e.target.value)}/>
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
         </RadioGroup>
       </FormControl>     </Grid>   
        </Grid>   
@@ -2679,7 +2783,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          onChange={handleChangeTextField} />
+                          value={field}
+                          onChange={e=>setField(e.target.value)} />
 
                       </div>
 </Grid>
@@ -2687,8 +2792,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                       <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -2710,7 +2815,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2718,8 +2824,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2743,7 +2849,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2751,8 +2858,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2776,7 +2883,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2784,8 +2892,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2809,7 +2917,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2817,8 +2926,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2842,7 +2951,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2850,8 +2960,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2875,7 +2985,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)}/>
 
                         </div></Grid>
 
@@ -2883,8 +2994,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2908,7 +3019,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2916,8 +3028,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2941,7 +3053,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -2975,8 +3088,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value8} onChange={handleChange8}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
         </RadioGroup>
       </FormControl>     </Grid>   
        </Grid>   
@@ -3013,7 +3126,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          onChange={handleChangeTextField} />
+                          value={field}
+                          onChange={e=>setField(e.target.value)} />
 
                       </div></Grid>
 
@@ -3021,8 +3135,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                       <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -3044,7 +3158,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3052,8 +3167,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3076,7 +3191,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3084,8 +3200,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3108,7 +3224,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)}/>
 
                         </div></Grid>
 
@@ -3116,8 +3233,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3140,7 +3257,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3148,8 +3266,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3172,7 +3290,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3180,8 +3299,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3201,7 +3320,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3209,8 +3329,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3228,7 +3348,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3236,8 +3357,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3255,7 +3376,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3307,8 +3429,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
       </Grid>      <Grid item xs={5} >
  <FormControl>
         <RadioGroup row value={value9} onChange={handleChange9}>
-          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-          <FormControlLabel value="no" control={<Radio />} label="Non" />
+          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
         </RadioGroup>
       </FormControl>     </Grid>   
        </Grid>   
@@ -3352,7 +3474,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          onChange={handleChangeTextField} />
+                          value={field}
+                          onChange={e=>setField(e.target.value)} />
 
                       </div></Grid>
 
@@ -3360,8 +3483,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                       <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" />
+                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -3383,7 +3506,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)}/>
 
                         </div></Grid>
 
@@ -3391,8 +3515,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3414,7 +3538,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3422,8 +3547,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3446,7 +3571,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3454,8 +3580,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3478,7 +3604,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3486,8 +3613,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3510,7 +3637,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div>
                       </Grid>
@@ -3519,8 +3647,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3538,7 +3666,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3546,8 +3675,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3565,7 +3694,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            onChange={handleChangeTextField} />
+                            value={field}
+                            onChange={e=>setField(e.target.value)} />
 
                         </div></Grid>
 
@@ -3573,8 +3703,8 @@ placeholder='Défaillances actives ou immédiates ou défauts de soin'
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
+                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 

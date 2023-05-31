@@ -22,12 +22,23 @@ import { Modal, Paper} from '@material-ui/core';
 import WarningIcon from '@mui/icons-material/Warning';
 import { Button } from '@mui/material';
 function DeclarerEM() {
-  
-    const [value, setValue] = useState('option1');
-    const [valuee, setValuee] = useState('yes');
+      const [Nom, setNom] = useState('');
+      const [Prenom, setPrenom] = useState('');
+      const [Fonction, setFonction] = useState('');
+      const [Date, setDate] = useState();
+      const [DateEvent, setDateEvent] = useState();
+      const [EtatPatient, setEtatPatient] = useState('');
+      const[NomMedicament,setNomMedicament] = useState('');
+      const[NomVoie,setNomVoie] = useState('');
+      const[Autre,setNomAutre] = useState('');
+      const[DescEvent,setDescEvent] = useState('');
+      const[Impact,setImpact] = useState('');
+
+      const [valuee,setValuee]=useState('')
+
+
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
-    const [Nom, setNom] = useState('');
 
     const handleOpen = () => {
       setOpen(true);
@@ -73,18 +84,11 @@ function DeclarerEM() {
 
   
       });
-      const handleChange2 = (event) => {
-        setValuee(event.target.valuee);
-      };
+    
+    
         
     
-      const handleChange3 = (event) => {
-        setValuee(event.target.valuee);
-      };
-      
-    const handleChange = (event) => {
-        setValue(event.target.value);
-      };
+    
     const handleNoClick8 = () => {
         const container = document.getElementById("container8",);
         container.style.display = "none";
@@ -104,7 +108,10 @@ function DeclarerEM() {
 
 
     return (
-        <><div>
+        <>
+        
+        
+        <div>
             <Box sx={{ textAlign: 'center' }}>
                 <h1>Déclarer une erreur médicamenteuse </h1>
             </Box>
@@ -120,7 +127,8 @@ function DeclarerEM() {
 
 
 
-            </div>             
+            </div>     
+            <form>       
              <Card style={{ backgroundColor: '#e2d2c1  ' , boxShadow: '5px 5px 5px #c7a988  ' , padding: '20px', margin:"40px"}}>
                      <h2>Identité</h2>   
 
@@ -130,9 +138,9 @@ function DeclarerEM() {
       </Grid>
       <Grid item xs={4}>
       <FormControl >
-      <RadioGroup row valuee={valuee} onChange={handleChange}>
-        <FormControlLabel value="yes" control={<Radio />} onClick={handleNoClick8} label="Oui" />
-        <FormControlLabel value="no" control={<Radio />}   onClick={handleYesClick8} label="Non" />
+      <RadioGroup row >
+        <FormControlLabel value="yes" control={<Radio />} onClick={handleNoClick8} label="Oui" onChange={e=>setValuee(e.target.value)} />
+        <FormControlLabel value="no" control={<Radio />}   onClick={handleYesClick8} label="Non" onChange={e=>setValuee(e.target.value)} />
       </RadioGroup>
     </FormControl>
 
@@ -147,7 +155,8 @@ function DeclarerEM() {
                                  id="filled-hidden-label-small"
                                  style={{backgroundColor: "white" }}
                                  size="small"
-                                 value={Nom}/> 
+                                 value={Nom}
+                                 onChange={e=>setNom(e.target.value)}/> 
                             </Grid>
                             <Grid item xs={12} sm={4}>
                             <Typography variant="h7">Prénom :</Typography>
@@ -155,7 +164,9 @@ function DeclarerEM() {
                                  hiddenLabel
                                  id="filled-hidden-label-small"
                                  style={{backgroundColor: "white" }}
-                                 size="small"/> 
+                                 size="small"
+                                 value={Prenom}
+                                 onChange={e=>setPrenom(e.target.value)}/> 
                             </Grid>
 
                             <Grid item xs={12} sm={4}>
@@ -164,7 +175,9 @@ function DeclarerEM() {
                                   hiddenLabel
                                   id="filled-hidden-label-small"
                                   style={{backgroundColor: "white" }}
-                                 size="small"/>
+                                 size="small"
+                                 value={Fonction}
+                                 onChange={e=>setFonction(e.target.value)}/>
                             </Grid>
                         </Grid>
                  </Container>
@@ -212,7 +225,8 @@ function DeclarerEM() {
     id="datetime-local"
     type="datetime-local"
     defaultValue="2017-05-24T10:30"
- 
+value={Date}
+onChange={e=>setDate(e.target.value)}
     InputLabelProps={{
       shrink: true,
     }}
@@ -243,6 +257,8 @@ function DeclarerEM() {
 id="datetime-local"
 type="datetime-local"
 defaultValue="2017-05-24T10:30"
+value={DateEvent}
+onChange={e=>setDateEvent(e.target.value)}
 
 InputLabelProps={{
  shrink: true,
@@ -279,10 +295,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-   <RadioGroup row valuee={valuee} onChange={handleChange3}>
-        <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-        <FormControlLabel value="no" control={<Radio />} label="Non" />
-        <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" /> 
+   <RadioGroup row  >
+        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
+        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
+        <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/> 
       </RadioGroup>
         
         
@@ -341,10 +357,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange3}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+      <RadioGroup row  >
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setValuee(e.target.value)} />
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas"  onChange={e=>setValuee(e.target.value)} />
                          </RadioGroup>
         
       </Grid>
@@ -511,7 +527,10 @@ InputLabelProps={{
                                     hiddenLabel
                                     id="filled-hidden-label-small"
                                     size="small"
+                                    
                                     style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem'  }}
+                                    value={EtatPatient}
+                                    onChange={e=>setEtatPatient(e.target.value)}
 
                                     />
                                 </Grid>
@@ -525,10 +544,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+      <RadioGroup row  >
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
                            
 
                          </RadioGroup>
@@ -555,11 +574,11 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="1" control={<Radio />} label="1" />
-                           <FormControlLabel value="2" control={<Radio />} label="2" />
-                           <FormControlLabel value="3" control={<Radio />} label="3" />
-                           <FormControlLabel value="4" control={<Radio />} label="4" />
+      <RadioGroup row  >
+                           <FormControlLabel value="1" control={<Radio />} label="1" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="2" control={<Radio />} label="2" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="3" control={<Radio />} label="3" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="4" control={<Radio />} label="4" onChange={e=>setValuee(e.target.value)}/>
 
                          </RadioGroup>
       </Grid>
@@ -586,7 +605,8 @@ InputLabelProps={{
                                     id="filled-hidden-label-small"
                                     size="small"
                                     style={{ width: '95%', backgroundColor: "white",marginTop: '0.5rem' }}
-                                    
+                                    value={NomMedicament}
+                                    onChange={e=>setNomMedicament(e.target.value)}
                                     />
                                  </Grid>
 
@@ -603,10 +623,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+      <RadioGroup row  >
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
                            
 
                          </RadioGroup>
@@ -638,14 +658,14 @@ InputLabelProps={{
       </Grid>
       <Grid item xs={12} sm={6}>
       <FormControl component="fieldset">
-                         <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="1" control={<Radio />} label="1" style={{color:"darkblue"}}/>
-                           <FormControlLabel value="2" control={<Radio />} label="2" style={{color:"red"}}/>
-                           <FormControlLabel value="3" control={<Radio />} label="3" style={{color:"green"}}/>
-                           <FormControlLabel value="4" control={<Radio />} label="4" style={{color:"orange"}}/>
-                           <FormControlLabel value="5" control={<Radio />} label="5"style={{color:"purple"}} />
-                           <FormControlLabel value="6" control={<Radio />} label="6" style={{color:"blue"}} />
-                           <FormControlLabel value="7" control={<Radio />} label="7" style={{color:"darkred"}} />    
+                         <RadioGroup row  >
+                           <FormControlLabel value="1" control={<Radio />} label="1" style={{color:"darkblue"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="2" control={<Radio />} label="2" style={{color:"red"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="3" control={<Radio />} label="3" style={{color:"green"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="4" control={<Radio />} label="4" style={{color:"orange"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="5" control={<Radio />} label="5"style={{color:"purple"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="6" control={<Radio />} label="6" style={{color:"blue"}} onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="7" control={<Radio />} label="7" style={{color:"darkred"}} onChange={e=>setValuee(e.target.value)}/>    
                             <InfoIcon fontSize="large" style={{ color: '#fb9628' }} onClick={handleOpen}/>
                             <Modal open={open} onClose={handleClose}>
         <div style={{
@@ -759,7 +779,8 @@ InputLabelProps={{
                                               id="filled-hidden-label-small"
                                               size="small"
                                               style={{ width: '95%', backgroundColor: "white" }}
-
+                                              value={NomVoie}
+                                              onChange={e=>setNomVoie(e.target.value)}
                                             />
                                     </Grid>
 
@@ -778,10 +799,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                           <FormControlLabel value="no" control={<Radio />} label="Non" />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" />
+      <RadioGroup row valuee={valuee} >
+                           <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
                            
 
                          </RadioGroup>
@@ -811,10 +832,10 @@ InputLabelProps={{
     
       </Grid>
       <Grid item xs={12} sm={4}>
-      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                           <FormControlLabel value="1" control={<Radio />} label="1"/>
-                           <FormControlLabel value="2" control={<Radio />} label="2" />
-                           <FormControlLabel value="3" control={<Radio />} label="3"/>
+      <RadioGroup row  >
+                           <FormControlLabel value="1" control={<Radio />} label="1" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="2" control={<Radio />} label="2" onChange={e=>setValuee(e.target.value)}/>
+                           <FormControlLabel value="3" control={<Radio />} label="3"onChange={e=>setValuee(e.target.value)}/>
                            <InfoIcon fontSize="large" style={{ color: '#fb9628' }} onClick={handleOpen1}/>
                             <Modal open={open1} onClose={handleClose1}>
         <div style={{
@@ -1067,7 +1088,9 @@ InputLabelProps={{
 
                                         variant="outlined"
                                         style={{ width: '35%', backgroundColor: "white" }}
-                                        placeholder="Autre" />
+                                        placeholder="Autre"
+                                        value={Autre}
+                                        onChange={e=>setNomAutre(e.target.value)} />
       </Grid>
   
     </Grid>
@@ -1104,7 +1127,8 @@ InputLabelProps={{
                                         id="outlined-multiline-static"
                                         multiline
                                         rows={1}
-
+                                        value={DescEvent}
+                                        onChange={e=>setDescEvent(e.target.value)} 
                                         variant="outlined"
                                         style={{ width: '95%', backgroundColor: "white" }}
                                         placeholder="Détails" />
@@ -1120,7 +1144,8 @@ InputLabelProps={{
                                         id="outlined-multiline-static"
                                         multiline
                                         rows={1}
-
+                                        value={Impact}
+                                        onChange={e=>setImpact(e.target.value)} 
                                         variant="outlined"
                                         style={{ width: '95%', backgroundColor: "white" }}
                                         placeholder="Détails" />
@@ -1146,7 +1171,7 @@ InputLabelProps={{
                     
                     
                     
-                    
+       </form> 
                     
                     
                     
