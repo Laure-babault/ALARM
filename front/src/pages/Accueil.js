@@ -30,7 +30,11 @@ function Accueil() {
       }}
     >
       <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
- 
+      <Box>
+        <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
+          Consulter les erreurs médicamenteuses
+        </Button>
+      </Box>
       <Box>
         <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
           Session du CREX
@@ -41,7 +45,7 @@ function Accueil() {
           Consulter les Archives
         </Button>
       </Box>
-{/* <Box>
+     {/* <Box>
    <Button component={Link} to="/SaisieErreur" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
       Analyser une erreur médicamenteuse
     </Button>
