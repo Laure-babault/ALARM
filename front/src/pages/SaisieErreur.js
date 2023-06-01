@@ -47,7 +47,26 @@ function SaisieErreur() {
   const [medicament , setMedicament] = useState('');
   const [Defaillances,setDefaillances] = useState ('');
   const [radiobuton , setRadiobutton] =useState('');
-  const [field, setField] =useState('')
+  const [field, setField] =useState('');
+  const [Defense,setDefense] = useState('');
+  const [CauseLatente,setCauseLatente] = useState('');
+  const [ActionPreventif,setActionPreventif] = useState('');
+  const [ActionCorrective,setActionCorrective] = useState('');
+  const [EffetAttendu,setEffetAttendu] = useState('');
+  const [Pilote,setPilote] = useState('');
+  const [EcheancePrevue,setEcheancePrevue] = useState(new Date());
+  const [EcheanceEffective,setEcheanceEffective] = useState(new Date());
+  const [Autre,setAutre] = useState('');
+
+
+
+  
+
+
+
+
+
+
 
 
  
@@ -125,14 +144,6 @@ function SaisieErreur() {
   };
 
 
-function getCurrentDateTime() {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
-
-  
-    return `${month}-${year}`;
-    }
 
 
 
@@ -3774,8 +3785,8 @@ function getCurrentDateTime() {
       
       <FormControl >
                   <RadioGroup row valuee={valuee} onChange={handleChange2} defaultValue="no">
-                    <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick7} label="Oui" />
-                    <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick7} label="Non" />
+                    <FormControlLabel value="yes" control={<Radio />} onClick={handleYesClick7} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                    <FormControlLabel value="no" control={<Radio />} onClick={handleNoClick7} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                   </RadioGroup>
                 </FormControl>
       
@@ -3794,6 +3805,8 @@ function getCurrentDateTime() {
                     multiline
                     rows={5}
                     variant="outlined"
+                    value={Defense}
+                    onChange={e=>setDefense(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white"}}
                   />
                 </Grid>
@@ -3851,6 +3864,8 @@ function getCurrentDateTime() {
                     hiddenLabel
                     id="filled-hidden-label-small"
                     size="small"
+                    value={CauseLatente}
+                    onChange={e=>setCauseLatente(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
@@ -3859,6 +3874,8 @@ function getCurrentDateTime() {
                     hiddenLabel
                     id="filled-hidden-label-small"
                     size="small"
+                    value={ActionPreventif}
+                    onChange={e=>setActionPreventif(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
@@ -3867,6 +3884,8 @@ function getCurrentDateTime() {
                     hiddenLabel
                     id="filled-hidden-label-small"
                     size="small"
+                    value={ActionCorrective}
+                    onChange={e=>setActionCorrective(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
@@ -3875,6 +3894,8 @@ function getCurrentDateTime() {
                     hiddenLabel
                     id="filled-hidden-label-small"
                     size="small"
+                    value={EffetAttendu}
+                    onChange={e=>setEffetAttendu(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
@@ -3883,6 +3904,8 @@ function getCurrentDateTime() {
                     hiddenLabel
                     id="filled-hidden-label-small"
                     size="small"
+                    value={Pilote}
+                    onChange={e=>setPilote(e.target.value)} 
                     style={{ width: '95%', backgroundColor: "white" }}
                   />
                 </Grid>
@@ -3892,7 +3915,8 @@ function getCurrentDateTime() {
                     <TextField
                      id="month-year"
                      type="month"
-                     defaultValue={getCurrentDateTime()}
+                     value={EcheancePrevue}
+                    onChange={e=>setEcheancePrevue(e.target.value)} 
                      style={{backgroundColor: "white", width: '95%'}}
                      InputLabelProps={{
                        shrink: true,
@@ -3905,7 +3929,8 @@ function getCurrentDateTime() {
                     <TextField
                      id="month-year"
                      type="month"
-                     defaultValue={getCurrentDateTime()}
+                     value={EcheanceEffective}
+                    onChange={e=>setEcheanceEffective(e.target.value)} 
                      style={{backgroundColor: "white", width: '95%'}}
                      InputLabelProps={{
                        shrink: true,
@@ -3927,7 +3952,8 @@ function getCurrentDateTime() {
                  rows={6}
                  variant="outlined"
                  placeholder='Autre'
-             
+                 value={Autre}
+                 onChange={e=>setAutre(e.target.value)} 
                     style={{ width: '100%', backgroundColor: "white" , marginTop:'20px'}}
                 />
                 </Grid>
