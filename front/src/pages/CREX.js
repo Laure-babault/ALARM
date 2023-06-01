@@ -220,7 +220,7 @@ function CREX() {
   </Grid>
 </Grid>
 </div>
-<div style={{ height: 400, width: '100%' }}>
+<div style={{ height: 400, width: '100%' , marginTop:"20px"}}>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -254,7 +254,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={4} >
-      <img src={Carte} style={{height:"100px", width:"100px"}}/>
+      <img src={Carte} style={{height:"70px", width:"70px"}}/>
  </Grid>
     </Grid>
    
@@ -275,7 +275,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={4} >
-      <img src={Calendrier} style={{height:"100px", width:"100px"}}/>
+      <img src={Calendrier} style={{height:"70px", width:"70px"}}/>
  </Grid>
     </Grid>
 
@@ -353,7 +353,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={4} >
-      <img src={Patient} style={{height:"100px", width:"100px"}}/>
+      <img src={Patient} style={{height:"70px", width:"70px"}}/>
  </Grid>
     </Grid>
 
@@ -606,7 +606,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={2} >
-      <img src={Médicament} style={{height:"80px", width:"80px"}}/>
+      <img src={Médicament} style={{height:"60px", width:"60px"}}/>
  </Grid>
     </Grid>
    
@@ -689,7 +689,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={2} >
-      <img src={Etapes} style={{height:"80px", width:"80px"}}/>
+      <img src={Etapes} style={{height:"70px", width:"70px"}}/>
  </Grid>
     </Grid>
    
@@ -744,7 +744,7 @@ function CREX() {
          {/* Affichage */}
       </Grid>
       <Grid item xs={2} >
-      <img src={Sante} style={{height:"80px", width:"80px"}}/>
+      <img src={Sante} style={{height:"70px", width:"70px"}}/>
  </Grid>
     </Grid>
    
@@ -782,7 +782,7 @@ function CREX() {
           <Typography variant="h7">Modifier la déclaration</Typography>
         </Grid>
         <Grid item xs={4}>
-          <Button variant="contained" style={{ backgroundColor: "green", marginTop: "20px", borderRadius: '10px' }}>Valider</Button>
+          <Button variant="contained" style={{ backgroundColor: "green", marginTop: "20px", borderRadius: '10px' }} component={Link} to="/SaisieErreur"  >Valider</Button>
         </Grid>
         <Grid item xs={4}>
           <Button variant="contained" style={{ backgroundColor: "orange", marginTop: "20px", borderRadius: '10px' }}>Mettre en attente</Button>
