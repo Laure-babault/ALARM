@@ -3,7 +3,6 @@ import Chart from 'react-apexcharts';
 import { Grid } from '@mui/material/';
 import { Button } from '@material-ui/core';
 import Box from '@mui/material/Box';
-import { createMuiTheme, ThemeProvider } from '@mui/material/styles';
 
 import Paper from '@mui/material/Paper';
 class Dashboard extends Component {

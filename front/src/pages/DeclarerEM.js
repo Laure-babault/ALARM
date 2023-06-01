@@ -1156,11 +1156,9 @@ InputLabelProps={{
         
                        
                         </>
-     
-                    <Box display="flex" justifyContent="center" alignItems="center" >
-      <Button variant="contained" color="primary"> Valider </Button>
-    </Box>    
-             
+                        <Box display="flex" justifyContent="center" alignItems="center">
+  <Button variant="contained" style={{ backgroundColor: '#7DC4B2' }}>Valider</Button>
+</Box>
              
                </Card>            
                     

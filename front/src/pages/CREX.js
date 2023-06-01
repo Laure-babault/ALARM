@@ -25,7 +25,9 @@ import myPdf1 from '../pdf/medicaments_risque.pdf';
 import myPdf2 from '../pdf/administration_risque.pdf';
 function CREX() {
     const [selectedOption, setSelectedOption] = useState('');
-
+    const [Nom, setNom] = useState('');
+    const [Prenom, setPrenom] = useState(''); 
+    const [Fonction, setFonction] = useState(''); 
     const [openaffichageErreurM, setOpenAffichageErreurM]=useState(false);
     const [idEm, setIdEm] = useState([]);
     const rows = [
@@ -88,140 +90,133 @@ function CREX() {
       </Box>
         <div className="Crex">
 
-<Grid container spacing={2}>
+        <Grid container spacing={2}>
   <Grid item xs={3}>
-    <Card style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '20px',  margin:"9px", height:"180px"}}>
-    
-    <Grid container direction="column" spacing={2}>
-    
-        <Grid item xs={4}>
-        <Typography variant="h6"><b>Date</b> </Typography>
+    <Card style={{ backgroundColor: '#B0E3CA', boxShadow: '5px 5px 5px #5C9077', padding: '20px', height: '200px' }}>
+      <Grid container direction="column" spacing={2}>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h6"><b>Date</b></Typography>
         </Grid>
-    <Grid item style={{marginLeft:'10px'}}>
-      <TextField
-        id="date-du"
-        label="Du"
-        type="date"
-        variant="outlined"
-        InputLabelProps={{
-          shrink: true,
-        }}
-        style={{backgroundColor:'white'}}
-      />
-    </Grid>
-    <Grid item style={{marginLeft:'10px'}}>
-      <TextField
-        id="date-au"
-        label="Au"
-        type="date"
-        variant="outlined"
-        InputLabelProps={{
-          shrink: true,
-          
-        }}
-        style={{backgroundColor:'white'}}
-      />
-    </Grid>
-  </Grid>
-  
-     </Card >
+        <Grid item xs={12} sm={6}>
+          <TextField
+            id="date-du"
+            label="Du"
+            type="date"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            style={{ backgroundColor: 'white', width: '100%' }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            id="date-au"
+            label="Au"
+            type="date"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            style={{ backgroundColor: 'white', width: '100%' }}
+          />
+        </Grid>
+      </Grid>
+    </Card>
   </Grid>
   <Grid item xs={3}>
-    <Card style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '20px',  margin:"9px", height:"180px" }}>
-    <Grid container direction="column" spacing={2}>
-    
-    <Grid item xs={4}>
-    <Typography variant="h6"><b>Etat</b> </Typography>
-    </Grid>
-    <Grid container direction="column" spacing={2} style={{marginLeft:'10px'}}>
-  <Grid item>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="E : En attente"
-    />
-  </Grid>
-  <Grid item>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="D : Déclaré "
-    />
-  </Grid>
-</Grid>
-</Grid>    </Card>
+    <Card style={{ backgroundColor: '#B0E3CA', boxShadow: '5px 5px 5px #5C9077', padding: '20px', height: '200px' }}>
+      <Grid container direction="column" spacing={2}>
+        <Grid item xs={4}>
+          <Typography variant="h6"><b>Etat</b></Typography>
+        </Grid>
+        <Grid container direction="column" spacing={2} style={{ marginLeft: '10px' }}>
+          <Grid item>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="E : En attente"
+            />
+          </Grid>
+          <Grid item>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="D : Déclaré"
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Card>
   </Grid>
   <Grid item xs={4}>
-    <Card  style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '20px' , margin:"9px", height:"180px"}}>
-    <Grid container direction="column" spacing={2}>
-    
-    <Grid item xs={4}>
-    <Typography variant="h6"><b>Pôle</b> </Typography>
-    </Grid>
-    <Grid container spacing={2} style={{marginLeft:'10px'}}>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Chirurgie"
-    />
-  </Grid>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Médico-Technique"
-    />
-  </Grid>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Gérontologie"
-    />
-  </Grid>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Mère enfant"
-    />
-  </Grid>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Médecine"
-    />
-  </Grid>
-  <Grid item xs={6}>
-    <FormControlLabel
-      control={<Checkbox />}
-      label="Plateau technique"
-  
-    />
-  </Grid>
-</Grid>
-
-</Grid>      </Card>
+    <Card style={{ backgroundColor: '#B0E3CA', boxShadow: '5px 5px 5px #5C9077', padding: '20px', height: '200px' }}>
+      <Grid container direction="column" spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant="h6"><b>Pôle</b></Typography>
+        </Grid>
+        <Grid container spacing={2} style={{ marginLeft: '10px' }}>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Chirurgie"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Médico-Technique"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Gérontologie"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Mère enfant"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Médecine"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Plateau technique"
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Card>
   </Grid>
   <Grid item xs={2}>
-    <Card style={{ backgroundColor: '#B0E3CA ', boxShadow: '5px 5px 5px #5C9077 ', padding: '20px' , margin:"9px", height:"180px"}}>
-    <Grid container direction="column" spacing={2}>
-    
-    <Grid item xs={4}>
-    <Typography variant="h6"><b>Service</b> </Typography>
-    </Grid>
-   
-    
-    <FormControl>
-      <Select
-        labelId="dropdown-label"
-        id="dropdown"
-        value={selectedOption}
-        onChange={handleChange}
-        style={{backgroundColor:'white',marginLeft:'10px'}}
-
-      >
-        <MenuItem style={{display:'block'}} value="option1">Departement 1</MenuItem>
-        <MenuItem style={{display:'block'}} value="option2">Departement 2</MenuItem>
-        <MenuItem style={{display:'block'}} value="option3">Departement 3</MenuItem>
-      </Select>
-    </FormControl>
-</Grid>      </Card>
+    <Card style={{ backgroundColor: '#B0E3CA', boxShadow: '5px 5px 5px #5C9077', padding: '20px', height: '200px' }}>
+      <Grid container direction="column" spacing={2}>
+        <Grid item xs={12}>
+          <Typography variant="h6"><b>Service</b></Typography>
+        </Grid>
+        <Grid item xs={12} style={{ marginLeft: '10px' }}>
+          <FormControl style={{ width: '100%' }}>
+            <Select
+              labelId="dropdown-label"
+              id="dropdown"
+              value={selectedOption}
+              onChange={handleChange}
+              style={{ backgroundColor: 'white' }}
+            >
+              <MenuItem value="option1">Departement 1</MenuItem>
+              <MenuItem value="option2">Departement 2</MenuItem>
+              <MenuItem value="option3">Departement 3</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
+    </Card>
   </Grid>
 </Grid>
 </div>
@@ -468,6 +463,8 @@ function CREX() {
         hiddenLabel
         id="filled-hidden-label-small"
         style={{ backgroundColor: "white" }}
+        value={Nom}
+        onChange={e=>setNom(e.target.value)}
         size="small" />
       </Grid>
       <Grid item xs={3} >
@@ -486,6 +483,8 @@ function CREX() {
       <TextField
         hiddenLabel
         id="filled-hidden-label-small"
+        value={Prenom}
+        onChange={e=>setPrenom(e.target.value)}
         style={{ backgroundColor: "white" }}
         size="small" />
       </Grid>
@@ -505,6 +504,8 @@ function CREX() {
       <TextField
         hiddenLabel
         id="filled-hidden-label-small"
+        value={Fonction}
+        onChange={e=>setFonction(e.target.value)}
         style={{ backgroundColor: "white" }}
         size="small" />
       </Grid>
