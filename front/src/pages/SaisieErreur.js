@@ -6,8 +6,8 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-//Definition des nom des étapes sur le menu
-const steps = ['Qui je suis', 'Suite saisie', 'Fin de saisie'];
+//Definition des nom des étapes sur le menu et nbr etape
+const steps = ['Qui je suis', 'Suite saisie', 'Fin de saisie','test'];
 
 function SaisieErreur() {
     const [activeStep, setActiveStep] = React.useState(0);
@@ -86,6 +86,7 @@ function SaisieErreur() {
                     <div>
                         <h2>Je m'identifie ( Etape Optionnel ) </h2>
                         <p>Contenu spécifique à l'étape 1</p>
+                        Voir comment faire
                     </div>
                 )}
 
