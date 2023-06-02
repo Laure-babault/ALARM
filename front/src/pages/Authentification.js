@@ -1,36 +1,103 @@
 import React from "react";
 import { Box, Grid, Button, TextField } from "@mui/material";
+import {Paper, Avatar,Typography,Link } from '@material-ui/core'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { useState } from 'react';
 
 function Authentification() {
+  const [nom, setNom] = useState('');
+  const [motDePasse, setMotDePasse] = useState('');
+  const [erreurNom, setErreurNom] = useState(false);
+  const [erreurMotDePasse, setErreurMotDePasse] = useState(false);
 
+  const paperStyle = {
+    padding: '20px',
+    width: '400px',
+    height:'350px',
+    margin: '10% auto',
+  };
+  
+  const avatarStyle = {
+    backgroundColor: '#7DC4B2',
+  };
+  
+  const btnstyle = {
+    marginTop: '20px',
+    backgroundColor:'#7DC4B2'
+  };
+  const handleNomChange = (e) => {
+    setNom(e.target.value);
+    setErreurNom(false);
+  };
+
+  const handleMotDePasseChange = (e) => {
+    setMotDePasse(e.target.value);
+    setErreurMotDePasse(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (nom === '') {
+      setErreurNom(true);
+    }
+
+    if (motDePasse === '') {
+      setErreurMotDePasse(true);
+    }
+
+
+    if (nom !== '' && motDePasse !== '') {
+      console.log('Formulaire soumis');
+    }
+  };
 
   return (
 
 
 
     <div className="Authentification">
-      <Grid container spacing={2} height='100%'>
-        <Grid item xs={5}>
-          <Box sx={{ textAlign: 'center' }}>
-            <h1 >Projet alarm</h1>
-          </Box>
+       <Grid>
+      <Paper elevation={10} style={paperStyle}>
+        <Grid align='center'>
+          <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
+          <h2>Se connecter</h2>
         </Grid>
-        <Grid item xs={7}>
-          <Box>
-            <h2>Authentification</h2>
-          </Box>
-          <Box>
-            <TextField>
+        <form onSubmit={handleSubmit}>
+          <TextField
+            style={{ marginBottom: '20px' }}
+            placeholder='Nom'
+            fullWidth
+            required
+            value={nom}
+            onChange={handleNomChange}
+            error={erreurNom}
+            helperText={erreurNom ? 'Veuillez entrer votre nom' : ''}
+          />
+          <TextField
+            style={{ marginBottom: '20px' }}
+            placeholder='Mot de passe'
+            type='password'
+            fullWidth
+            required
+            value={motDePasse}
+            onChange={handleMotDePasseChange}
+            error={erreurMotDePasse}
+            helperText={erreurMotDePasse ? 'Veuillez entrer votre mot de passe' : ''}
+          />
 
-            </TextField>
-          </Box>
-          <Box>
-            <Button variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px' }} >
-              Connexion
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
+          <Button
+            type='submit'
+            color='primary'
+            variant="contained"
+            style={btnstyle}
+            fullWidth
+          >
+            Se connecter
+          </Button>
+        </form>
+      </Paper>
+    </Grid>
 
     </div>
   );
