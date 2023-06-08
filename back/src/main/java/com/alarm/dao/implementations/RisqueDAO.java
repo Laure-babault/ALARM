@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.alarm.dao.interfaces.InterfaceRisqueDAO;
-import com.alarm.entity.Crex;
+import com.alarm.entity.Risque;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -17,28 +17,30 @@ public class RisqueDAO implements InterfaceRisqueDAO{
 	private EntityManager entityManager;
 
 	@Override
-	public Crex getById(int id) {
+	public Risque getById(int id) {
 		// TODO Auto-generated method stub
-		return entityManager.find(Crex.class, id);
+		return entityManager.find(Risque.class, id);
 	}
 
 	@Override
-	public List<Crex> getAll() {
+	public List<Risque> getAll() {
 		// TODO Auto-generated method stub
-		String jpql = "SELECT c FROM Crex c";
-		TypedQuery<Crex> query = entityManager.createQuery(jpql, Crex.class);
+		String jpql = "SELECT r FROM Risque r";
+		TypedQuery<Risque> query = entityManager.createQuery(jpql, Risque.class);
 		return query.getResultList();
-	}	
-
-	@Override
-	public void addCrex(Crex crex) {
-		// TODO Auto-generated method stub
-		entityManager.persist(crex);
 	}
 
 	@Override
-	public void updateCrex(Crex crex) {
+	public void addRisque(Risque risque) {
 		// TODO Auto-generated method stub
-		entityManager.merge(crex);
+		entityManager.persist(risque);
 	}
+
+	@Override
+	public void updateRisque(Risque risque) {
+		// TODO Auto-generated method stub
+		entityManager.merge(risque);
+	}
+
+	
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.alarm.dao.interfaces.InterfaceServiceHospitalDAO;
-import com.alarm.entity.Crex;
+import com.alarm.entity.ServiceHospital;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -17,28 +17,28 @@ public class ServiceHospitalDAO implements InterfaceServiceHospitalDAO{
 	private EntityManager entityManager;
 
 	@Override
-	public Crex getById(int id) {
+	public ServiceHospital getById(int id) {
 		// TODO Auto-generated method stub
-		return entityManager.find(Crex.class, id);
+		return entityManager.find(ServiceHospital.class, id);
 	}
 
 	@Override
-	public List<Crex> getAll() {
+	public List<ServiceHospital> getAll() {
 		// TODO Auto-generated method stub
-		String jpql = "SELECT c FROM Crex c";
-		TypedQuery<Crex> query = entityManager.createQuery(jpql, Crex.class);
+		String jpql = "SELECT s FROM ServiceHospital s";
+		TypedQuery<ServiceHospital> query = entityManager.createQuery(jpql, ServiceHospital.class);
 		return query.getResultList();
 	}	
 
 	@Override
-	public void addCrex(Crex crex) {
+	public void addServiceHospital(ServiceHospital serviceHospital) {
 		// TODO Auto-generated method stub
-		entityManager.persist(crex);
+		entityManager.persist(serviceHospital);
 	}
 
 	@Override
-	public void updateCrex(Crex crex) {
+	public void updateServiceHospital(ServiceHospital serviceHospital) {
 		// TODO Auto-generated method stub
-		entityManager.merge(crex);
+		entityManager.merge(serviceHospital);
 	}
 }

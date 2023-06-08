@@ -5,30 +5,39 @@ import java.util.List;
 import com.alarm.dao.interfaces.InterfaceActionQuestionDAO;
 import com.alarm.entity.Action_question;
 
-public class ActionQuestionReponseDAO implements InterfaceActionQuestionDAO {
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
+
+public class ActionQuestionDAO implements InterfaceActionQuestionDAO{
+	
+	@PersistenceContext
+	private EntityManager entityManager;
 
 	@Override
 	public Action_question getById(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.find(Action_question.class, id);
 	}
 
 	@Override
 	public List<Action_question> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		String jpql = "SELECT a FROM Action_question a";
+		TypedQuery<Action_question> query = entityManager.createQuery(jpql, Action_question.class);
+		return query.getResultList();
 	}
 
 	@Override
 	public void addActionQuestion(Action_question action_question) {
 		// TODO Auto-generated method stub
-		
+		entityManager.persist(action_question);
 	}
 
 	@Override
 	public void updateActionQuestion(Action_question action_question) {
 		// TODO Auto-generated method stub
-		
+		entityManager.merge(action_question);
 	}
 
 }
