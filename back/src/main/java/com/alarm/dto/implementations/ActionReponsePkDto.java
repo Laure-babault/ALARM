@@ -9,4 +9,20 @@ public class ActionReponsePkDto implements Dto<Action_reponsePK>{
 
 	private int idActionQuestion;
 
+	public int getIdAnalyse() {
+		return idAnalyse;
+	}
+
+	public void setIdAnalyse(int idAnalyse) {
+		this.idAnalyse = idAnalyse;
+	}
+
+	public int getIdActionQuestion() {
+		return idActionQuestion;
+	}
+
+	public void setIdActionQuestion(int idActionQuestion) {
+		this.idActionQuestion = idActionQuestion;
+	}
+
 }
