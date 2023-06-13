@@ -8,4 +8,12 @@ public class ParticipationDto implements Dto<Participation>{
 	
 	private ParticipationPK id;
 
+	public ParticipationPK getId() {
+		return id;
+	}
+
+	public void setId(ParticipationPK id) {
+		this.id = id;
+	}
+
 }

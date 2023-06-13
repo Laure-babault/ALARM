@@ -11,4 +11,28 @@ public class FacteurReponseDto implements Dto<Facteur_reponse>{
 
 	private String reponse;
 
+	public FacteurReponsePkDto getId() {
+		return id;
+	}
+
+	public void setId(FacteurReponsePkDto id) {
+		this.id = id;
+	}
+
+	public int getNumLigne() {
+		return numLigne;
+	}
+
+	public void setNumLigne(int numLigne) {
+		this.numLigne = numLigne;
+	}
+
+	public String getReponse() {
+		return reponse;
+	}
+
+	public void setReponse(String reponse) {
+		this.reponse = reponse;
+	}
+
 }
