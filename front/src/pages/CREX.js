@@ -209,9 +209,9 @@ function CREX() {
               onChange={handleChange}
               style={{ backgroundColor: 'white' }}
             >
-              <MenuItem value="option1">Departement 1</MenuItem>
-              <MenuItem value="option2">Departement 2</MenuItem>
-              <MenuItem value="option3">Departement 3</MenuItem>
+              <MenuItem style={{display:"block"}} value="option1">Departement 1</MenuItem>
+              <MenuItem style={{display:"block"}} value="option2">Departement 2</MenuItem>
+              <MenuItem style={{display:"block"}} value="option3">Departement 3</MenuItem>
             </Select>
           </FormControl>
         </Grid>
