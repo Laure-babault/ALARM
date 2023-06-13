@@ -55,10 +55,10 @@ public class Erreur_medicamenteuse implements Serializable {
 	private int idService;
 
 	@Column(name="is_patient_risque")
-	private byte isPatientRisque;
+	private boolean isPatientRisque;
 
 	@Column(name="is_voie_administration_risque")
-	private byte isVoieAdministrationRisque;
+	private boolean isVoieAdministrationRisque;
 
 	@Column(name="libelle_medicament")
 	private String libelleMedicament;
@@ -171,19 +171,19 @@ public class Erreur_medicamenteuse implements Serializable {
 		this.idService = idService;
 	}
 
-	public byte getIsPatientRisque() {
+	public boolean getIsPatientRisque() {
 		return this.isPatientRisque;
 	}
 
-	public void setIsPatientRisque(byte isPatientRisque) {
+	public void setIsPatientRisque(boolean isPatientRisque) {
 		this.isPatientRisque = isPatientRisque;
 	}
 
-	public byte getIsVoieAdministrationRisque() {
+	public boolean getIsVoieAdministrationRisque() {
 		return this.isVoieAdministrationRisque;
 	}
 
-	public void setIsVoieAdministrationRisque(byte isVoieAdministrationRisque) {
+	public void setIsVoieAdministrationRisque(boolean isVoieAdministrationRisque) {
 		this.isVoieAdministrationRisque = isVoieAdministrationRisque;
 	}
 

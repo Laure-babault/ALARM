@@ -28,7 +28,7 @@ public class Crex implements Serializable {
 	private Timestamp dateFin;
 
 	@Column(name="is_archive")
-	private byte isArchive;
+	private boolean isArchive;
 
 	public Crex() {
 	}
@@ -57,11 +57,11 @@ public class Crex implements Serializable {
 		this.dateFin = dateFin;
 	}
 
-	public byte getIsArchive() {
+	public boolean getIsArchive() {
 		return this.isArchive;
 	}
 
-	public void setIsArchive(byte isArchive) {
+	public void setIsArchive(boolean isArchive) {
 		this.isArchive = isArchive;
 	}
 
