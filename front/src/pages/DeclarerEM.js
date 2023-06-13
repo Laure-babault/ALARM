@@ -86,7 +86,12 @@ function DeclarerEM() {
       });
     
     
-        
+      const [value, setValue] = useState('yes');
+
+      const handleChange = (event) => {
+        setValue(event.target.value);
+      };
+    
     
     
     const handleNoClick8 = () => {
@@ -116,7 +121,7 @@ function DeclarerEM() {
                 <h1>Déclarer une erreur médicamenteuse </h1>
             </Box>
 
-            <h4><WarningIcon fontSize="medium" style={{ color: 'red', marginRight: '10px' }} /><u> 
+            <h4><WarningIcon fontSize="medium" style={{ color: 'red', marginRight: 'auto' }} /><u> 
    Ne sont pas concérnés les événements indésirables consécutifs en lien avec le médicament, ceci relevant de la pharmacovigilance</u></h4></div><div>
 
 
@@ -138,49 +143,14 @@ function DeclarerEM() {
       </Grid>
       <Grid item xs={4}>
       <FormControl >
-      <RadioGroup row >
-        <FormControlLabel value="yes" control={<Radio />} onClick={handleNoClick8} label="Oui" onChange={e=>setValuee(e.target.value)} />
-        <FormControlLabel value="no" control={<Radio />}   onClick={handleYesClick8} label="Non" onChange={e=>setValuee(e.target.value)} />
+      <RadioGroup row value={value} >
+        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={handleChange} />
       </RadioGroup>
     </FormControl>
 
     
       </Grid>
-      <Container id="container8" style={{marginTop:"20px"}} >
-                                <Grid container spacing={2}>
-                        <Grid item xs={12} sm={4}>
-                            <Typography variant="h7">Nom :</Typography>
-                               <TextField
-                                 hiddenLabel
-                                 id="filled-hidden-label-small"
-                                 style={{backgroundColor: "white" }}
-                                 size="small"
-                                 value={Nom}
-                                 onChange={e=>setNom(e.target.value)}/> 
-                            </Grid>
-                            <Grid item xs={12} sm={4}>
-                            <Typography variant="h7">Prénom :</Typography>
-                               <TextField
-                                 hiddenLabel
-                                 id="filled-hidden-label-small"
-                                 style={{backgroundColor: "white" }}
-                                 size="small"
-                                 value={Prenom}
-                                 onChange={e=>setPrenom(e.target.value)}/> 
-                            </Grid>
-
-                            <Grid item xs={12} sm={4}>
-                             <Typography variant="h7">Fonction :</Typography>
-                               <TextField
-                                  hiddenLabel
-                                  id="filled-hidden-label-small"
-                                  style={{backgroundColor: "white" }}
-                                 size="small"
-                                 value={Fonction}
-                                 onChange={e=>setFonction(e.target.value)}/>
-                            </Grid>
-                        </Grid>
-                 </Container>
+ 
     </Grid>
 
 
@@ -290,7 +260,7 @@ InputLabelProps={{
              
                             <Grid container spacing={2} style={{marginTop:"20px"}}>
       <Grid item xs={12} sm={3} >
-  <Typography variant="h7" >Est-ce un never-event :</Typography>  
+  <Typography variant="h7" >S'agit-il d'un never-event (NE) :</Typography>  
   
     
       </Grid>
@@ -350,23 +320,6 @@ InputLabelProps={{
     <>
 
 
-    <Grid container spacing={2} style={{marginTop:"5px"}}>
-      <Grid item xs={12} sm={3} >
-  <Typography variant="h7" >S'agit-il d'un never-event (NE) :</Typography>  
-  
-    
-      </Grid>
-      <Grid item xs={12} sm={4}>
-      <RadioGroup row  >
-                           <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
-                           <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setValuee(e.target.value)} />
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas"  onChange={e=>setValuee(e.target.value)} />
-                         </RadioGroup>
-        
-      </Grid>
-    
-    </Grid>
-             
 
 
 

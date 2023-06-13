@@ -1,6 +1,7 @@
 import { Box, Grid, Button } from "@mui/material";
 import React from "react";
 import { Link } from 'react-router-dom';
+import Vaccine from '../image/Vaccine.gif';
 
 function Accueil() {
 
@@ -20,7 +21,13 @@ function Accueil() {
         }}} >Déclarer les erreurs médicamenteuses</Button>
       </Box>  </Grid>
       
-      <Grid container height='100%'  justifyContent="right" alignItems="center">
+      <Grid container >
+      <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-70px' }}>
+        
+       
+          <img src={Vaccine} />
+
+      </Grid>
   <Grid item xs={6} sx={{ textAlign: 'center' }}>
     <Box
       sx={{
@@ -30,11 +37,11 @@ function Accueil() {
       }}
     >
       <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
-      <Box>
+      {/*  <Box>
         <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
           Consulter les erreurs médicamenteuses
         </Button>
-      </Box>
+      </Box> */}
       <Box>
         <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
           Session du CREX

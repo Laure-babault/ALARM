@@ -85,9 +85,9 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="donut">
-        <h3>
+        <h2>
           <center>Bienvenue dans ce dashboard</center>
-        </h3>
+        </h2>
 
 
 

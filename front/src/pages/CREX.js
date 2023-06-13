@@ -782,13 +782,13 @@ function CREX() {
           <Typography variant="h7">Modifier la déclaration</Typography>
         </Grid>
         <Grid item xs={4}>
-          <Button variant="contained" style={{ backgroundColor: "green", marginTop: "20px", borderRadius: '10px' }} component={Link} to="/SaisieErreur"  >Valider</Button>
+          <Button variant="contained" style={{ backgroundColor: "green", marginTop: "20px", borderRadius: '10px' ,color:'white'}} component={Link} to="/SaisieErreur"  >Valider</Button>
         </Grid>
         <Grid item xs={4}>
-          <Button variant="contained" style={{ backgroundColor: "orange", marginTop: "20px", borderRadius: '10px' }}>Mettre en attente</Button>
+          <Button variant="contained" style={{ backgroundColor: "orange", marginTop: "20px", borderRadius: '10px',color:'white' }}>Mettre en attente</Button>
         </Grid>
         <Grid item xs={4}>
-          <Button variant="contained" style={{ backgroundColor: "red", marginTop: "20px", borderRadius: '10px' }}>Modifier</Button>
+          <Button variant="contained" style={{ backgroundColor: "red", marginTop: "20px", borderRadius: '10px',color:'white'  }}>Modifier</Button>
         </Grid>
       </Grid>
     </Card>

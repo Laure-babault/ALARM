@@ -545,7 +545,7 @@ function ConsulterEM() {
 
 
 </Card> 
-<Card style={{  backgroundColor: '#f5f5f6', boxShadow: '5px 5px 5px #c1c1c7',padding: '60px', margin: '9px', height: '120px' }}>
+<Card style={{  backgroundColor: '#f5f5f6', boxShadow: '5px 5px 5px #c1c1c7',padding: '60px', height: '120px' }}>
       <Grid container spacing={2} justify="center" alignItems="center">
         <Grid item xs={4}>
           <Typography variant="h7">Valider la déclaration telle qu'elle</Typography>

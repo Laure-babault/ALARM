@@ -22,6 +22,7 @@ import { Checkbox } from '@material-ui/core';
 import { Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
 import AddIcon from '@mui/icons-material/Add';
 import RefreshIcon from '@mui/icons-material/Refresh';
+import MyPDF from '../component/MyPDF';
 
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
@@ -61,6 +62,287 @@ function SaisieErreur() {
 
 
   
+
+
+  const [field1, setField1] =useState('');
+  const [field2, setField2] = useState('');
+  const [field3, setField3] = useState('');
+  const [field4, setField4] = useState('');
+  const [field5, setField5] = useState('');
+  const [field6, setField6] = useState('');
+  const [field7, setField7] = useState('');
+  const [field8, setField8] = useState('');
+  const [field9, setField9] = useState('');
+  const [field10, setField10] = useState('');
+  const [field11, setField11] = useState('');
+  const [field12, setField12] = useState('');
+  const [field13, setField13] = useState('');
+  const [field14, setField14] = useState('');
+  const [field15, setField15] = useState('');
+  const [field16, setField16] = useState('');
+  const [field17, setField17] = useState('');
+  const [field18, setField18] = useState('');
+  const [field19, setField19] = useState('');
+  const [field20, setField20] = useState('');
+  const [field21, setField21] = useState('');
+  const [field22, setField22] = useState('');
+  const [field23, setField23] = useState('');
+  const [field24, setField24] = useState('');
+  const [field25, setField25] = useState('');
+  const [field26, setField26] = useState('');
+  const [field27, setField27] = useState('');
+  const [field28, setField28] = useState('');
+  const [field29, setField29] = useState('');
+  const [field30, setField30] = useState('');
+  const [field31, setField31] = useState('');
+  const [field32, setField32] = useState('');
+  const [field33, setField33] = useState('');
+  const [field34, setField34] = useState('');
+  const [field35, setField35] = useState('');
+  const [field36, setField36] = useState('');
+  const [field37, setField37] = useState('');
+  const [field38, setField38] = useState('');
+  const [field39, setField39] = useState('');
+  const [field40, setField40] = useState('');
+  const [field41, setField41] = useState('');
+  const [field42, setField42] = useState('');
+  const [field43, setField43] = useState('');
+  const [field44, setField44] = useState('');
+  const [field45, setField45] = useState('');
+  const [field46, setField46] = useState('');
+  const [field47, setField47] = useState('');
+  const [field48, setField48] = useState('');
+  const [field49, setField49] = useState('');
+  const [field50, setField50] = useState('');
+  const [field51, setField51] = useState('');
+  const [field52, setField52] = useState('');
+  const [field53, setField53] = useState('');
+  const [field54, setField54] = useState('');
+  const [field55, setField55] = useState('');
+  const [field56, setField56] = useState('');
+  const [field57, setField57] = useState('');
+  const [field58, setField58] = useState('');
+  const [field59, setField59] = useState('');
+
+
+  const [valuee1, setValuee1] = useState('');
+  const [valuee2, setValuee2] = useState('');
+  const [valuee3, setValuee3] = useState('');
+  const [valuee4, setValuee4] = useState('');
+  const [valuee5, setValuee5] = useState('');
+  const [valuee6, setValuee6] = useState('');
+  const [valuee7, setValuee7] = useState('');
+  const [valuee8, setValuee8] = useState('');
+  const [valuee9, setValuee9] = useState('');
+  const [valuee10, setValuee10] = useState('');
+  const [valuee11, setValuee11] = useState('');
+  const [valuee12, setValuee12] = useState('');
+  const [valuee13, setValuee13] = useState('');
+  const [valuee14, setValuee14] = useState('');
+  const [valuee15, setValuee15] = useState('');
+  const [valuee16, setValuee16] = useState('');
+  const [valuee17, setValuee17] = useState('');
+  const [valuee18, setValuee18] = useState('');
+  const [valuee19, setValuee19] = useState('');
+  const [valuee20, setValuee20] = useState('');
+  const [valuee21, setValuee21] = useState('');
+  const [valuee22, setValuee22] = useState('');
+  const [valuee23, setValuee23] = useState('');
+  const [valuee24, setValuee24] = useState('');
+  const [valuee25, setValuee25] = useState('');
+  const [valuee26, setValuee26] = useState('');
+  const [valuee27, setValuee27] = useState('');
+  const [valuee28, setValuee28] = useState('');
+  const [valuee29, setValuee29] = useState('');
+  const [valuee30, setValuee30] = useState('');
+  const [valuee31, setValuee31] = useState('');
+  const [valuee32, setValuee32] = useState('');
+  const [valuee33, setValuee33] = useState('');
+  const [valuee34, setValuee34] = useState('');
+  const [valuee35, setValuee35] = useState('');
+  const [valuee36, setValuee36] = useState('');
+  const [valuee37, setValuee37] = useState('');
+  const [valuee38, setValuee38] = useState('');
+  const [valuee39, setValuee39] = useState('');
+  const [valuee40, setValuee40] = useState('');
+  const [valuee41, setValuee41] = useState('');
+  const [valuee42, setValuee42] = useState('');
+  const [valuee43, setValuee43] = useState('');
+  const [valuee44, setValuee44] = useState('');
+  const [valuee45, setValuee45] = useState('');
+  const [valuee46, setValuee46] = useState('');
+  const [valuee47, setValuee47] = useState('');
+  const [valuee48, setValuee48] = useState('');
+  const [valuee49, setValuee49] = useState('');
+  const [valuee50, setValuee50] = useState('');
+  const [valuee51, setValuee51] = useState('');
+  
+  const handleChange22 = (event) => {
+ 
+    switch(event.target.name) {
+      case "valuee":
+        setValuee(event.target.value);
+        break;
+      case "valuee1":
+        setValuee1(event.target.value);
+        break;
+      case "valuee2":
+        setValuee2(event.target.value);
+        break;
+      case "valuee3":
+        setValuee3(event.target.value);
+        break;
+      case "valuee4":
+        setValuee4(event.target.value);
+        break;
+      case "valuee5":
+        setValuee5(event.target.value);
+        break;
+      case "valuee6":
+        setValuee6(event.target.value);
+        break;
+      case "valuee7":
+        setValuee7(event.target.value);
+        break;
+      case "valuee8":
+        setValuee8(event.target.value);
+        break;
+      case "valuee9":
+        setValuee9(event.target.value);
+        break;
+      case "valuee10":
+        setValuee10(event.target.value);
+        break;
+      case "valuee11":
+        setValuee11(event.target.value);
+        break;
+      case "valuee12":
+        setValuee12(event.target.value);
+        break;
+      case "valuee13":
+        setValuee13(event.target.value);
+        break;
+      case "valuee14":
+        setValuee14(event.target.value);
+        break;
+      case "valuee15":
+        setValuee15(event.target.value);
+        break;
+      case "valuee16":
+        setValuee16(event.target.value);
+        break;
+      case "valuee17":
+        setValuee17(event.target.value);
+        break;
+      case "valuee18":
+        setValuee18(event.target.value);
+        break;
+      case "valuee19":
+        setValuee19(event.target.value);
+        break;
+      case "valuee20":
+        setValuee20(event.target.value);
+        break;
+      case "valuee21":
+        setValuee21(event.target.value);
+        break;
+      case "valuee22":
+        setValuee22(event.target.value);
+        break;
+      case "valuee23":
+        setValuee23(event.target.value);
+        break;
+      case "valuee24":
+        setValuee24(event.target.value);
+        break;
+      case "valuee25":
+        setValuee25(event.target.value);
+        break;
+      case "valuee26":
+        setValuee26(event.target.value);
+        break;
+      case "valuee27":
+        setValuee27(event.target.value);
+        break;
+      case "valuee28":
+        setValuee28(event.target.value);
+        break;
+      case "valuee29":
+        setValuee29(event.target.value);
+        break;
+      case "valuee30":
+        setValuee30(event.target.value);
+        break;
+      case "valuee31":
+        setValuee31(event.target.value);
+        break;
+      case "valuee32":
+        setValuee32(event.target.value);
+        break;
+      case "valuee33":
+        setValuee33(event.target.value);
+        break;
+      case "valuee34":
+        setValuee34(event.target.value);
+        break;
+      case "valuee35":
+        setValuee35(event.target.value);
+        break;
+      case "valuee36":
+        setValuee36(event.target.value);
+        break;
+      case "valuee37":
+        setValuee37(event.target.value);
+        break;
+      case "valuee38":
+        setValuee38(event.target.value);
+        break;
+      case "valuee39":
+        setValuee39(event.target.value);
+        break;
+      case "valuee40":
+        setValuee40(event.target.value);
+        break;
+      case "valuee41":
+        setValuee41(event.target.value);
+        break;
+      case "valuee42":
+        setValuee42(event.target.value);
+        break;
+      case "valuee43":
+        setValuee43(event.target.value);
+        break;
+      case "valuee44":
+        setValuee44(event.target.value);
+        break;
+      case "valuee45":
+        setValuee45(event.target.value);
+        break;
+      case "valuee46":
+        setValuee46(event.target.value);
+        break;
+      case "valuee47":
+        setValuee47(event.target.value);
+        break;
+      case "valuee48":
+        setValuee48(event.target.value);
+        break;
+      case "valuee49":
+        setValuee49(event.target.value);
+        break;
+      case "valuee50":
+        setValuee50(event.target.value);
+        break;
+      case "valuee51":
+        setValuee51(event.target.value);
+        break;
+      default:
+      console.log("fdjd");
+    }
+
+   
+  };
+
 
 
 
@@ -1140,7 +1422,7 @@ function SaisieErreur() {
       </FormControl>     </Grid>   
 
 
-     
+          
       <Grid item xs={12} >
       {containerVisible1 && (
       
@@ -1167,8 +1449,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field1}
+              onChange={e=>setField1(e.target.value)} 
 
             />
 
@@ -1177,9 +1459,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}  />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}  />
+          <RadioGroup row name="valuee" value={valuee} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}  />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}  />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1209,8 +1491,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field2}
+              onChange={e=>setField2(e.target.value)} 
 
 
             />
@@ -1220,9 +1502,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui"   onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row name="valuee1" value={valuee1} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui"   onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1256,8 +1538,9 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field3
+              }
+              onChange={e=>setField3(e.target.value)} 
 
             />
 
@@ -1266,9 +1549,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row name="valuee2" value={valuee2} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1299,8 +1582,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field4}
+              onChange={e=>setField4(e.target.value)} 
 
             />
 
@@ -1309,9 +1592,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row name="valuee3" value={valuee3} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1343,8 +1626,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field5}
+              onChange={e=>setField5(e.target.value)} 
 
             />
 
@@ -1354,9 +1637,9 @@ function SaisieErreur() {
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
 
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
+          <RadioGroup row name="valuee4" value={valuee4} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
           </RadioGroup>
         </FormControl> </Grid>
 
@@ -1387,22 +1670,15 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)} 
+              value={field6}
+              onChange={e=>setField6(e.target.value)} 
 
 
             />
 
           </div></Grid>
 
-        <Grid item xs={12} md={3}>
-          <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-        <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-          </RadioGroup>
-        </FormControl></Grid>
+     
 
 
       </Grid></Grid>
@@ -1414,7 +1690,7 @@ function SaisieErreur() {
 
 
       )}
-      </Grid>  
+      </Grid> 
     
     </Grid>
 
@@ -1462,7 +1738,6 @@ function SaisieErreur() {
       </FormControl>     </Grid>   
 
 
-     
       <Grid item xs={12} >
       {containerVisible2 && (
       
@@ -1490,8 +1765,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field7}
+                        onChange={e=>setField7(e.target.value)}
 
                       />
 
@@ -1500,9 +1775,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                      <FormControlLabel value="no" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee5" value={valuee5} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                      <FormControlLabel value="Non" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1532,8 +1807,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field8}
+                        onChange={e=>setField8(e.target.value)}
 
                       />
 
@@ -1542,9 +1817,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}> 
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee6" value={valuee6} onChange={handleChange22}> 
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1578,8 +1853,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field9}
+                        onChange={e=>setField9(e.target.value)}
 
 
                       />
@@ -1589,9 +1864,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+                    <RadioGroup row  name="valuee7" value={valuee7} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1629,8 +1904,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field10}
+                        onChange={e=>setField10(e.target.value)}
 
 
                       />
@@ -1640,9 +1915,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee8" value={valuee8} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1679,8 +1954,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field11}
+                        onChange={e=>setField11(e.target.value)}
 
 
                       />
@@ -1690,9 +1965,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui"onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee9" value={valuee9} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui"onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1723,8 +1998,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field12}
+                        onChange={e=>setField12(e.target.value)}
 
 
                       />
@@ -1734,9 +2009,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee10" value={valuee10} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1770,8 +2045,8 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field13}
+                        onChange={e=>setField13(e.target.value)}
 
 
                       />
@@ -1781,9 +2056,9 @@ function SaisieErreur() {
                   <Grid item xs={12} md={3}>
                     <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                   <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                    <RadioGroup row  name="valuee11" value={valuee11} onChange={handleChange22}>
+                      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                     </RadioGroup>
                   </FormControl></Grid>
 
@@ -1814,23 +2089,15 @@ function SaisieErreur() {
                         id="filled-hidden-label-small"
                         size="small"
                         style={{ width: '30%', backgroundColor: "white" }}
-                        value={field}
-                        onChange={e=>setField(e.target.value)}
+                        value={field14}
+                        onChange={e=>setField14(e.target.value)}
 
 
                       />
 
                     </div></Grid>
 
-                  <Grid item xs={12} md={3}>
-                    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                    <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                      <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                      <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
-                    </RadioGroup>
-                  </FormControl></Grid>
-
+               
 
                 </Grid>
               </Grid>
@@ -1843,7 +2110,6 @@ function SaisieErreur() {
 
       )}
       </Grid>  
-    
     </Grid>
           
             </Card>
@@ -1913,8 +2179,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field15}
+              onChange={e=>setField15(e.target.value)}
 
             />
 
@@ -1923,9 +2189,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row  name="valuee12" value={valuee12} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -1955,8 +2221,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field16}
+              onChange={e=>setField16(e.target.value)}
 
             />
 
@@ -1965,9 +2231,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row  name="valuee13" value={valuee13} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2001,8 +2267,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white" }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field17}
+              onChange={e=>setField17(e.target.value)}
 
             />
 
@@ -2011,9 +2277,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row  name="valuee14" value={valuee14} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2051,8 +2317,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field18}
+              onChange={e=>setField18(e.target.value)}
 
             />
 
@@ -2061,9 +2327,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+          <RadioGroup row  name="valuee15" value={valuee15} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2100,8 +2366,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field19}
+              onChange={e=>setField19(e.target.value)}
 
             />
 
@@ -2110,9 +2376,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row  name="valuee16" value={valuee16} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2142,8 +2408,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field20}
+              onChange={e=>setField20(e.target.value)}
 
             />
 
@@ -2152,9 +2418,9 @@ function SaisieErreur() {
         <Grid item xs={12} md={3}>
           <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
         <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-          <RadioGroup row valuee={valuee} onChange={handleChange2}>
-            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+          <RadioGroup row  name="valuee17" value={valuee17} onChange={handleChange22}>
+            <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+            <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
           </RadioGroup>
         </FormControl></Grid>
 
@@ -2184,8 +2450,8 @@ function SaisieErreur() {
               id="filled-hidden-label-small"
               size="small"
               style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-              value={field}
-              onChange={e=>setField(e.target.value)}
+              value={field21}
+              onChange={e=>setField21(e.target.value)}
 
             />
 
@@ -2292,7 +2558,7 @@ function SaisieErreur() {
 
             
 
-                  <Grid item xs={12} > 
+       <Grid item xs={12} > 
                   {containerVisible4 && (
 
                   
@@ -2314,17 +2580,17 @@ function SaisieErreur() {
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          value={field}
-                          onChange={e=>setField(e.target.value)}                           />
+                          value={field22}
+                          onChange={e=>setField22(e.target.value)}                           />
 
                       </div></Grid>
 
                     <Grid item xs={12} md={3}>
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                      <RadioGroup row  name="valuee18" value={valuee18} onChange={handleChange22}>
+                        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -2346,17 +2612,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field23}
+                            onChange={e=>setField23(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee19"  value={valuee19} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2380,17 +2646,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)}                             />
+                            value={field24}
+                            onChange={e=>setField24(e.target.value)}                             />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee20" value={valuee20} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2414,17 +2680,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field25}
+                            onChange={e=>setField25(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee21" value={valuee21} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2448,17 +2714,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field26}
+                            onChange={e=>setField26(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee22"  value={valuee22} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non"onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2482,17 +2748,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field27}
+                            onChange={e=>setField27(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee23" value={valuee23} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2516,17 +2782,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field28}
+                            onChange={e=>setField28(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee24" value={valuee24} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2550,17 +2816,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field29}
+                            onChange={e=>setField29(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+                        <RadioGroup row  name="valuee25" value={valuee25} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2584,17 +2850,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field30}
+                            onChange={e=>setField30(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee26" value={valuee26} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2618,17 +2884,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field31}
+                            onChange={e=>setField31(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}> 
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee27" value={valuee27} onChange={handleChange22}> 
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2652,17 +2918,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field32}
+                            onChange={e=>setField32(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee28" value={valuee28} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2686,20 +2952,12 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)}/>
+                            value={field33}
+                            onChange={e=>setField33(e.target.value)}/>
 
                         </div></Grid>
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
-                        </RadioGroup>
-                      </FormControl></Grid>
-
+                     
 
 
 
@@ -2770,9 +3028,7 @@ function SaisieErreur() {
 
 
 
-
-             
-                  <Grid item xs={12} >
+       <Grid item xs={12} >
                   {containerVisible5 && (
 
                     
@@ -2794,17 +3050,17 @@ function SaisieErreur() {
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          value={field}
-                          onChange={e=>setField(e.target.value)} />
+                          value={field34}
+                          onChange={e=>setField34(e.target.value)} />
 
                       </div>
 </Grid>
                     <Grid item xs={12} md={3}>
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                      <RadioGroup row  name="valuee29" value={valuee29} onChange={handleChange22}>
+                        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -2826,17 +3082,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field35}
+                            onChange={e=>setField35(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee30" value={valuee30} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2860,16 +3116,16 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field36}
+                            onChange={e=>setField36(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee31" value={valuee31} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
                           <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
@@ -2894,17 +3150,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field37}
+                            onChange={e=>setField37(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee32" value={valuee32} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2928,17 +3184,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field38}
+                            onChange={e=>setField38(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee33" value={valuee33} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2962,17 +3218,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field39}
+                            onChange={e=>setField39(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee34" value={valuee34} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -2996,17 +3252,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)}/>
+                            value={field40}
+                            onChange={e=>setField40(e.target.value)}/>
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row name="valuee35"  value={valuee35} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3030,17 +3286,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field41}
+                            onChange={e=>setField41(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee36" value={valuee36} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3064,8 +3320,8 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field42}
+                            onChange={e=>setField42(e.target.value)} />
 
                         </div></Grid>
 
@@ -3117,8 +3373,7 @@ function SaisieErreur() {
 
 
 
-
-                  <Grid item xs={12} >     
+       <Grid item xs={12} >     
                    {containerVisible6 && (
 
               <><Grid container spacing={1} style={{ padding: "5px", marginBottom: "20px" }} id="container5">
@@ -3137,17 +3392,17 @@ function SaisieErreur() {
                           id="filled-hidden-label-small"
                           size="small"
                           style={{ width: '30%', backgroundColor: "white" }}
-                          value={field}
-                          onChange={e=>setField(e.target.value)} />
+                          value={field43}
+                          onChange={e=>setField43(e.target.value)} />
 
                       </div></Grid>
 
                     <Grid item xs={12} md={3}>
                       <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                     <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+                      <RadioGroup row  name="valuee37" value={valuee37} onChange={handleChange22}>
+                        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                       </RadioGroup>
                     </FormControl></Grid></Grid>
 
@@ -3169,17 +3424,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field44}
+                            onChange={e=>setField44(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee38" value={valuee38} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3202,17 +3457,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field45}
+                            onChange={e=>setField45(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee39" value={valuee39} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3235,17 +3490,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)}/>
+                            value={field46}
+                            onChange={e=>setField46(e.target.value)}/>
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee40" value={valuee40} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3268,17 +3523,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field47}
+                            onChange={e=>setField47(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
+                        <RadioGroup row  name="valuee41" value={valuee41} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3301,17 +3556,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field48}
+                            onChange={e=>setField48(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+                        <RadioGroup row  name="valuee42" value={valuee42} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
                         </RadioGroup>
                       </FormControl></Grid>
 
@@ -3331,17 +3586,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field49}
+                            onChange={e=>setField49(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+                        <RadioGroup row  name="valuee43" value={valuee43} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+                          <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3359,17 +3614,17 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field50}
+                            onChange={e=>setField50(e.target.value)} />
 
                         </div></Grid>
 
                       <Grid item xs={12} md={3}>
                         <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
                       <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
+                        <RadioGroup row  name="valuee44" value={valuee44} onChange={handleChange22}>
+                          <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+                          <FormControlLabel value="Non" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
                         </RadioGroup>
                       </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
@@ -3387,19 +3642,10 @@ function SaisieErreur() {
                             id="filled-hidden-label-small"
                             size="small"
                             style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+                            value={field51}
+                            onChange={e=>setField51(e.target.value)} />
 
                         </div></Grid>
-
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" />
-                        </RadioGroup>
-                      </FormControl></Grid>
 
 
 
@@ -3463,267 +3709,256 @@ function SaisieErreur() {
 
 
             
+       <Grid item xs={12} >
 
-              
-                  <Grid item xs={12} >
+{containerVisible7 && (
+<><Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
 
-                  {containerVisible7 && (
-                  <><Grid container spacing={1} style={{ padding: "5px", margin: "2px" }} id="container6">
+  <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                    <Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+  <Grid item xs={12}> <div>
+      <FormControlLabel
+        control={<Checkbox
+          onChange={handleChange}
+          name="checkedOption1"
+          color="primary" />}
+        label="Les contraintes financières au niveau de l'établissement sont-elles à l'origine de l'événement ?" />
+      <TextField
+        hiddenLabel
 
-                    <Grid item xs={12}> <div>
-                        <FormControlLabel
-                          control={<Checkbox
-                            onChange={handleChange}
-                            name="checkedOption1"
-                            color="primary" />}
-                          label="Les contraintes financières au niveau de l'établissement sont-elles à l'origine de l'événement ?" />
-                        <TextField
-                          hiddenLabel
+        id="filled-hidden-label-small"
+        size="small"
+        style={{ width: '30%', backgroundColor: "white" }}
+        value={field52}
+        onChange={e=>setField52(e.target.value)} />
 
-                          id="filled-hidden-label-small"
-                          size="small"
-                          style={{ width: '30%', backgroundColor: "white" }}
-                          value={field}
-                          onChange={e=>setField(e.target.value)} />
+    </div></Grid>
 
-                      </div></Grid>
+  <Grid item xs={12} md={3}>
+    <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+  <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+    <RadioGroup row  name="valuee45" value={valuee45} onChange={handleChange22}>
+      <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
+      <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+    </RadioGroup>
+  </FormControl></Grid></Grid>
 
-                    <Grid item xs={12} md={3}>
-                      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                      <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                        <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)}/>
-                        <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-                      </RadioGroup>
-                    </FormControl></Grid></Grid>
-
-                  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+</Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="Les ressources sanitaires sont-elles insuffisantes, inadaptées ou défectueuses ?" />
-                          <TextField
-                            hiddenLabel
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="Les ressources sanitaires sont-elles insuffisantes, inadaptées ou défectueuses ?" />
+        <TextField
+          hiddenLabel
 
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)}/>
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white" }}
+          value={field53}
+          onChange={e=>setField53(e.target.value)}/>
 
-                        </div></Grid>
+      </div></Grid>
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-                        </RadioGroup>
-                      </FormControl></Grid>
-
-
-                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row  name="valuee46" value={valuee46} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+      </RadioGroup>
+    </FormControl></Grid>
 
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="Les échanges ou relations avec d'autres structures de soins sont-ils faibles ou difficiles ?" />
-                          <TextField
-                            hiddenLabel
-
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
-
-                        </div></Grid>
-
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
-                        </RadioGroup>
-                      </FormControl></Grid>
+  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
-                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="Les échanges ou relations avec d'autres structures de soins sont-ils faibles ou difficiles ?" />
+        <TextField
+          hiddenLabel
+
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white" }}
+          value={field54}
+          onChange={e=>setField54(e.target.value)} />
+
+      </div></Grid>
+
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row  name="valuee47" value={valuee47} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+      </RadioGroup>
+    </FormControl></Grid>
 
 
-
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="Peut-on relever une absence de stratégie,politique/une absence de priorité/ou des stratégies contradictoires ou inadaptées ?" />
-                          <TextField
-                            hiddenLabel
-
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
-
-                        </div></Grid>
-
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-                        </RadioGroup>
-                      </FormControl></Grid>
-
-
-                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
 
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="La sécurité et gestion des risques ne sont-elles pas perçues comme des objectifs importants ?" />
-                          <TextField
-                            hiddenLabel
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="Peut-on relever une absence de stratégie,politique/une absence de priorité/ou des stratégies contradictoires ou inadaptées ?" />
+        <TextField
+          hiddenLabel
 
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+          value={field55}
+          onChange={e=>setField55(e.target.value)} />
 
-                        </div></Grid>
+      </div></Grid>
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
-                        </RadioGroup>
-                      </FormControl></Grid>
-
-
-                    </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row  name="valuee48" value={valuee48} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+      </RadioGroup>
+    </FormControl></Grid>
 
 
+  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="La culture du signalement des EI et de propositions de corrections est-elle inexistante ou défectueuse ?" />
-                          <TextField
-                            hiddenLabel
 
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
 
-                        </div>
-                      </Grid>
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="La sécurité et gestion des risques ne sont-elles pas perçues comme des objectifs importants ?" />
+        <TextField
+          hiddenLabel
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-                        </RadioGroup>
-                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white", marginLeft: '30px' }}
+          value={field56}
+          onChange={e=>setField56(e.target.value)} />
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="Le contexte social était-il difficile ?" />
-                          <TextField
-                            hiddenLabel
+      </div></Grid>
 
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row name="valuee49"  value={valuee49} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)}/>
+      </RadioGroup>
+    </FormControl></Grid>
 
-                        </div></Grid>
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
-                        </RadioGroup>
-                      </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+  </Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
 
-                      <Grid item xs={12}>
-                        <div>
-                          <FormControlLabel
-                            control={<Checkbox
-                              onChange={handleChange}
-                              name="checkedOption1"
-                              color="primary" />}
-                            label="Autre ?" />
-                          <TextField
-                            hiddenLabel
 
-                            id="filled-hidden-label-small"
-                            size="small"
-                            style={{ width: '30%', backgroundColor: "white" }}
-                            value={field}
-                            onChange={e=>setField(e.target.value)} />
 
-                        </div></Grid>
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="La culture du signalement des EI et de propositions de corrections est-elle inexistante ou défectueuse ?" />
+        <TextField
+          hiddenLabel
 
-                      <Grid item xs={12} md={3}>
-                        <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
-                      <Grid item xs={12} md={2}>  <FormControl component="fieldset">
-                        <RadioGroup row valuee={valuee} onChange={handleChange2}>
-                          <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
-                          <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
-                        </RadioGroup>
-                      </FormControl></Grid>
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white" }}
+          value={field57}
+          onChange={e=>setField57(e.target.value)} />
+
+      </div>
+    </Grid>
+
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row  name="valuee50"  value={valuee50} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non" onChange={e=>setRadiobutton(e.target.value)} />
+      </RadioGroup>
+    </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="Le contexte social était-il difficile ?" />
+        <TextField
+          hiddenLabel
+
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white" }}
+          value={field58}
+          onChange={e=>setField58(e.target.value)} />
+
+      </div></Grid>
+
+    <Grid item xs={12} md={3}>
+      <Typography variant="h7" style={{ paddingLeft: "31px" }}>Cela était-il évitable?</Typography></Grid>
+    <Grid item xs={12} md={2}>  <FormControl component="fieldset">
+      <RadioGroup row  name="valuee51" value={valuee51} onChange={handleChange22}>
+        <FormControlLabel value="OUI" control={<Radio />} label="Oui" onChange={e=>setRadiobutton(e.target.value)} />
+        <FormControlLabel value="Non" control={<Radio />} label="Non"  onChange={e=>setRadiobutton(e.target.value)}/>
+      </RadioGroup>
+    </FormControl></Grid></Grid><Grid container spacing={1} style={{ backgroundColor: "#E8F8F5 ", padding: "5px", marginBottom: "20px" }}>
+
+    <Grid item xs={12}>
+      <div>
+        <FormControlLabel
+          control={<Checkbox
+            onChange={handleChange}
+            name="checkedOption1"
+            color="primary" />}
+          label="Autre ?" />
+        <TextField
+          hiddenLabel
+
+          id="filled-hidden-label-small"
+          size="small"
+          style={{ width: '30%', backgroundColor: "white" }}
+          value={field59}
+          onChange={e=>setField59(e.target.value)} />
+
+      </div></Grid>
 
 
 
 
 
-                    </Grid></>
+  </Grid></>
 
 
 
@@ -3741,6 +3976,129 @@ function SaisieErreur() {
 
 
 
+<Card style={{ backgroundColor: '#D4EFDF ', boxShadow: '5px 5px 5px #A9DFBF', padding: '20px', marginTop: '20px' }}>
+<div>
+      <h3>Résumé</h3>
+     
+      <MyPDF titre1={value3}   titre2={value4}  titre3={value5}  titre4={value6}  titre5={value7}  titre6={value8}  titre7={value9} 
+      check={valuee} 
+
+check1={valuee1}
+check2={valuee2}
+check3={valuee3}
+check4={valuee4}
+check5={valuee5}
+check6={valuee6}
+check7={valuee7}
+check8={valuee8}
+check9={valuee9}
+check10={valuee10}
+check11={valuee11}
+check12={valuee12}
+check13={valuee13}
+check14={valuee14}
+check15={valuee15}
+check16={valuee16}
+check17={valuee17}
+check18={valuee18}
+check19={valuee19}
+check20={valuee20}
+check21={valuee21}
+check22={valuee22}
+check23={valuee23}
+check24={valuee24}
+check25={valuee25}
+check26={valuee26}
+check27={valuee27}
+check28={valuee28}
+check29={valuee29}
+check30={valuee30}
+check31={valuee31}
+check32={valuee32}
+check33={valuee33}
+check34={valuee34}
+check35={valuee35}
+check36={valuee36}
+check37={valuee37}
+check38={valuee38}
+check39={valuee39}
+check40={valuee40}
+check41={valuee41}
+check42={valuee42}
+check43={valuee43}
+check44={valuee44}
+check45={valuee45}
+check46={valuee46}
+check47={valuee47}
+check48={valuee48}
+check49={valuee49}
+check50={valuee50}
+check51={valuee51}
+
+
+
+
+input1={field1}
+input2={field2}
+input3={field3}
+input4={field4}
+input5={field5}
+input6={field6}
+input7={field7}
+input8={field8}
+input9={field9}
+input10={field10}
+input11={field11}
+input12={field12}
+input13={field13}
+input14={field14}
+input15={field15}
+input16={field16}
+input17={field17}
+input18={field18}
+input19={field19}
+input20={field20}
+input21={field21}
+input22={field22}
+input23={field23}
+input24={field24}
+input25={field25}
+input26={field26}
+input27={field27}
+input28={field28}
+input29={field29}
+input30={field30}
+input31={field31}
+input32={field32}
+input33={field33}
+input34={field34}
+input35={field35}
+input36={field36}
+input37={field37}
+input38={field38}
+input39={field39}
+input40={field40}
+input41={field41}
+input42={field42}
+input43={field43}
+input44={field44}
+input45={field45}
+input46={field46}
+input47={field47}
+input48={field48}
+input49={field49}
+input50={field50}
+input51={field51}
+input52={field52}
+input53={field53}
+input54={field54}
+input55={field55}
+input56={field56}
+input57={field57}
+input58={field58}
+input59={field59}/>
+    </div>
+    </Card>
 
 
 

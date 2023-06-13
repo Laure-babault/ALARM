@@ -3,18 +3,21 @@ import { Box, Grid, Button, TextField } from "@mui/material";
 import {Paper, Avatar,Typography,Link } from '@material-ui/core'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 function Authentification() {
   const [nom, setNom] = useState('');
   const [motDePasse, setMotDePasse] = useState('');
   const [erreurNom, setErreurNom] = useState(false);
   const [erreurMotDePasse, setErreurMotDePasse] = useState(false);
-
+  const navigate = useNavigate();
   const paperStyle = {
-    padding: '20px',
-    width: '400px',
-    height:'350px',
-    margin: '10% auto',
+    padding: "20px",
+    width: "400px",
+    height: "auto",
+    marginTop: "5% ",
+    marginLeft:"auto",
+    marginRight:"auto",
+    marginButtom:"auto",
   };
   
   const avatarStyle = {
@@ -71,8 +74,7 @@ function Authentification() {
             required
             value={nom}
             onChange={handleNomChange}
-            error={erreurNom}
-            helperText={erreurNom ? 'Veuillez entrer votre nom' : ''}
+       
           />
           <TextField
             style={{ marginBottom: '20px' }}
@@ -82,8 +84,7 @@ function Authentification() {
             required
             value={motDePasse}
             onChange={handleMotDePasseChange}
-            error={erreurMotDePasse}
-            helperText={erreurMotDePasse ? 'Veuillez entrer votre mot de passe' : ''}
+        
           />
 
           <Button
@@ -95,7 +96,17 @@ function Authentification() {
           >
             Se connecter
           </Button>
+           <Button
+
+color="primary"
+variant="contained"
+style={btnstyle}
+fullWidth
+onClick={() => navigate('/Registre')}>
+S'inscrire
+</Button>
         </form>
+       
       </Paper>
     </Grid>
 

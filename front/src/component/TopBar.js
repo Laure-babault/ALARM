@@ -13,7 +13,7 @@ function TopBar() {
 
   const StyledIconButton = styled(IconButton)(({ theme }) => ({
     color: "inherit",
-    marginTop:'10px',
+
     "&:hover": {
       "background-color": '#92D6B5' 
     }
@@ -21,13 +21,12 @@ function TopBar() {
 
   return (
   
-
 <AppBar position='sticky' style={{ background: '#7DC4B2' }}>
-  <Toolbar variant='dense' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+  <Toolbar variant='dense' style={{ alignItems: 'center', justifyContent: 'space-between' }}>
     <img height="30px" src={ChicCMLogo} alt="Logo du chic de Castres-Mazamet" />
 
-    <div style={{ display: 'flex', alignItems: 'center' }}>  
-    <Link to="/">
+    <div style={{alignItems: 'center' }}>  
+      <Link to="/">
         <StyledIconButton aria-label="Menu" title="Menu">
           <img src={list} style={{ height: "20px", width: "20px" }} alt="Icône liste" />
         </StyledIconButton>
@@ -36,8 +35,7 @@ function TopBar() {
         <StyledIconButton aria-label="Deconnexion" title="Deconnexion">
           <img src={Team} style={{ height: "30px", width: "30px" }} alt="Icône équipe" />
         </StyledIconButton>
-      </Link>
-    
+      </Link>    
     </div>
   </Toolbar>
 </AppBar>
