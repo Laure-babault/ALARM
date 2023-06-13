@@ -3,6 +3,9 @@ package com.alarm.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import com.alarm.enumerations.EnumDegreRealisation;
+import com.alarm.enumerations.EnumStatut;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -40,10 +43,10 @@ public class Erreur_medicamenteuse implements Serializable {
 	private String descriptionImpact;
 
 	@Column(name="enum_degre_realisation")
-	private int enumDegreRealisation;
+	private EnumDegreRealisation enumDegreRealisation;
 
 	@Column(name="enum_statut")
-	private int enumStatut;
+	private EnumStatut enumStatut;
 
 	@Column(name="id_crex")
 	private int idCrex;
@@ -131,19 +134,19 @@ public class Erreur_medicamenteuse implements Serializable {
 		this.descriptionImpact = descriptionImpact;
 	}
 
-	public int getEnumDegreRealisation() {
+	public EnumDegreRealisation getEnumDegreRealisation() {
 		return this.enumDegreRealisation;
 	}
 
-	public void setEnumDegreRealisation(int enumDegreRealisation) {
+	public void setEnumDegreRealisation(EnumDegreRealisation enumDegreRealisation) {
 		this.enumDegreRealisation = enumDegreRealisation;
 	}
 
-	public int getEnumStatut() {
+	public EnumStatut getEnumStatut() {
 		return this.enumStatut;
 	}
 
-	public void setEnumStatut(int enumStatut) {
+	public void setEnumStatut(EnumStatut enumStatut) {
 		this.enumStatut = enumStatut;
 	}
 

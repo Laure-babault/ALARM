@@ -4,6 +4,8 @@ import java.sql.Timestamp;
 
 import com.alarm.dto.interfaces.Dto;
 import com.alarm.entity.Erreur_medicamenteuse;
+import com.alarm.enumerations.EnumDegreRealisation;
+import com.alarm.enumerations.EnumStatut;
 
 public class ErreurMedicamenteuseDto implements Dto<Erreur_medicamenteuse>{
 	
@@ -21,9 +23,9 @@ public class ErreurMedicamenteuseDto implements Dto<Erreur_medicamenteuse>{
 
 	private String descriptionImpact;
 
-	private int enumDegreRealisation;
+	private EnumDegreRealisation enumDegreRealisation;
 
-	private int enumStatut;
+	private EnumStatut enumStatut;
 
 	private int idCrex;
 
@@ -99,19 +101,19 @@ public class ErreurMedicamenteuseDto implements Dto<Erreur_medicamenteuse>{
 		this.descriptionImpact = descriptionImpact;
 	}
 
-	public int getEnumDegreRealisation() {
+	public EnumDegreRealisation getEnumDegreRealisation() {
 		return enumDegreRealisation;
 	}
 
-	public void setEnumDegreRealisation(int enumDegreRealisation) {
+	public void setEnumDegreRealisation(EnumDegreRealisation enumDegreRealisation) {
 		this.enumDegreRealisation = enumDegreRealisation;
 	}
 
-	public int getEnumStatut() {
+	public EnumStatut getEnumStatut() {
 		return enumStatut;
 	}
 
-	public void setEnumStatut(int enumStatut) {
+	public void setEnumStatut(EnumStatut enumStatut) {
 		this.enumStatut = enumStatut;
 	}
 

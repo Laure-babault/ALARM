@@ -1,0 +1,5 @@
+package com.alarm.enumerations;
+
+public enum EnumDegreRealisation {
+	Erreur_médicamenteuse_a_atteint_le_patient, Erreur_médicamenteuse_a_été_interceptéeEvénement_porteur_de_risque_EPRO,Je_ne_sais_pas;
+}

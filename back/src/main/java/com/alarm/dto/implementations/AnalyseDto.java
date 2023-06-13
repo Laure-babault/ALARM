@@ -2,6 +2,12 @@ package com.alarm.dto.implementations;
 
 import com.alarm.dto.interfaces.Dto;
 import com.alarm.entity.Analyse;
+import com.alarm.enumerations.EnumGravite;
+import com.alarm.enumerations.EnumNiveauMaitrise;
+import com.alarm.enumerations.EnumOccurrence;
+import com.alarm.enumerations.EnumTypeMedicament;
+
+import jakarta.persistence.Column;
 
 public class AnalyseDto implements Dto<Analyse>{
 	
@@ -11,20 +17,20 @@ public class AnalyseDto implements Dto<Analyse>{
 
 	private String defenseManquante;
 
-	private int enumGravite;
+	private EnumGravite enumGravite;
 
-	private int enumNiveauMaitrise;
+	private EnumNiveauMaitrise enumNiveauMaitrise;
 
-	private int enumOccurrence;
+	private EnumOccurrence enumOccurrence;
 
-	private int enumTypeMedicament;
+	private EnumTypeMedicament enumTypeMedicament;
 
 	private String eviteEm;
 
 	private int idErreurMedicamenteuse;
 
 	private String libelleDysfonctionnement;
-
+	
 	private String libelleProbleme;
 
 	public int getId() {
@@ -51,35 +57,35 @@ public class AnalyseDto implements Dto<Analyse>{
 		this.defenseManquante = defenseManquante;
 	}
 
-	public int getEnumGravite() {
+	public EnumGravite getEnumGravite() {
 		return enumGravite;
 	}
 
-	public void setEnumGravite(int enumGravite) {
+	public void setEnumGravite(EnumGravite enumGravite) {
 		this.enumGravite = enumGravite;
 	}
 
-	public int getEnumNiveauMaitrise() {
+	public EnumNiveauMaitrise getEnumNiveauMaitrise() {
 		return enumNiveauMaitrise;
 	}
 
-	public void setEnumNiveauMaitrise(int enumNiveauMaitrise) {
+	public void setEnumNiveauMaitrise(EnumNiveauMaitrise enumNiveauMaitrise) {
 		this.enumNiveauMaitrise = enumNiveauMaitrise;
 	}
 
-	public int getEnumOccurrence() {
+	public EnumOccurrence getEnumOccurrence() {
 		return enumOccurrence;
 	}
 
-	public void setEnumOccurrence(int enumOccurrence) {
+	public void setEnumOccurrence(EnumOccurrence enumOccurrence) {
 		this.enumOccurrence = enumOccurrence;
 	}
 
-	public int getEnumTypeMedicament() {
+	public EnumTypeMedicament getEnumTypeMedicament() {
 		return enumTypeMedicament;
 	}
 
-	public void setEnumTypeMedicament(int enumTypeMedicament) {
+	public void setEnumTypeMedicament(EnumTypeMedicament enumTypeMedicament) {
 		this.enumTypeMedicament = enumTypeMedicament;
 	}
 
