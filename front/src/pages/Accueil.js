@@ -22,10 +22,10 @@ function Accueil() {
       </Box>  </Grid>
       
       <Grid container >
-      <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-70px' }}>
+      <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' }}>
         
        
-          <img src={Vaccine} />
+          <img src={Vaccine} style={{height:"80%"}}/>
 
       </Grid>
   <Grid item xs={6} sx={{ textAlign: 'center' }}>
@@ -62,18 +62,15 @@ function Accueil() {
           Dashbord
         </Button>
       </Box>
-    </Box>
-  </Grid>
-</Grid>
-
-    <Grid item xs={12}sx={{ textAlign: 'center' }}>
-      <Box>
+    </Box>  <Box>
         <p><b>Si vous souhaitez en savoir plus, vous pouvez consulter les actions mises en place</b></p>
         <Button component={Link} to="/ConsultationAction" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', "&:hover": {
           "background-color": '#92D6B5'
         }}}>Consulter les actions mises en place</Button>
       </Box>
-    </Grid>
+  </Grid>
+</Grid>
+
 
     
   </Grid>
