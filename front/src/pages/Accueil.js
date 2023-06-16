@@ -17,45 +17,43 @@ function Accueil() {
           <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', "&:hover": {
             "background-color": '#92D6B5'
           } }}>Déclarer les erreurs médicamenteuses</Button>
+         
         </Box>
       </Grid>
-  
-  
       <Grid container justifyContent="center" alignItems="center">
-        <Grid item xs={12} sx={{ textAlign: 'center' }}>
+      <Grid item xs={12} sx={{ textAlign: 'center' }}>
         <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <Box
-    sx={{
-      backgroundColor: '#ffdab9',
-      border: '2px solid green',
-      marginTop: "2%",
-      width: "600px",
-      height: "auto",
-      padding:"1%"
-   
- 
-    }}
-  >
-    <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
-    <Box>
-      <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
-        Session du CREX
-      </Button>
-    </Box>
-    <Box>
-      <Button component={Link} to="/Archive" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
-        Consulter les Archives
-      </Button>
-    </Box>
-    <Box>
-      <Button component={Link} to="/Dashboard" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
-        Tableau de bord
-      </Button>
-    </Box>
-  </Box>
-</div>
-        </Grid>
+          <img src={Vaccine} style={{ height: "300px", marginLeft: "-300px" , marginTop:"-100px"}} alt="Vaccine" />
+          <Box
+            sx={{
+              backgroundColor: '#ffdab9',
+              border: '2px solid green',
+              marginTop: "2%",
+              width: "600px",
+              height: "auto",
+              padding: "1%"
+            }}
+          >
+            <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
+            <Box>
+              <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2',  color: 'white', margin: '10px', width: '40%', "&:hover": { backgroundColor: '#92D6B5' } }}>
+                Session du CREX
+              </Button>
+            </Box>
+            <Box>
+              <Button component={Link} to="/Archive" variant='contained' sx={{ background: '#7DC4B2', color: 'white', margin: '10px', width: '40%', "&:hover": { backgroundColor: '#92D6B5' } }}>
+                Consulter les Archives
+              </Button>
+            </Box>
+            <Box>
+              <Button component={Link} to="/Dashboard" variant='contained' sx={{ background: '#7DC4B2',  color: 'white', margin: '10px', width: '40%', "&:hover": { backgroundColor: '#92D6B5' } }}>
+                Tableau de bord
+              </Button>
+            </Box>
+          </Box>
+        </div>
       </Grid>
+    </Grid>
       <Grid container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
    
      
