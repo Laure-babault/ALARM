@@ -7,75 +7,72 @@ function Accueil() {
 
   return (
 
-    <div className="Accueil" >
-  <Box sx={{ textAlign: 'center' }}>
-    <h1>Outil de déclaration et d'analyse des erreurs médicamenteuses</h1>
-  </Box>
-
-  <Grid container spacing={2} height='100%'>
-    <Grid item xs={12}sx={{ textAlign: 'center' }}>
-      <Box>
-        <p><b>Tout professionnel de l'établissement peut déclarer une erreur médicamenteuse</b></p>
-        <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', "&:hover": {
-          "background-color": '#92D6B5'
-        }}} >Déclarer les erreurs médicamenteuses</Button>
-      </Box>  </Grid>
-      
-      <Grid container >
-      <Grid item xs={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-100px' }}>
-        
-       
-          <img src={Vaccine} style={{height:"80%"}}/>
-
+    <div className="Accueil" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Grid container spacing={2} height='100%' style={{ marginTop: "4%" }}>
+  
+      <Grid item xs={12} sx={{ textAlign: 'center' }}>
+        <Box>
+          <h1>Outil de déclaration et d'analyse des erreurs médicamenteuses</h1>
+          <p><b>Tout professionnel de l'établissement peut déclarer une erreur médicamenteuse</b></p>
+          <Button component={Link} to="/DeclarerEM" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', "&:hover": {
+            "background-color": '#92D6B5'
+          } }}>Déclarer les erreurs médicamenteuses</Button>
+        </Box>
       </Grid>
-  <Grid item xs={6} sx={{ textAlign: 'center' }}>
-    <Box
-      sx={{
-        backgroundColor: '#ffdab9',
-        border: '2px solid green',
-        marginTop: '-10px'
-      }}
-    >
-      <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
-      {/*  <Box>
-        <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
-          Consulter les erreurs médicamenteuses
-        </Button>
-      </Box> */}
-      <Box>
-        <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
-          Session du CREX
-        </Button>
-      </Box>
-      <Box>
-        <Button component={Link} to="/Archive" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
-          Consulter les Archives
-        </Button>
-      </Box>
-     {/* <Box>
-   <Button component={Link} to="/SaisieErreur" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
-      Analyser une erreur médicamenteuse
-    </Button>
-  </Box> */}
-      <Box>
-        <Button component={Link} to="/Dashboard" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '90%', "&:hover": { "background-color": '#92D6B5' } }}>
-          Dashbord
-        </Button>
-      </Box>
-    </Box>  <Box>
-        <p><b>Si vous souhaitez en savoir plus, vous pouvez consulter les actions mises en place</b></p>
-        <Button component={Link} to="/ConsultationAction" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', "&:hover": {
-          "background-color": '#92D6B5'
-        }}}>Consulter les actions mises en place</Button>
-      </Box>
-  </Grid>
-</Grid>
-
-
-    
-  </Grid>
+  
+  
+      <Grid container justifyContent="center" alignItems="center">
+        <Grid item xs={12} sx={{ textAlign: 'center' }}>
+        <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Box
+    sx={{
+      backgroundColor: '#ffdab9',
+      border: '2px solid green',
+      marginTop: "2%",
+      width: "600px",
+      height: "auto",
+      padding:"2%"
+   
+ 
+    }}
+  >
+    <p><b>Ne pas utiliser, ces accès sont réservés aux professionnels habilités</b></p>
+    <Box>
+      <Button component={Link} to="/Crex" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
+        Session du CREX
+      </Button>
+    </Box>
+    <Box>
+      <Button component={Link} to="/Archive" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px', width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
+        Consulter les Archives
+      </Button>
+    </Box>
+    <Box>
+      <Button component={Link} to="/Dashboard" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A', margin: '10px',width: '40%', "&:hover": { "background-color": '#92D6B5' } }}>
+        Tableau de bord
+      </Button>
+    </Box>
+  </Box>
 </div>
-
+        </Grid>
+      </Grid>
+      <Grid container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+   
+     
+         <Grid item xs={12} sx={{ textAlign: 'center' }}>
+        <Box>
+          <p><b>Si vous souhaitez en savoir plus, vous pouvez consulter les actions mises en place</b></p>
+          <Button component={Link} to="/ConsultationAction" variant='contained' sx={{ background: '#7DC4B2', color: '506C7A',justifyContent: 'center', "&:hover": {
+            "background-color": '#92D6B5'
+          } }}>Consulter les actions mises en place</Button>
+        </Box>
+      </Grid>
+      </Grid>
+    </Grid>
+    
+   
+  
+  </div>
   );
 }
 
