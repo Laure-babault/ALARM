@@ -7,8 +7,6 @@ import com.alarm.enumerations.EnumNiveauMaitrise;
 import com.alarm.enumerations.EnumOccurrence;
 import com.alarm.enumerations.EnumTypeMedicament;
 
-import jakarta.persistence.Column;
-
 public class AnalyseDto implements Dto<Analyse>{
 	
 	private int id;
