@@ -31,7 +31,7 @@ function Accueil() {
       marginTop: "2%",
       width: "600px",
       height: "auto",
-      padding:"2%"
+      padding:"1%"
    
  
     }}
