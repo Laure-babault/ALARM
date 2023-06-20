@@ -52,5 +52,16 @@ public class EtapeCircuitMedicamentService implements InterfaceEtapeCircuitMedic
 		// TODO Auto-generated method stub
 		return mapper.entityToDto(this.finById(id));
 	}
+	
+	public EtapeCircuitMedicament create(EtapeCircuitMedicament newEtapeCircuitMedicamentDto) {
+		// TODO Auto-generated method stub
+		return etapeCircuitMedicamentDAO.addEtapeCircuitMedicament(newEtapeCircuitMedicamentDto);
+	}
+
+	@Override
+	public EtapeCircuitMedicamentDto create_metier(EtapeCircuitMedicamentDto newEtapeCircuitMedicamentDto) {
+		EtapeCircuitMedicament newEtapeCircuitMedicament = this.create(mapper.dtoToEntity(newEtapeCircuitMedicamentDto));
+		return mapper.entityToDto(newEtapeCircuitMedicament);
+	}
 
 }

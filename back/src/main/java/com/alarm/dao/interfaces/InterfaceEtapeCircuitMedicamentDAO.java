@@ -10,7 +10,7 @@ public interface InterfaceEtapeCircuitMedicamentDAO {
 
 	List<EtapeCircuitMedicament> getAll();
 
-	void addEtapeCircuitMedicament(EtapeCircuitMedicament etapeCircuitMedicament);
+	EtapeCircuitMedicament addEtapeCircuitMedicament(EtapeCircuitMedicament etapeCircuitMedicament);
 
 	void updateEtapeCircuitMedicament(EtapeCircuitMedicament etapeCircuitMedicament);
 

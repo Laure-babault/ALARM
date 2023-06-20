@@ -32,9 +32,10 @@ public class EtapeCircuitMedicamentDAO implements InterfaceEtapeCircuitMedicamen
 	}
 
 	@Override
-	public void addEtapeCircuitMedicament(EtapeCircuitMedicament etapeCircuitMedicament) {
+	public EtapeCircuitMedicament addEtapeCircuitMedicament(EtapeCircuitMedicament etapeCircuitMedicament) {
 		// TODO Auto-generated method stub
-		entityManager.persist(etapeCircuitMedicament);
+		 entityManager.persist(etapeCircuitMedicament);
+		 return etapeCircuitMedicament;
 	}
 
 	@Override

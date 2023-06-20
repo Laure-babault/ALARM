@@ -9,5 +9,7 @@ public interface InterfaceEtapeCircuitMedicamentService {
 	Set<EtapeCircuitMedicamentDto> findAll_metier();
 	
 	EtapeCircuitMedicamentDto finById_metier(int id);
+	
+	EtapeCircuitMedicamentDto create_metier(EtapeCircuitMedicamentDto newEtapeCircuitMedicamentDto);
 
 }
