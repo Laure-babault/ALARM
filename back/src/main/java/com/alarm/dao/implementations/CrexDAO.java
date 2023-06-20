@@ -2,6 +2,8 @@ package com.alarm.dao.implementations;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.alarm.dao.interfaces.InterfaceCrexDAO;
 import com.alarm.entity.Crex;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
+@Component
 public class CrexDAO implements InterfaceCrexDAO {
 	
 	@PersistenceContext
