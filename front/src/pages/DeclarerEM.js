@@ -124,14 +124,6 @@ function DeclarerEM() {
             <h4><WarningIcon fontSize="medium" style={{ color: 'red', marginRight: 'auto' }} /><u> 
    Ne sont pas concérnés les événements indésirables consécutifs en lien avec le médicament, ceci relevant de la pharmacovigilance</u></h4></div><div>
 
-
-
-
-
-
-
-
-
             </div>     
             <form>       
              <Card style={{ backgroundColor: '#e2d2c1  ' , boxShadow: '5px 5px 5px #c7a988  ' , padding: '20px', margin:"40px"}}>
@@ -152,26 +144,6 @@ function DeclarerEM() {
       </Grid>
  
     </Grid>
-
-
-
-
-                  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                   
@@ -204,15 +176,7 @@ onChange={e=>setDate(e.target.value)}
 </form></Grid> 
                           </Grid>
                     </Card>            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                                
                     
                     <Card style={{ backgroundColor: '#e2d2c1 ' , boxShadow: '5px 5px 5px #c7a988 ', padding: '20px' ,  margin:"40px"}}>
                    
@@ -268,7 +232,6 @@ InputLabelProps={{
    <RadioGroup row  >
         <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
         <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
-        <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/> 
       </RadioGroup>
         
         
@@ -280,53 +243,8 @@ InputLabelProps={{
       </Grid>
     </Grid>
              
-             
-             
-             
-             
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
     <>
-
-
-
-
-
-
-
-
-
 
     <Grid container spacing={2} style={{marginTop:"5px"}}>
       <Grid item xs={12} sm={3} >
@@ -500,9 +418,7 @@ InputLabelProps={{
       <RadioGroup row  >
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
                            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
                            
-
                          </RadioGroup>
         
       </Grid>
@@ -512,11 +428,6 @@ InputLabelProps={{
        
       </Grid>
     </Grid>
-
-
-
-
-
 
 
 
@@ -537,17 +448,6 @@ InputLabelProps={{
       </Grid>
    
     </Grid>
-
-
-                        
-
-
-                               
-                               
-                               
-
-
-
 
 
 
@@ -579,9 +479,7 @@ InputLabelProps={{
       <RadioGroup row  >
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
                            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
-                           
-
+                        
                          </RadioGroup>
         
       </Grid>
@@ -591,15 +489,6 @@ InputLabelProps={{
        
       </Grid>
     </Grid>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -682,46 +571,7 @@ InputLabelProps={{
       </Grid>
    
     </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
                       
 
@@ -747,7 +597,7 @@ InputLabelProps={{
 
                                  <Grid container spacing={2} style={{marginTop:"5px"}}>
       <Grid item xs={12} sm={3} >
-  <Typography variant="h7" >S'agit-il d'un e voie d'administration à risque ? :</Typography>  
+  <Typography variant="h7" >S'agit-il d'une voie d'administration à risque ? :</Typography>  
   
     
       </Grid>
@@ -755,9 +605,7 @@ InputLabelProps={{
       <RadioGroup row valuee={valuee} >
                            <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e=>setValuee(e.target.value)}/>
                            <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e=>setValuee(e.target.value)}/>
-                           <FormControlLabel value="Je ne sais pas" control={<Radio />} label="Je ne sais pas" onChange={e=>setValuee(e.target.value)}/>
-                           
-
+                
                          </RadioGroup>
       </Grid>
       <Grid item xs={12} sm={5} style={{marginTop:"10px"}}>
@@ -766,16 +614,6 @@ InputLabelProps={{
        
       </Grid>
     </Grid>
-
-
-
-
-
-
-
-
-
-
 
 
     <Grid container spacing={2} style={{marginTop:"5px"}}>
@@ -836,44 +674,6 @@ InputLabelProps={{
     </Grid>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                     <Grid container spacing={2} style={{marginTop:"5px"}}>
       <Grid item xs={12} sm={3} >
   <Typography variant="h7" >Degré de réalisation :</Typography>  
@@ -932,20 +732,6 @@ InputLabelProps={{
        
       </Grid>
     </Grid>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <Grid container spacing={2} style={{marginTop:"5px"}}>
@@ -1048,27 +834,7 @@ InputLabelProps={{
   
     </Grid>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                               
+             
                      
                         
                                <hr style={{ border: "0", borderBottom: "1px dashed black",background: "#black"}}></hr>   
@@ -1114,31 +880,11 @@ InputLabelProps={{
 </Box>
              
                </Card>            
-                    
-                    
-                    
-                    
-          
-                    
-                    
+                         
                     
        </form> 
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+ 
                     
                     </>
   );
