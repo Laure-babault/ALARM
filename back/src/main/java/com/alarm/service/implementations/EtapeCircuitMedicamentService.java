@@ -9,6 +9,7 @@ import javax.enterprise.context.control.ActivateRequestContext;
 import javax.inject.Inject;
 
 import org.mapstruct.factory.Mappers;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.alarm.dao.implementations.EtapeCircuitMedicamentDAO;
@@ -22,7 +23,7 @@ import jakarta.transaction.Transactional;
 @Service
 public class EtapeCircuitMedicamentService implements InterfaceEtapeCircuitMedicamentService{
 	
-	@Inject
+	@Autowired
 	EtapeCircuitMedicamentDAO etapeCircuitMedicamentDAO;
 	
 	private final EtapeCircuitMedicamentMapper mapper = Mappers.getMapper(EtapeCircuitMedicamentMapper.class);

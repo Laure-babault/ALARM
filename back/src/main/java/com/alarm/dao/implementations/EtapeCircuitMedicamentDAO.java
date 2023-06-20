@@ -2,6 +2,8 @@ package com.alarm.dao.implementations;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.alarm.dao.interfaces.InterfaceEtapeCircuitMedicamentDAO;
 import com.alarm.entity.EtapeCircuitMedicament;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
+@Component
 public class EtapeCircuitMedicamentDAO implements InterfaceEtapeCircuitMedicamentDAO {
 	
 	@PersistenceContext
@@ -23,7 +26,7 @@ public class EtapeCircuitMedicamentDAO implements InterfaceEtapeCircuitMedicamen
 	@Override
 	public List<EtapeCircuitMedicament> getAll() {
 		// TODO Auto-generated method stub
-		String jpql = "SELECT * FROM EtapeCircuitMedicament e";
+		String jpql = "SELECT e FROM EtapeCircuitMedicament e";
 		TypedQuery<EtapeCircuitMedicament> query = entityManager.createQuery(jpql, EtapeCircuitMedicament.class);
 		return query.getResultList();
 	}
