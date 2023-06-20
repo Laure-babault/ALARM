@@ -2,6 +2,8 @@ package com.alarm.dao.implementations;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.alarm.dao.interfaces.InterfaceActionReponseDAO;
 import com.alarm.entity.Action_reponse;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
+@Component
 public class ActionReponseDAO implements InterfaceActionReponseDAO{
 	
 	@PersistenceContext

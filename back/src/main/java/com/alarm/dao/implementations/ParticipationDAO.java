@@ -2,6 +2,7 @@ package com.alarm.dao.implementations;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.alarm.dao.interfaces.InterfaceParticipationDAO;
@@ -11,7 +12,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 
-@Repository
+@Component
 public class ParticipationDAO implements InterfaceParticipationDAO{
 	@PersistenceContext
 	private EntityManager entityManager;
