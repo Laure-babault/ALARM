@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alarm.dto.implementations.EtapeCircuitMedicamentDto;
 import com.alarm.service.interfaces.InterfaceEtapeCircuitMedicamentService;
 
+import jakarta.transaction.Transactional;
+
 @RestController
 public class EtapeCircuitMedicamentServiceController {
 
@@ -32,6 +34,7 @@ public class EtapeCircuitMedicamentServiceController {
 		return this.etapeCircuitMedicamentService.finById_metier(id);
 	}
 	
+	@Transactional
 	@PostMapping(value="/etapeCircuitMedicament/ajout", consumes = {"*/*"})
 	EtapeCircuitMedicamentDto addEtapeCircuitMedicament(@RequestBody EtapeCircuitMedicamentDto newEtapeCircuitMedicament) {
 	    return etapeCircuitMedicamentService.create_metier(newEtapeCircuitMedicament);
