@@ -7,5 +7,7 @@ import com.alarm.dto.implementations.EtapeCircuitMedicamentDto;
 public interface InterfaceEtapeCircuitMedicamentService {
 	
 	Set<EtapeCircuitMedicamentDto> findAll_metier();
+	
+	EtapeCircuitMedicamentDto finById_metier(int id);
 
 }

@@ -23,7 +23,7 @@ public class EtapeCircuitMedicamentDAO implements InterfaceEtapeCircuitMedicamen
 	@Override
 	public List<EtapeCircuitMedicament> getAll() {
 		// TODO Auto-generated method stub
-		String jpql = "SELECT e FROM EtapeCircuitMedicament e";
+		String jpql = "SELECT * FROM EtapeCircuitMedicament e";
 		TypedQuery<EtapeCircuitMedicament> query = entityManager.createQuery(jpql, EtapeCircuitMedicament.class);
 		return query.getResultList();
 	}

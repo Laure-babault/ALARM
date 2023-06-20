@@ -9,6 +9,7 @@ import javax.enterprise.context.control.ActivateRequestContext;
 import javax.inject.Inject;
 
 import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Service;
 
 import com.alarm.dao.implementations.EtapeCircuitMedicamentDAO;
 import com.alarm.dto.implementations.EtapeCircuitMedicamentDto;
@@ -18,9 +19,7 @@ import com.alarm.service.interfaces.InterfaceEtapeCircuitMedicamentService;
 
 import jakarta.transaction.Transactional;
 
-@RequestScoped 
-@ActivateRequestContext
-@Transactional
+@Service
 public class EtapeCircuitMedicamentService implements InterfaceEtapeCircuitMedicamentService{
 	
 	@Inject
@@ -38,9 +37,19 @@ public class EtapeCircuitMedicamentService implements InterfaceEtapeCircuitMedic
 		final List<EtapeCircuitMedicament> ecmList = this.test();
 		final Set<EtapeCircuitMedicamentDto> ecmListDto = new HashSet<>();
 		for (EtapeCircuitMedicament etapeCircuitMedicament : ecmList) {
-			ecmListDto.add(mapper.entityToListDto(etapeCircuitMedicament));
+			ecmListDto.add(mapper.entityToDto(etapeCircuitMedicament));
 		}
 		return ecmListDto;
+	}
+	   public EtapeCircuitMedicament finById(final int id) {
+			// TODO Auto-generated method stub
+			return etapeCircuitMedicamentDAO.getById(id);
+		}
+
+	@Override
+	public EtapeCircuitMedicamentDto finById_metier(final int id) {
+		// TODO Auto-generated method stub
+		return mapper.entityToDto(this.finById(id));
 	}
 
 }
