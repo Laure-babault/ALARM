@@ -32,7 +32,7 @@ public class EtapeCircuitMedicamentServiceController {
 		return this.etapeCircuitMedicamentService.finById_metier(id);
 	}
 	
-	@PostMapping(value="/etapeCircuitMedicament/add", consumes = {"*/*"}, headers = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value="/etapeCircuitMedicament/ajout", consumes = {"*/*"})
 	EtapeCircuitMedicamentDto addEtapeCircuitMedicament(@RequestBody EtapeCircuitMedicamentDto newEtapeCircuitMedicament) {
 	    return etapeCircuitMedicamentService.create_metier(newEtapeCircuitMedicament);
 	  }
