@@ -10,4 +10,5 @@ public interface EtapeCircuitMedicamentMapper {
 	
 	EtapeCircuitMedicamentDto entityToDto(EtapeCircuitMedicament etapeCircuitMedicament);
 
+	EtapeCircuitMedicament dtoToEntity(EtapeCircuitMedicamentDto etapeCircuitMedicamentDto);
 }
