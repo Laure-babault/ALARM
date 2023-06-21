@@ -35,7 +35,14 @@ function DeclarerEM() {
   const [Impact, setImpact] = useState('');
 
   const [valuee, setValuee] = useState('')
+  const [valueePatient, setValueePatient] = useState('')
+  const [valueeMedicament, setValueeMedicament]=useState('')
+  const [valueeVoie, setValueeVoie]=useState('')
+  const [valueePatientb, setValueePatientb] = useState(false)
+  const [valueeMedicamentb, setValueeMedicamentb]=useState(false)
+  const [valueeVoieb, setValueeVoieb]=useState(false)
 
+  const [em,setEm]=useState({});
 
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
@@ -95,15 +102,6 @@ function DeclarerEM() {
   };
 
 
-
-  const handleNoClick8 = () => {
-    const container = document.getElementById("container8",);
-    container.style.display = "none";
-  };
-  const handleYesClick8 = () => {
-    const container = document.getElementById("container8");
-    container.style.display = "block";
-  };
   const [selectedValue, setSelectedValue] = useState('default'); // définit la valeur par défaut
   const handleChange1 = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -113,35 +111,42 @@ function DeclarerEM() {
     setSelectedValue(event.target.value);
   };
 
-  
-  if (state.checked1 === true) { setIdNE(1); } else {
-    if (state.checked2 === true) {setIdNE(2); }else{
-      if(state.checked3 === true) {setIdNE(3); } else {
-        if(state.checked4 === true) {setIdNE(4); } else{
-          if(state.checked5 === true) {setIdNE(5); }else{
-            if(state.checked6 === true) {setIdNE(6); } else{
-              if(state.checked7 === true) {setIdNE(7); }else{
-                if(state.checked8 === true) {setIdNE(8); }else{
-                  if(state.checked9 === true) {setIdNE(9); }else{
-                    if(state.checked10 === true) {setIdNE(10); }else{
-                      if(state.checked11 === true) {setIdNE(11); }else{
-                        if(state.checked12 === true) {setIdNE(12); }else{
-                            setIdNE(0);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+  const [idDegres, setIdDegres] = useState('');
+
+  const postEm = () => {
+
+    if (state.checked1 === true) { setIdNE(1); }
+    if (state.checked2 === true) { setIdNE(2); }
+    if (state.checked3 === true) { setIdNE(3); }
+    if (state.checked4 === true) { setIdNE(4); }
+    if (state.checked5 === true) { setIdNE(5); }
+    if (state.checked6 === true) { setIdNE(6); }
+    if (state.checked7 === true) { setIdNE(7); }
+    if (state.checked8 === true) { setIdNE(8); }
+    if (state.checked9 === true) { setIdNE(9); }
+    if (state.checked10 === true) { setIdNE(10); }
+    if (state.checked11 === true) { setIdNE(11); }
+    if (state.checked12 === true) { setIdNE(12); }
+
+    if (state.checked20 === true) { setIdDegres(1); } else {
+      if (state.checked21 === true) { setIdDegres(2); } else {
+        if (state.checked22 === true) { setIdDegres(3); } else {
+          if (state.checked23 === true) { setIdDegres(4); } else {
+            setIdDegres(0);
           }
         }
       }
     }
-  
+
+    console.log(idNE)
+
+  };
 
 
-  }
+
+
+
+
 
   return (
     <>
@@ -154,7 +159,6 @@ function DeclarerEM() {
 
         <h4><WarningIcon fontSize="medium" style={{ color: 'red', marginRight: 'auto' }} /><u>
           Ne sont pas concérnés les événements indésirables consécutifs en lien avec le médicament, ceci relevant de la pharmacovigilance</u></h4></div><div>
-
       </div>
       <form>
         <Card style={{ backgroundColor: '#e2d2c1  ', boxShadow: '5px 5px 5px #c7a988  ', padding: '20px', margin: "40px" }}>
@@ -179,11 +183,6 @@ function DeclarerEM() {
 
 
         </Card>
-
-
-
-
-
 
         <Card style={{ backgroundColor: '#e2d2c1  ', boxShadow: '5px 5px 5px #c7a988 ', padding: '30px', margin: "40px" }}>
 
@@ -447,8 +446,8 @@ function DeclarerEM() {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <RadioGroup row  >
-                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValuee(e.target.value)} />
+                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValueePatientb(e.target.value)} />
+                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValueePatientb(e.target.value)} />
 
                 </RadioGroup>
 
@@ -470,10 +469,10 @@ function DeclarerEM() {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <RadioGroup row  >
-                  <FormControlLabel value="1" control={<Radio />} label="1" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="2" control={<Radio />} label="2" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="3" control={<Radio />} label="3" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="4" control={<Radio />} label="4" onChange={e => setValuee(e.target.value)} />
+                  <FormControlLabel value="1" control={<Radio />} label="1" onChange={e => setValueePatient(e.target.value)} />
+                  <FormControlLabel value="2" control={<Radio />} label="2" onChange={e => setValueePatient(e.target.value)} />
+                  <FormControlLabel value="3" control={<Radio />} label="3" onChange={e => setValueePatient(e.target.value)} />
+                  <FormControlLabel value="4" control={<Radio />} label="4" onChange={e => setValueePatient(e.target.value)} />
 
                 </RadioGroup>
               </Grid>
@@ -508,8 +507,8 @@ function DeclarerEM() {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <RadioGroup row  >
-                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValuee(e.target.value)} />
+                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValueeMedicamentb(e.target.value)} />
+                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValueeMedicamentb(e.target.value)} />
 
                 </RadioGroup>
 
@@ -532,13 +531,13 @@ function DeclarerEM() {
               <Grid item xs={12} sm={6}>
                 <FormControl component="fieldset">
                   <RadioGroup row  >
-                    <FormControlLabel value="1" control={<Radio />} label="1" style={{ color: "darkblue" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="2" control={<Radio />} label="2" style={{ color: "red" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="3" control={<Radio />} label="3" style={{ color: "green" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="4" control={<Radio />} label="4" style={{ color: "orange" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="5" control={<Radio />} label="5" style={{ color: "purple" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="6" control={<Radio />} label="6" style={{ color: "blue" }} onChange={e => setValuee(e.target.value)} />
-                    <FormControlLabel value="7" control={<Radio />} label="7" style={{ color: "darkred" }} onChange={e => setValuee(e.target.value)} />
+                    <FormControlLabel value="1" control={<Radio />} label="1" style={{ color: "darkblue" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="2" control={<Radio />} label="2" style={{ color: "red" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="3" control={<Radio />} label="3" style={{ color: "green" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="4" control={<Radio />} label="4" style={{ color: "orange" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="5" control={<Radio />} label="5" style={{ color: "purple" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="6" control={<Radio />} label="6" style={{ color: "blue" }} onChange={e => setValueeMedicament(e.target.value)} />
+                    <FormControlLabel value="7" control={<Radio />} label="7" style={{ color: "darkred" }} onChange={e => setValueeMedicament(e.target.value)} />
                     <InfoIcon fontSize="large" style={{ color: '#fb9628' }} onClick={handleOpen} />
                     <Modal open={open} onClose={handleClose}>
                       <div style={{
@@ -633,9 +632,9 @@ function DeclarerEM() {
 
               </Grid>
               <Grid item xs={12} sm={4}>
-                <RadioGroup row valuee={valuee} >
-                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValuee(e.target.value)} />
+                <RadioGroup row valuee={valueeVoie} >
+                  <FormControlLabel value="yes" control={<Radio />} label="Oui" onChange={e => setValueeVoieb(e.target.value)} />
+                  <FormControlLabel value="no" control={<Radio />} label="Non" onChange={e => setValueeVoieb(e.target.value)} />
 
                 </RadioGroup>
               </Grid>
@@ -655,9 +654,9 @@ function DeclarerEM() {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <RadioGroup row  >
-                  <FormControlLabel value="1" control={<Radio />} label="1" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="2" control={<Radio />} label="2" onChange={e => setValuee(e.target.value)} />
-                  <FormControlLabel value="3" control={<Radio />} label="3" onChange={e => setValuee(e.target.value)} />
+                  <FormControlLabel value="1" control={<Radio />} label="1" onChange={e => setValueeVoie(e.target.value)} />
+                  <FormControlLabel value="2" control={<Radio />} label="2" onChange={e => setValueeVoie(e.target.value)} />
+                  <FormControlLabel value="3" control={<Radio />} label="3" onChange={e => setValueeVoie(e.target.value)} />
                   <InfoIcon fontSize="large" style={{ color: '#fb9628' }} onClick={handleOpen1} />
                   <Modal open={open1} onClose={handleClose1}>
                     <div style={{
@@ -907,7 +906,7 @@ function DeclarerEM() {
 
           </>
           <Box display="flex" justifyContent="center" alignItems="center">
-            <Button style={{ backgroundColor: '#7DC4B2', color: "white" }}>Valider</Button>
+            <Button style={{ backgroundColor: '#7DC4B2', color: "white" }} onClick={postEm}>Valider</Button>
           </Box>
 
         </Card>
